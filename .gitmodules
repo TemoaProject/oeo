@@ -1,0 +1,3 @@
+[submodule "temoa"]
+	path = temoa
+	url = https://github.com/TemoaProject/temoa
