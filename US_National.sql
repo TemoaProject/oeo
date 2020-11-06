@@ -410,11 +410,11 @@ INSERT INTO `technologies` VALUES ('T_HDV_AJP_N','p','transport','#new airplane 
 INSERT INTO `technologies` VALUES ('T_HDV_AJP_R','p','transport','#existing airplane jet passenger','');
 INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_A','p','transport','#blending air HDV demand tech for jet passenger and general aviation commodities','');
 INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_CT','p','transport','#blending commercial truck HDV demand tech for diesel gasoline and other fuels commodities','');
-INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_RP','p','transport','#blending rail passenger HDV demand tech for subway intercity rail diesel and electric commuter rail commodities','');
+INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_RP','p','transport','#blending rail passenger HDV demand tech for subway, intercity rail,  commuter rail commodities','');
 INSERT INTO `technologies` VALUES ('T_HDV_CRDSL_N','p','transport','#new diesel commuter rail','');
 INSERT INTO `technologies` VALUES ('T_HDV_CRELC_N','p','transport','#new electric commuter rail','');
-INSERT INTO `technologies` VALUES ('T_HDV_ICRDSLELC_N','p','transport','#new electric-diesel intercity rail','');
-INSERT INTO `technologies` VALUES ('T_HDV_ICRDSLELC_R','p','transport','#existing electric-diesel intercity rail','');
+INSERT INTO `technologies` VALUES ('T_HDV_ICRDSL_N','p','transport','#new diesel intercity rail','');
+INSERT INTO `technologies` VALUES ('T_HDV_ICRDSL_R','p','transport','#existing diesel intercity rail','');
 INSERT INTO `technologies` VALUES ('T_HDV_RFDSL_N','p','transport','#new diesel freight rail','');
 INSERT INTO `technologies` VALUES ('T_HDV_RFDSL_R','p','transport','#existing diesel freight rail ','');
 INSERT INTO `technologies` VALUES ('T_HDV_SUBELC_N','p','transport','#new electric subways and street cars','');
@@ -514,7 +514,7 @@ INSERT INTO `technologies` VALUES ('T_HDV_AJP_APU','p','transport','#air jet pas
 INSERT INTO `technologies` VALUES ('T_HDV_AJP_BW','p','transport','#air jet passenger blended wing','');
 INSERT INTO `technologies` VALUES ('T_HDV_AJP_AE','p','transport','#air jet passenger advanced aerodynamics','');
 INSERT INTO `technologies` VALUES ('T_HDV_AJP_GE','p','transport','#air jet passenger geared engine','');
-INSERT INTO `technologies` VALUES ('T_HDV_RFB20_N','p','transport','#new biodiesel freight rail','');
+INSERT INTO `technologies` VALUES ('T_HDV_RFB20_N','p','transport','# new B20 freight rail','');
 INSERT INTO `technologies` VALUES ('T_HDV_CRB20_N','p','transport','#new biodiesel commuter rail','');
 INSERT INTO `technologies` VALUES ('T_HDV_CRDM_N','p','transport','#new dual mode commuter rail ','');
 INSERT INTO `technologies` VALUES ('T_HDV_CRDM_R','p','transport','#residual dual mode commuter rail','');
@@ -907,13 +907,20 @@ INSERT INTO `technologies` VALUES ('T_HDV_WTLBS_LH2_N','p','transport','#Liquid 
 INSERT INTO `technologies` VALUES ('T_HDV_WTC_LH2_N','p','transport','#Liquid hydrogen containership','');
 INSERT INTO `technologies` VALUES ('T_HDV_WTGC_LH2_N','p','transport','#Liquid hydrogen general cargo ship','');
 INSERT INTO `technologies` VALUES ('T_HDV_WTO_LH2_N','p','transport','#Liquid hydrogen offshore supply vessel','');
-INSERT INTO `technologies` VALUES ('T_HDV_RFB20_R','p','transport','#existing diesel freight rail','');
+INSERT INTO `technologies` VALUES ('T_HDV_RFB20_R','p','transport','# existing diesel freight rail','');
 INSERT INTO `technologies` VALUES ('T_HDV_THLH2_N','p','transport','#H2 heavy-duty long haul trucks','');
 INSERT INTO `technologies` VALUES ('O_EA_GSL','p','industrial','#emission accounting technology from gasoline in the industrial sector','');
 INSERT INTO `technologies` VALUES ('IMPTRNLNG','r','supply','#imported LNG to transport','');
 INSERT INTO `technologies` VALUES ('T_EA_LNG','p','transport','#co2 emissions accounting LNG','');
 INSERT INTO `technologies` VALUES ('T_HDV_THLLNG_N','p','transport','#LNG heavy-duty long haul trucks','');
 INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_WTP','p','transport','#blending demand tech for passenger boats','');
+INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_RP_CR','p','transport','#blending technology for commuter rail technologies',NULL);
+INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_RP_ICR','p','transport','#blending technology for intercity rail technologies',NULL);
+INSERT INTO `technologies` VALUES ('T_HDV_ICRB20_N','p','transport','# new B20 intercity rail',NULL);
+INSERT INTO `technologies` VALUES ('T_HDV_ICRB100_N','p','transport','# new B100 intercity rail',NULL);
+INSERT INTO `technologies` VALUES ('T_HDV_RFB100_N','p','transport','# new biodiesel freight rail',NULL);
+INSERT INTO `technologies` VALUES ('T_HDV_RFLNG_N','p','transport','# new LNG freight rail',NULL);
+INSERT INTO `technologies` VALUES ('T_HDV_ICRH2_N','p','transport','# new intercity hydrogen rail',NULL);
 CREATE TABLE "tech_reserve" (
 	"tech"	text,
 	"notes"	text,
@@ -1063,8 +1070,8 @@ INSERT INTO `tech_annual` VALUES ('T_HDV_BLNDDEM_CT','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_BLNDDEM_RP','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_CRDSL_N','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_CRELC_N','');
-INSERT INTO `tech_annual` VALUES ('T_HDV_ICRDSLELC_N','');
-INSERT INTO `tech_annual` VALUES ('T_HDV_ICRDSLELC_R','');
+INSERT INTO `tech_annual` VALUES ('T_HDV_ICRDSL_N','');
+INSERT INTO `tech_annual` VALUES ('T_HDV_ICRDSL_R','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_RFDSL_N','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_RFDSL_R','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_SUBELC_N','');
@@ -1340,6 +1347,13 @@ INSERT INTO `tech_annual` VALUES ('T_HDV_THLH2_N','');
 INSERT INTO `tech_annual` VALUES ('T_EA_LNG','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_THLLNG_N','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_BLNDDEM_WTP','');
+INSERT INTO `tech_annual` VALUES ('T_HDV_BLNDDEM_RP_CR',NULL);
+INSERT INTO `tech_annual` VALUES ('T_HDV_BLNDDEM_RP_ICR',NULL);
+INSERT INTO `tech_annual` VALUES ('T_HDV_ICRB20_N',NULL);
+INSERT INTO `tech_annual` VALUES ('T_HDV_ICRB100_N',NULL);
+INSERT INTO `tech_annual` VALUES ('T_HDV_RFB100_N',NULL);
+INSERT INTO `tech_annual` VALUES ('T_HDV_RFLNG_N',NULL);
+INSERT INTO `tech_annual` VALUES ('T_HDV_ICRH2_N',NULL);
 CREATE TABLE "sector_labels" (
 	"sector"	text,
 	PRIMARY KEY("sector")
@@ -1797,6 +1811,13 @@ INSERT INTO `commodities` VALUES ('T_LNG','p','#lng for the transportation secto
 INSERT INTO `commodities` VALUES ('TMDHDV_HTL_LNG','p','#demand for heavy-duty long haul LNG trucks');
 INSERT INTO `commodities` VALUES ('TMDHDV_WTP_MGO','p','#mgo demand for passenger ferries');
 INSERT INTO `commodities` VALUES ('TMDHDV_WTP_ELC','p','#demand for electric passenger ferries');
+INSERT INTO `commodities` VALUES ('TMDHDV_RP_ICRDSL','p','# transport miles demanded for intercity diesel rail');
+INSERT INTO `commodities` VALUES ('TMDHDV_RP_CR','p','# transport miles demanded for commuter rail technologies');
+INSERT INTO `commodities` VALUES ('TMDHDV_RP_ICRB20','p','# transport miles demanded for intercity B20 rail');
+INSERT INTO `commodities` VALUES ('TMDHDV_RP_ICRB100','p','# transport miles demanded for intercity B100 rail');
+INSERT INTO `commodities` VALUES ('TMDHDV_RF_B100','p','# transport miles demanded for biodiesel rail freight');
+INSERT INTO `commodities` VALUES ('TMDHDV_RF_LNG','p','# transport miles demanded for LNG freight rail');
+INSERT INTO `commodities` VALUES ('TMDHDV_RP_ICRH2','p','# transport miles demanded for intercity H2 rail');
 CREATE TABLE "TechOutputSplit" (
 	"regions"	TEXT,
 	"periods"	integer,
@@ -3065,6 +3086,7 @@ CREATE TABLE "MyopicBaseyear" (
 	"year"	real
 	"notes"	text	
 );
+INSERT INTO `MyopicBaseyear` VALUES ('2017');
 CREATE TABLE "MinGenGroupWeight" (
 	"regions"	text,
 	"tech"	text,
@@ -3073,14 +3095,37 @@ CREATE TABLE "MinGenGroupWeight" (
 	"tech_desc"	text,
 	PRIMARY KEY("tech","group_name","regions")
 );
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL4_N','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WND_R','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLTHCEN_N','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLTH_R','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPVCEN_N','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPV_R ','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_HYDCONV_R ','RPS_MTN',0.28,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_GEOBCFS_N ','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_GEO_R ','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_BIOIGCC_N ','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL5_N','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL1_N','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL2_N','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL3_N ','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_BECCS_N ','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPVENDUSE_R ','RPS_MTN',1.0,NULL);
+INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPVENDUSE_N ','RPS_MTN',1.0,NULL);
 CREATE TABLE "MinGenGroupTarget" (
-	"regions"	text,
-	"periods"	integer,
-	"group_name"	text,
-	"min_act_g"	real,
-	"notes"	text,
-	PRIMARY KEY("periods","group_name","regions")
+	`periods`	integer,
+	`group_name`	text,
+	`min_act_g`	real,
+	`notes`	text,
+	PRIMARY KEY(periods,group_name)
 );
+INSERT INTO `MinGenGroupTarget` VALUES (2020,'RPS_MTN',219.96,NULL);
+INSERT INTO `MinGenGroupTarget` VALUES (2025,'RPS_MTN',240.48,NULL);
+INSERT INTO `MinGenGroupTarget` VALUES (2030,'RPS_MTN',261.0,NULL);
+INSERT INTO `MinGenGroupTarget` VALUES (2035,'RPS_MTN',271.44,NULL);
+INSERT INTO `MinGenGroupTarget` VALUES (2040,'RPS_MTN',281.88,NULL);
+INSERT INTO `MinGenGroupTarget` VALUES (2045,'RPS_MTN',294.48,NULL);
+INSERT INTO `MinGenGroupTarget` VALUES (2050,'RPS_MTN',307.08,NULL);
 CREATE TABLE "MinCapacity" (
 	"regions"	text,
 	"periods"	integer,
@@ -3395,8 +3440,8 @@ INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_CRDSL_N',20.0,'NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_CRELC_N',20.0,'NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_SUBELC_R',20.0,'NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_SUBELC_N',20.0,'NULL');
-INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_ICRDSLELC_R',20.0,'NULL');
-INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_ICRDSLELC_N',20.0,'NULL');
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_ICRDSL_R',20.0,'NULL');
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_ICRDSL_N',20.0,'NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_RFDSL_R',30.0,'NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_RFDSL_N',30.0,'NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_BLND_DSLBIODSL_B20',50.0,'NULL');
@@ -3929,6 +3974,12 @@ INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_WTO_LH2_N',25.0,'');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_THLH2_N',17.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','T_EA_LNG',50.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_THLLNG_N',17.0,NULL);
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_ICRB20_N',20.0,NULL);
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_ICRB100_N',20.0,NULL);
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_RFB100_N',30.0,NULL);
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_RFLNG_N',30.0,NULL);
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_RFB20_R',30.0,NULL);
+INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_ICRH2_N',20.0,NULL);
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
 	"tech"	text,
@@ -4547,15 +4598,15 @@ INSERT INTO `ExistingCapacity` VALUES ('US','E_SCR_COAS_R',2010,410.7337277,'NUL
 ');
 INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_SUBELC_R',2010,3.9613,'NULL','NULL
 ');
-INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSLELC_R',2010,1.6756,'NULL','NULL
+INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSL_R',2010,1.6756,'NULL','NULL
 ');
 INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_SUBELC_R',2005,3.9613,'NULL','NULL
 ');
-INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSLELC_R',2005,1.6756,'NULL','NULL
+INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSL_R',2005,1.6756,'NULL','NULL
 ');
 INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_SUBELC_R',2000,3.9613,'NULL','NULL
 ');
-INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSLELC_R',2000,1.6756,'NULL','NULL
+INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSL_R',2000,1.6756,'NULL','NULL
 ');
 INSERT INTO `ExistingCapacity` VALUES ('US','C_LT_INC100W_ELC_R',2000,117.0,'NULL','NULL
 ');
@@ -4655,7 +4706,7 @@ INSERT INTO `ExistingCapacity` VALUES ('US','R_LT_EXT_R',2000,13.965,'NULL','NUL
 ');
 INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_AJP_R',2015,287.8677218,NULL,NULL);
 INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_SUBELC_R',2015,3.9613,NULL,NULL);
-INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSLELC_R',2015,1.6756,NULL,NULL);
+INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_ICRDSL_R',2015,1.6756,NULL,NULL);
 INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_TCE10_R',2005,17.92022,'#bvm','#percent of stock based on AEO 2019; existing capacity total based on EPA US 9rTv18.1
 ');
 INSERT INTO `ExistingCapacity` VALUES ('US','T_HDV_TCE10_R',2010,17.92022,'#bvm','#percent of stock based on AEO 2019; existing capacity total based on EPA US 9rTv18.1
@@ -5431,22 +5482,6 @@ INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2025,'
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2030,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2035,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2040,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_R',2000,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_R',2005,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_R',2010,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_R',2000,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_R',2005,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_R',2010,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_N',2020,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_N',2025,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_N',2030,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_N',2035,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_N',2040,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_N',2020,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_N',2025,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_N',2030,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_N',2035,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_N',2040,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
@@ -5535,8 +5570,6 @@ INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_N',2045,'
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_N',2045,'TMDHDV_A_JP',0.0215,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','E10','T_HDV_AGA_N',2045,'TMDHDV_A_GA',0.1636,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2045,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_N',2045,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_N',2045,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','COABH_R','E_FGD_COABH_N',2050,'COAB_R_CC',-1.127,'#kt/PJout','NULL');
@@ -5583,8 +5616,6 @@ INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_N',2050,'
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_N',2050,'TMDHDV_A_JP',0.0215,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','E10','T_HDV_AGA_N',2050,'TMDHDV_A_GA',0.1636,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2050,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_N',2050,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_N',2050,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','E_NGA','E_NGASTM_R',2015,'ELCP',0.067,'#kt/PJout','#VT_EPAUS9rT_ELC_v18.1.1, Emission tab, SEELCNGS');
@@ -8149,41 +8180,6 @@ INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','JTF','T_HDV_AJP_GE',2050,
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_R',2015,'TMDHDV_A_JP',0.065,'#kt/bpm',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_R',2015,'TMDHDV_A_JP',0.0215,'#kt/bpm',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_WT',2050,'TMDHDV_A_JP',0.065,'#kt/bpm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_N',2020,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_N',2025,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_N',2030,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_N',2035,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_N',2040,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_N',2045,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_N',2050,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_N',2020,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_N',2025,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_N',2030,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_N',2035,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_N',2040,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_N',2045,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_N',2050,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_N',2020,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_N',2025,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_N',2030,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_N',2035,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_N',2040,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_N',2045,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_N',2050,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSLELC_R',2015,'TMDHDV_RP_ICR',0.001,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSLELC_R',2015,'TMDHDV_RP_ICR',1.256,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_R',2000,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_R',2005,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_R',2010,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSLELC_R',2015,'TMDHDV_RP_ICR',0.037,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_R',2000,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_R',2005,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_R',2010,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSLELC_R',2015,'TMDHDV_RP_ICR',0.036,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_R',2000,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_R',2005,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_R',2010,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSLELC_R',2015,'TMDHDV_RP_ICR',0.052,'#kt/bpmt','#GREET 2019');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
 INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
@@ -13057,6 +13053,186 @@ INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_MDV_TMDSL_R',2015
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',0.4036,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
 INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',1.0327,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
 INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',0.4852,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_R',2000,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_R',2005,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_R',2010,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_R',2015,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_N',2020,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_N',2025,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_N',2030,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_N',2035,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_N',2040,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_N',2045,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_N',2050,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_R',2000,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_R',2005,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_R',2010,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_R',2015,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_N',2020,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_N',2025,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_N',2030,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_N',2035,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_N',2040,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_N',2045,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_ICRDSL_N',2050,'TMDHDV_RP_ICRDSL',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_R',2000,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_R',2005,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_R',2010,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_R',2015,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_N',2020,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_N',2025,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_N',2030,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_N',2035,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_N',2040,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_N',2045,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_ICRDSL_N',2050,'TMDHDV_RP_ICRDSL',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_R',2000,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_R',2005,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_R',2010,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_R',2015,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_N',2020,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_N',2025,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_N',2030,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_N',2035,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_N',2040,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_N',2045,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_ICRDSL_N',2050,'TMDHDV_RP_ICRDSL',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_R',2000,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_R',2005,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_R',2010,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_R',2015,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_N',2020,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_N',2025,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_N',2030,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_N',2035,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_N',2040,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_N',2045,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_ICRDSL_N',2050,'TMDHDV_RP_ICRDSL',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_ICRB20_N',2020,'TMDHDV_RP_ICRB20',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_ICRB20_N',2025,'TMDHDV_RP_ICRB20',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_ICRB20_N',2030,'TMDHDV_RP_ICRB20',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_ICRB20_N',2035,'TMDHDV_RP_ICRB20',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_ICRB20_N',2040,'TMDHDV_RP_ICRB20',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_ICRB20_N',2045,'TMDHDV_RP_ICRB20',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_ICRB20_N',2050,'TMDHDV_RP_ICRB20',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_ICRB20_N',2020,'TMDHDV_RP_ICRB20',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_ICRB20_N',2025,'TMDHDV_RP_ICRB20',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_ICRB20_N',2030,'TMDHDV_RP_ICRB20',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_ICRB20_N',2035,'TMDHDV_RP_ICRB20',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_ICRB20_N',2040,'TMDHDV_RP_ICRB20',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_ICRB20_N',2045,'TMDHDV_RP_ICRB20',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_ICRB20_N',2050,'TMDHDV_RP_ICRB20',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_ICRB20_N',2020,'TMDHDV_RP_ICRB20',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_ICRB20_N',2025,'TMDHDV_RP_ICRB20',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_ICRB20_N',2030,'TMDHDV_RP_ICRB20',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_ICRB20_N',2035,'TMDHDV_RP_ICRB20',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_ICRB20_N',2040,'TMDHDV_RP_ICRB20',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_ICRB20_N',2045,'TMDHDV_RP_ICRB20',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_ICRB20_N',2050,'TMDHDV_RP_ICRB20',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_ICRB20_N',2020,'TMDHDV_RP_ICRB20',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_ICRB20_N',2025,'TMDHDV_RP_ICRB20',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_ICRB20_N',2030,'TMDHDV_RP_ICRB20',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_ICRB20_N',2035,'TMDHDV_RP_ICRB20',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_ICRB20_N',2040,'TMDHDV_RP_ICRB20',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_ICRB20_N',2045,'TMDHDV_RP_ICRB20',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_ICRB20_N',2050,'TMDHDV_RP_ICRB20',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_ICRB20_N',2020,'TMDHDV_RP_ICRB20',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_ICRB20_N',2025,'TMDHDV_RP_ICRB20',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_ICRB20_N',2030,'TMDHDV_RP_ICRB20',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_ICRB20_N',2035,'TMDHDV_RP_ICRB20',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_ICRB20_N',2040,'TMDHDV_RP_ICRB20',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_ICRB20_N',2045,'TMDHDV_RP_ICRB20',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_ICRB20_N',2050,'TMDHDV_RP_ICRB20',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_ICRB100_N',2025,'TMDHDV_RP_ICRB100',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_ICRB100_N',2030,'TMDHDV_RP_ICRB100',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_ICRB100_N',2035,'TMDHDV_RP_ICRB100',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_ICRB100_N',2040,'TMDHDV_RP_ICRB100',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_ICRB100_N',2045,'TMDHDV_RP_ICRB100',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_ICRB100_N',2050,'TMDHDV_RP_ICRB100',1.2557,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_ICRB100_N',2025,'TMDHDV_RP_ICRB100',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_ICRB100_N',2030,'TMDHDV_RP_ICRB100',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_ICRB100_N',2035,'TMDHDV_RP_ICRB100',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_ICRB100_N',2040,'TMDHDV_RP_ICRB100',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_ICRB100_N',2045,'TMDHDV_RP_ICRB100',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_ICRB100_N',2050,'TMDHDV_RP_ICRB100',0.000689,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_ICRB100_N',2025,'TMDHDV_RP_ICRB100',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_ICRB100_N',2030,'TMDHDV_RP_ICRB100',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_ICRB100_N',2035,'TMDHDV_RP_ICRB100',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_ICRB100_N',2040,'TMDHDV_RP_ICRB100',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_ICRB100_N',2045,'TMDHDV_RP_ICRB100',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_ICRB100_N',2050,'TMDHDV_RP_ICRB100',0.03572,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_ICRB100_N',2025,'TMDHDV_RP_ICRB100',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_ICRB100_N',2030,'TMDHDV_RP_ICRB100',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_ICRB100_N',2035,'TMDHDV_RP_ICRB100',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_ICRB100_N',2040,'TMDHDV_RP_ICRB100',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_ICRB100_N',2045,'TMDHDV_RP_ICRB100',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_ICRB100_N',2050,'TMDHDV_RP_ICRB100',0.0368,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_ICRB100_N',2025,'TMDHDV_RP_ICRB100',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_ICRB100_N',2030,'TMDHDV_RP_ICRB100',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_ICRB100_N',2035,'TMDHDV_RP_ICRB100',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_ICRB100_N',2040,'TMDHDV_RP_ICRB100',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_ICRB100_N',2045,'TMDHDV_RP_ICRB100',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_ICRB100_N',2050,'TMDHDV_RP_ICRB100',0.0521,'#kt/bpm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_RFB100_N',2025,'TMDHDV_RF_B100',0.267,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_RFB100_N',2030,'TMDHDV_RF_B100',0.267,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_RFB100_N',2035,'TMDHDV_RF_B100',0.267,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_RFB100_N',2040,'TMDHDV_RF_B100',0.267,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_RFB100_N',2045,'TMDHDV_RF_B100',0.267,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','BIODSL','T_HDV_RFB100_N',2050,'TMDHDV_RF_B100',0.267,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_RFB100_N',2025,'TMDHDV_RF_B100',0.000146,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_RFB100_N',2030,'TMDHDV_RF_B100',0.000146,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_RFB100_N',2035,'TMDHDV_RF_B100',0.000146,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_RFB100_N',2040,'TMDHDV_RF_B100',0.000146,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_RFB100_N',2045,'TMDHDV_RF_B100',0.000146,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','BIODSL','T_HDV_RFB100_N',2050,'TMDHDV_RF_B100',0.000146,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_RFB100_N',2025,'TMDHDV_RF_B100',0.00759,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_RFB100_N',2030,'TMDHDV_RF_B100',0.00759,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_RFB100_N',2035,'TMDHDV_RF_B100',0.00759,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_RFB100_N',2040,'TMDHDV_RF_B100',0.00759,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_RFB100_N',2045,'TMDHDV_RF_B100',0.00759,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','BIODSL','T_HDV_RFB100_N',2050,'TMDHDV_RF_B100',0.00759,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_RFB100_N',2025,'TMDHDV_RF_B100',0.00783,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_RFB100_N',2030,'TMDHDV_RF_B100',0.00783,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_RFB100_N',2035,'TMDHDV_RF_B100',0.00783,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_RFB100_N',2040,'TMDHDV_RF_B100',0.00783,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_RFB100_N',2045,'TMDHDV_RF_B100',0.00783,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','BIODSL','T_HDV_RFB100_N',2050,'TMDHDV_RF_B100',0.00783,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_RFB100_N',2025,'TMDHDV_RF_B100',0.01108,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_RFB100_N',2030,'TMDHDV_RF_B100',0.01108,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_RFB100_N',2035,'TMDHDV_RF_B100',0.01108,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_RFB100_N',2040,'TMDHDV_RF_B100',0.01108,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_RFB100_N',2045,'TMDHDV_RF_B100',0.01108,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','BIODSL','T_HDV_RFB100_N',2050,'TMDHDV_RF_B100',0.01108,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','T_LNG','T_HDV_RFLNG_N',2025,'TMDHDV_RF_LNG',0.2887,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','T_LNG','T_HDV_RFLNG_N',2030,'TMDHDV_RF_LNG',0.2887,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','T_LNG','T_HDV_RFLNG_N',2035,'TMDHDV_RF_LNG',0.2887,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','T_LNG','T_HDV_RFLNG_N',2040,'TMDHDV_RF_LNG',0.2887,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','T_LNG','T_HDV_RFLNG_N',2045,'TMDHDV_RF_LNG',0.2887,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','T_LNG','T_HDV_RFLNG_N',2050,'TMDHDV_RF_LNG',0.2887,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','T_LNG','T_HDV_RFLNG_N',2025,'TMDHDV_RF_LNG',7.8e-05,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','T_LNG','T_HDV_RFLNG_N',2030,'TMDHDV_RF_LNG',7.8e-05,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','T_LNG','T_HDV_RFLNG_N',2035,'TMDHDV_RF_LNG',7.8e-05,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','T_LNG','T_HDV_RFLNG_N',2040,'TMDHDV_RF_LNG',7.8e-05,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','T_LNG','T_HDV_RFLNG_N',2045,'TMDHDV_RF_LNG',7.8e-05,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','T_LNG','T_HDV_RFLNG_N',2050,'TMDHDV_RF_LNG',7.8e-05,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','T_LNG','T_HDV_RFLNG_N',2025,'TMDHDV_RF_LNG',0.000821,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','T_LNG','T_HDV_RFLNG_N',2030,'TMDHDV_RF_LNG',0.000821,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','T_LNG','T_HDV_RFLNG_N',2035,'TMDHDV_RF_LNG',0.000821,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','T_LNG','T_HDV_RFLNG_N',2040,'TMDHDV_RF_LNG',0.000821,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','T_LNG','T_HDV_RFLNG_N',2045,'TMDHDV_RF_LNG',0.000821,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','T_LNG','T_HDV_RFLNG_N',2050,'TMDHDV_RF_LNG',0.000821,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','T_LNG','T_HDV_RFLNG_N',2025,'TMDHDV_RF_LNG',0.000846,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','T_LNG','T_HDV_RFLNG_N',2030,'TMDHDV_RF_LNG',0.000846,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','T_LNG','T_HDV_RFLNG_N',2035,'TMDHDV_RF_LNG',0.000846,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','T_LNG','T_HDV_RFLNG_N',2040,'TMDHDV_RF_LNG',0.000846,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','T_LNG','T_HDV_RFLNG_N',2045,'TMDHDV_RF_LNG',0.000846,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','T_LNG','T_HDV_RFLNG_N',2050,'TMDHDV_RF_LNG',0.000846,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','T_LNG','T_HDV_RFLNG_N',2025,'TMDHDV_RF_LNG',0.01198,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','T_LNG','T_HDV_RFLNG_N',2030,'TMDHDV_RF_LNG',0.01198,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','T_LNG','T_HDV_RFLNG_N',2035,'TMDHDV_RF_LNG',0.01198,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','T_LNG','T_HDV_RFLNG_N',2040,'TMDHDV_RF_LNG',0.01198,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','T_LNG','T_HDV_RFLNG_N',2045,'TMDHDV_RF_LNG',0.01198,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','T_LNG','T_HDV_RFLNG_N',2050,'TMDHDV_RF_LNG',0.01198,'#kt/btm','#GREET 2019');
 CREATE TABLE "Efficiency" (
 	"regions"	text,
 	"input_comm"	text,
@@ -13363,8 +13539,8 @@ INSERT INTO `Efficiency` VALUES ('US','RFO_EA','T_EA_RFO',2017,'RFO',1.0,'NULL')
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_A_JP','T_HDV_BLNDDEM_A',2017,'TMDHDV_A',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_A_GA','T_HDV_BLNDDEM_A',2017,'TMDHDV_A',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_SUB','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_ICR','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRDSL','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_ICRDSL','T_HDV_BLNDDEM_RP_ICR',2017,'TMDHDV_RP_ICR',1.0,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRDSL','T_HDV_BLNDDEM_RP_CR',2017,'TMDHDV_RP_CR',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','DSL','T_OH_DSL_N',2017,'TMDOH_DSL',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E10','T_OH_E10_N',2017,'TMDOH_E10',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_OH_E10_N',2017,'TMDOH_E10',1.0,'NULL');
@@ -14194,22 +14370,6 @@ INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_N',2040,'TMDHDV_A_JP',0.4
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_R',2000,'TMDHDV_A_JP',0.43,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_R',2005,'TMDHDV_A_JP',0.43,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_R',2010,'TMDHDV_A_JP',0.43,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_N',2020,'TMDHDV_RP_ICR',0.4635,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_N',2025,'TMDHDV_RP_ICR',0.4635,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_N',2030,'TMDHDV_RP_ICR',0.4635,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_N',2035,'TMDHDV_RP_ICR',0.4635,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_N',2040,'TMDHDV_RP_ICR',0.4635,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_R',2000,'TMDHDV_RP_ICR',0.3885,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_R',2005,'TMDHDV_RP_ICR',0.3885,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_R',2010,'TMDHDV_RP_ICR',0.3885,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',3.648,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',3.779,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',3.919,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',4.071,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',4.215,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',2.909,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',3.04,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',3.552,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
 INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2020,'TMDHDV_RP_SUB',1.267,'#US9rTv18.1');
 INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2025,'TMDHDV_RP_SUB',1.267,'#US9rTv18.1');
 INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2030,'TMDHDV_RP_SUB',1.267,'#US9rTv18.1');
@@ -14341,8 +14501,6 @@ INSERT INTO `Efficiency` VALUES ('US','ELC','R_WH_SOLELC_N',2045,'RWHSOL',1.0,'N
 INSERT INTO `Efficiency` VALUES ('US','ethos_R','R_WH_SOLELC_N',2045,'RWHSOL',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E10','T_HDV_AGA_N',2045,'TMDHDV_A_GA',0.276,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_N',2045,'TMDHDV_A_JP',0.45,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_N',2045,'TMDHDV_RP_ICR',0.4635,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',4.215,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
 INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2045,'TMDHDV_RP_SUB',1.267,'#US9rTv18.1');
 INSERT INTO `Efficiency` VALUES ('US','C_NGA','C_CK_CONVECTION_NGA_N',2050,'CCKNGA',0.6,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ELC','C_CK_INDUCTION_ELC_N',2050,'CCKELC',0.8,'NULL');
@@ -14467,8 +14625,6 @@ INSERT INTO `Efficiency` VALUES ('US','ELC','R_WH_SOLELC_N',2050,'RWHSOL',1.0,'N
 INSERT INTO `Efficiency` VALUES ('US','ethos_R','R_WH_SOLELC_N',2050,'RWHSOL',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E10','T_HDV_AGA_N',2050,'TMDHDV_A_GA',0.276,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_N',2050,'TMDHDV_A_JP',0.45,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_N',2050,'TMDHDV_RP_ICR',0.4635,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',4.215,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
 INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2050,'TMDHDV_RP_SUB',1.267,'#US9rTv18.1');
 INSERT INTO `Efficiency` VALUES ('US','ethos','IMPELCCOAS',2017,'COAS_EA',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ethos','IMPELCCOAL',2017,'COAL_EA',1.0,'NULL');
@@ -15527,18 +15683,9 @@ INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_GE',2040,'TMDHDV_A_JP',0.
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_GE',2045,'TMDHDV_A_JP',0.516,NULL);
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_GE',2050,'TMDHDV_A_JP',0.516,NULL);
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_R',2015,'TMDHDV_A_JP',0.43,NULL);
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',3.648,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',3.779,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',3.919,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',4.071,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',4.215,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',4.215,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',4.215,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSLELC_R',2015,'TMDHDV_RP_ICR',0.3885,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_R',2015,'TMDHDV_RP_SUB',1.147,NULL);
-INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',3.513,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRELC','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRDM','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRELC','T_HDV_BLNDDEM_RP_CR',2017,'TMDHDV_RP_CR',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRDM','T_HDV_BLNDDEM_RP_CR',2017,'TMDHDV_RP_CR',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','H2_100','T_FT',2020,'T_Liquids',0.8,'#Table 3 of https://www.sciencedirect.com/science/article/pii/S0360319915001652#sec3 indicates a 83% efficiency. Table 3 of Zeman and Keith (2007) indicates a 80% efficiecny (https://keith.seas.harvard.edu/files/tkg/files/103.zeman_.2008.chncs_.e.pdf). To be more conservative, 80% is chosen.'')');
 INSERT INTO `Efficiency` VALUES ('US','H2_100','T_FT',2025,'T_Liquids',0.8,'#Table 3 of https://www.sciencedirect.com/science/article/pii/S0360319915001652#sec3 indicates a 83% efficiency. Table 3 of Zeman and Keith (2007) indicates a 80% efficiecny (https://keith.seas.harvard.edu/files/tkg/files/103.zeman_.2008.chncs_.e.pdf). To be more conservative, 80% is chosen.'')');
 INSERT INTO `Efficiency` VALUES ('US','H2_100','T_FT',2030,'T_Liquids',0.8,'#Table 3 of https://www.sciencedirect.com/science/article/pii/S0360319915001652#sec3 indicates a 83% efficiency. Table 3 of Zeman and Keith (2007) indicates a 80% efficiecny (https://keith.seas.harvard.edu/files/tkg/files/103.zeman_.2008.chncs_.e.pdf). To be more conservative, 80% is chosen.'')');
@@ -15797,7 +15944,7 @@ INSERT INTO `Efficiency` VALUES ('US','DSLELC','T_HDV_CRDM_R',2000,'TMDHDV_RP_CR
 INSERT INTO `Efficiency` VALUES ('US','DSLELC','T_HDV_CRDM_R',2005,'TMDHDV_RP_CRDM',0.3327,'#estimated with data from Isaac, 2020. https://search-proquest-com.proxy.library.cmu.edu/docview/2410648110?pq-origsite=gscholar&fromopenview=true');
 INSERT INTO `Efficiency` VALUES ('US','DSLELC','T_HDV_CRDM_R',2010,'TMDHDV_RP_CRDM',0.3327,'#estimated with data from Isaac, 2020. https://search-proquest-com.proxy.library.cmu.edu/docview/2410648110?pq-origsite=gscholar&fromopenview=true');
 INSERT INTO `Efficiency` VALUES ('US','DSLELC','T_HDV_CRDM_R',2015,'TMDHDV_RP_CRDM',0.3327,'#estimated with data from Isaac, 2020. https://search-proquest-com.proxy.library.cmu.edu/docview/2410648110?pq-origsite=gscholar&fromopenview=true');
-INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRB20','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CRB20','T_HDV_BLNDDEM_RP_CR',2017,'TMDHDV_RP_CR',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','E10','T_HDV_THSE10_N',2020,'TMDHDV_HTS_E10',0.0381,'#epa US9rTv18.1.1');
 INSERT INTO `Efficiency` VALUES ('US','E10','T_HDV_THSE10_N',2025,'TMDHDV_HTS_E10',0.0381,'#epa US9rTv18.1.1');
 INSERT INTO `Efficiency` VALUES ('US','E10','T_HDV_THSE10_N',2030,'TMDHDV_HTS_E10',0.0381,'#epa US9rTv18.1.1');
@@ -17518,10 +17665,6 @@ INSERT INTO `Efficiency` VALUES ('US','TMDHDV_WTLBS_LH2','T_HDV_BLNDDEM_WT_LBS',
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_WTC_LH2','T_HDV_BLNDDEM_WT_C',2030,'TMDHDV_WTC',1.0,'#blend');
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_WTGC_LH2','T_HDV_BLNDDEM_WT_GC',2030,'TMDHDV_WTGC',1.0,'#blend');
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_WTO_LH2','T_HDV_BLNDDEM_WT_O',2030,'TMDHDV_WTO',1.0,'#blend');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2000,'TMDHDV_RF_B20',2.909,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2005,'TMDHDV_RF_B20',3.04,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2010,'TMDHDV_RF_B20',3.552,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
-INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2015,'TMDHDV_RF_B20',3.513,'#GREET2019. Sheet Rail_WTW, Energy intensity by rail type.');
 INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_THLB20_R',2005,'TMDHDV_HTL_B20',0.0443836428571429,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
 INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_THLB20_R',2010,'TMDHDV_HTL_B20',0.0443836428571429,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
 INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_THLB20_R',2015,'TMDHDV_HTL_B20',0.0443836428571429,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
@@ -17585,6 +17728,76 @@ INSERT INTO `Efficiency` VALUES ('US','TMDHDV_HTL_LNG','T_HDV_BLNDDEM_HTL',2020,
 INSERT INTO `Efficiency` VALUES ('US','ethos','IMPTRNLNG',2017,'T_LNG_EA',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_WTP_MGO','T_HDV_BLNDDEM_WTP',2017,'TMDHDV_WTP',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_WTP_ELC','T_HDV_BLNDDEM_WTP',2030,'TMDHDV_WTP',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_CR','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_ICR','T_HDV_BLNDDEM_RP',2017,'TMDHDV_RP',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_R',2000,'TMDHDV_RP_ICRDSL',0.481878759392802,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_R',2005,'TMDHDV_RP_ICRDSL',0.674568602400161,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_R',2010,'TMDHDV_RP_ICRDSL',0.830197421694057,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_R',2015,'TMDHDV_RP_ICRDSL',0.830197421694057,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_N',2020,'TMDHDV_RP_ICRDSL',0.838116633983666,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_N',2025,'TMDHDV_RP_ICRDSL',0.847548814751971,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_N',2030,'TMDHDV_RP_ICRDSL',0.855804160350204,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_N',2035,'TMDHDV_RP_ICRDSL',0.864221906189715,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_N',2040,'TMDHDV_RP_ICRDSL',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_N',2045,'TMDHDV_RP_ICRDSL',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_ICRDSL_N',2050,'TMDHDV_RP_ICRDSL',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_ICRB20_N',2020,'TMDHDV_RP_ICRB20',0.838116633983666,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_ICRB20_N',2025,'TMDHDV_RP_ICRB20',0.847548814751971,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_ICRB20_N',2030,'TMDHDV_RP_ICRB20',0.855804160350204,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_ICRB20_N',2035,'TMDHDV_RP_ICRB20',0.864221906189715,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_ICRB20_N',2040,'TMDHDV_RP_ICRB20',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_ICRB20_N',2045,'TMDHDV_RP_ICRB20',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_ICRB20_N',2050,'TMDHDV_RP_ICRB20',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_ICRB20','T_HDV_BLNDDEM_RP_ICR',2020,'TMDHDV_RP_ICR',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_ICRB100_N',2025,'TMDHDV_RP_ICRB100',0.847548814751971,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_ICRB100_N',2030,'TMDHDV_RP_ICRB100',0.855804160350204,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_ICRB100_N',2035,'TMDHDV_RP_ICRB100',0.864221906189715,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_ICRB100_N',2040,'TMDHDV_RP_ICRB100',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_ICRB100_N',2045,'TMDHDV_RP_ICRB100',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_ICRB100_N',2050,'TMDHDV_RP_ICRB100',0.872806892012791,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_ICRB100','T_HDV_BLNDDEM_RP_ICR',2025,'TMDHDV_RP_ICR',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',3.2342,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',3.2243,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',3.2145,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',3.2047,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',3.195,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',3.1853,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',3.1757,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',3.166,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2000,'TMDHDV_RF_B20',3.2342,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2005,'TMDHDV_RF_B20',3.2243,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2010,'TMDHDV_RF_B20',3.2145,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_R',2015,'TMDHDV_RF_B20',3.2047,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',3.195,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',3.1853,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',3.1757,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',3.166,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_RFB100_N',2025,'TMDHDV_RF_B100',3.1853,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_RFB100_N',2030,'TMDHDV_RF_B100',3.1757,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_RFB100_N',2035,'TMDHDV_RF_B100',3.166,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_RFB100_N',2040,'TMDHDV_RF_B100',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_RFB100_N',2045,'TMDHDV_RF_B100',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_HDV_RFB100_N',2050,'TMDHDV_RF_B100',3.157,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_RFLNG_N',2025,'TMDHDV_RF_LNG',2.94,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_RFLNG_N',2030,'TMDHDV_RF_LNG',2.94,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_RFLNG_N',2035,'TMDHDV_RF_LNG',2.94,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_RFLNG_N',2040,'TMDHDV_RF_LNG',2.94,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_RFLNG_N',2045,'TMDHDV_RF_LNG',2.94,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_RFLNG_N',2050,'TMDHDV_RF_LNG',2.94,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RF_LNG','T_HDV_BLNDDEM_RF',2025,'TMDHDV_RF',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RF_B100','T_HDV_BLNDDEM_RF',2025,'TMDHDV_RF',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','TMDHDV_RP_ICRH2','T_HDV_BLNDDEM_RP_ICR',2030,'TMDHDV_RP_ICR',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','H2','T_HDV_ICRH2_N',2030,'TMDHDV_RP_ICRH2',0.7924,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','H2','T_HDV_ICRH2_N',2035,'TMDHDV_RP_ICRH2',0.8002,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','H2','T_HDV_ICRH2_N',2040,'TMDHDV_RP_ICRH2',0.80815,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','H2','T_HDV_ICRH2_N',2045,'TMDHDV_RP_ICRH2',0.80815,'#GREET 2019');
+INSERT INTO `Efficiency` VALUES ('US','H2','T_HDV_ICRH2_N',2050,'TMDHDV_RP_ICRH2',0.80815,'#GREET 2019');
 CREATE TABLE "DiscountRate" (
 	"regions"	text,
 	"tech"	text,
@@ -18726,11 +18939,6 @@ INSERT INTO `DiscountRate` VALUES ('US','T_HDV_SUBELC_N',2025,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_SUBELC_N',2030,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_SUBELC_N',2035,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_SUBELC_N',2040,0.05,'');
-INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRDSLELC_N',2020,0.05,'');
-INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRDSLELC_N',2025,0.05,'');
-INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRDSLELC_N',2030,0.05,'');
-INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRDSLELC_N',2035,0.05,'');
-INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRDSLELC_N',2040,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFDSL_N',2020,0.05,'
 ');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFDSL_N',2025,0.05,'
@@ -18747,7 +18955,6 @@ INSERT INTO `DiscountRate` VALUES ('US','T_HDV_AGA_N',2045,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_CRDSL_N',2045,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_CRELC_N',2045,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_SUBELC_N',2045,0.05,'');
-INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRDSLELC_N',2045,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFDSL_N',2045,0.05,'
 ');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_AJP_N',2050,0.05,'');
@@ -18756,7 +18963,6 @@ INSERT INTO `DiscountRate` VALUES ('US','T_HDV_AGA_N',2050,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_CRDSL_N',2050,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_CRELC_N',2050,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_SUBELC_N',2050,0.05,'');
-INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRDSLELC_N',2050,0.05,'');
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFDSL_N',2050,0.05,'
 ');
 INSERT INTO `DiscountRate` VALUES ('US','H2_STO150',2017,0.06,NULL);
@@ -19849,6 +20055,35 @@ INSERT INTO `DiscountRate` VALUES ('US','T_HDV_THLLNG_N',2035,0.1,NULL);
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_THLLNG_N',2040,0.1,NULL);
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_THLLNG_N',2045,0.1,NULL);
 INSERT INTO `DiscountRate` VALUES ('US','T_HDV_THLLNG_N',2050,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB100_N',2025,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB100_N',2030,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB100_N',2035,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB100_N',2040,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB100_N',2045,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB100_N',2050,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFB100_N',2025,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFB100_N',2030,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFB100_N',2035,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFB100_N',2040,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFB100_N',2045,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFB100_N',2050,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFLNG_N',2025,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFLNG_N',2030,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFLNG_N',2035,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFLNG_N',2040,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFLNG_N',2045,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_RFLNG_N',2050,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB20_N',2025,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB20_N',2030,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB20_N',2035,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB20_N',2040,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB20_N',2045,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRB20_N',2050,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRH2_N',2030,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRH2_N',2035,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRH2_N',2040,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRH2_N',2045,0.1,NULL);
+INSERT INTO `DiscountRate` VALUES ('US','T_HDV_ICRH2_N',2050,0.1,NULL);
 CREATE TABLE "DemandSpecificDistribution" (
 	"regions"	text,
 	"season_name"	text,
@@ -23396,56 +23631,6 @@ INSERT INTO `CostVariable` VALUES ('US',2050,'T_MDV_TMB20_HYB_N',2045,152.333166
 ');
 INSERT INTO `CostVariable` VALUES ('US',2050,'T_MDV_TMB20_HYB_N',2050,152.3331661,'#M$/bvmt','NULL
 ');
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFB20_N',2020,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_N',2020,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2020,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2025,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2030,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2035,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_N',2020,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_N',2025,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2025,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2030,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2040,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2050,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_N',2025,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_N',2030,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2035,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2040,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2030,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2035,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2040,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2035,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2045,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2045,1.547,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_N',2020,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_N',2020,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2020,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2025,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2030,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2035,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_N',2020,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_N',2025,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2025,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2030,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2040,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2050,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_N',2025,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_N',2030,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2035,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2040,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2030,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2035,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2040,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2035,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2045,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2045,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_R',2005,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_R',2010,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_R',2015,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_R',2010,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_R',2015,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_R',2015,1.5509,'#M$/btm','#EPAUS9rT_v20.1');
 INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_CRB20_N',2020,155.46,'#M$/bpmt','"NULL
 "
 ');
@@ -23852,61 +24037,6 @@ INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_CRELC_R',2015,155.46,'#M$/bp
 INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_CRELC_R',2010,155.46,'#M$/bpmt
 ','NULL
 ');
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSLELC_N',2020,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSLELC_N',2020,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSLELC_N',2020,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSLELC_N',2025,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSLELC_N',2030,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSLELC_N',2035,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSLELC_N',2020,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSLELC_N',2025,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSLELC_N',2025,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSLELC_N',2030,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSLELC_N',2040,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSLELC_N',2050,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSLELC_N',2025,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSLELC_N',2030,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSLELC_N',2035,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSLELC_N',2040,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSLELC_N',2030,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSLELC_N',2035,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSLELC_N',2040,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSLELC_N',2035,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSLELC_N',2045,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSLELC_N',2045,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSLELC_R',2005,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSLELC_R',2010,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSLELC_R',2015,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSLELC_R',2010,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSLELC_R',2015,21.973,'#$M/bpm
-',NULL);
-INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSLELC_R',2015,21.973,'#$M/bpm',NULL);
 INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_AJP_R',2000,9.038,NULL,NULL);
 INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_AJP_R',2000,9.038,NULL,NULL);
 INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_AJP_R',2005,9.038,NULL,NULL);
@@ -27193,6 +27323,224 @@ INSERT INTO `CostVariable` VALUES ('US',2050,'E_PTSO2_COABL',2035,3.0e-05,'#$M/P
 INSERT INTO `CostVariable` VALUES ('US',2050,'E_PTSO2_COABL',2040,3.0e-05,'#$M/PJ','#to ensure that between model runs, deployment of medium, low, and high sulfur coal stay the same');
 INSERT INTO `CostVariable` VALUES ('US',2050,'E_PTSO2_COABL',2045,3.0e-05,'#$M/PJ','#to ensure that between model runs, deployment of medium, low, and high sulfur coal stay the same');
 INSERT INTO `CostVariable` VALUES ('US',2050,'E_PTSO2_COABL',2050,3.0e-05,'#$M/PJ','#to ensure that between model runs, deployment of medium, low, and high sulfur coal stay the same');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_ICRDSL_R',2000,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_ICRDSL_R',2005,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSL_R',2005,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_ICRDSL_R',2010,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSL_R',2010,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSL_R',2010,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_ICRDSL_R',2015,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSL_R',2015,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSL_R',2015,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSL_R',2015,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRDSL_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSL_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSL_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSL_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRDSL_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSL_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSL_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSL_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRDSL_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSL_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSL_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSL_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRDSL_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSL_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSL_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSL_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRDSL_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSL_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSL_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRDSL_N',2045,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSL_N',2045,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRDSL_N',2050,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_ICRB20_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRB20_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRB20_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRB20_N',2020,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRB20_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRB20_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRB20_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB20_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRB20_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRB20_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB20_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB20_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRB20_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB20_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB20_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB20_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB20_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB20_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB20_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB20_N',2045,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB20_N',2045,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB20_N',2050,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFDSL_R',2000,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_R',2000,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_R',2000,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFDSL_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFDSL_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFDSL_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFDSL_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFDSL_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFDSL_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFDSL_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFDSL_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFDSL_N',2045,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2045,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFDSL_N',2050,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFB20_R',2000,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFB20_R',2000,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_R',2000,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFB20_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFB20_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_R',2005,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFB20_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFB20_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_R',2010,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2017,'T_HDV_RFB20_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFB20_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_R',2015,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2020,'T_HDV_RFB20_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2020,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB20_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB20_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB20_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB20_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB20_N',2045,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2045,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB20_N',2050,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFB100_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB100_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB100_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB100_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB100_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB100_N',2025,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFB100_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB100_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB100_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB100_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB100_N',2030,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFB100_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB100_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB100_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB100_N',2035,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFB100_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB100_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB100_N',2040,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFB100_N',2045,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB100_N',2045,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFB100_N',2050,1.9652,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_RFLNG_N',2025,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFLNG_N',2025,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFLNG_N',2025,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFLNG_N',2025,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFLNG_N',2025,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFLNG_N',2025,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_RFLNG_N',2030,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFLNG_N',2030,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFLNG_N',2030,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFLNG_N',2030,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFLNG_N',2030,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_RFLNG_N',2035,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFLNG_N',2035,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFLNG_N',2035,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFLNG_N',2035,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_RFLNG_N',2040,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFLNG_N',2040,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFLNG_N',2040,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_RFLNG_N',2045,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFLNG_N',2045,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_RFLNG_N',2050,3.2492,'#$M/btm','# 6% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRH2_N',2030,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRH2_N',2030,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRH2_N',2030,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRH2_N',2030,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRH2_N',2035,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRH2_N',2035,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRH2_N',2035,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRH2_N',2035,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRH2_N',2040,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRH2_N',2040,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRH2_N',2040,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRH2_N',2045,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRH2_N',2045,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRH2_N',2050,86.258,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2025,'T_HDV_ICRB100_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRB100_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRB100_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB100_N',2025,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2030,'T_HDV_ICRB100_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRB100_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB100_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB100_N',2030,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2035,'T_HDV_ICRB100_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB100_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB100_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB100_N',2035,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2040,'T_HDV_ICRB100_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB100_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB100_N',2040,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2045,'T_HDV_ICRB100_N',2045,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB100_N',2045,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
+INSERT INTO `CostVariable` VALUES ('US',2050,'T_HDV_ICRB100_N',2050,65.018,'#$M/bpm','# 10% of Investment cost (based on EPA assumption in EPAUS9rT_TRNHDV_v20.1.0)');
 CREATE TABLE "CostInvest" (
 	"regions"	text,
 	"tech"	text,
@@ -27582,21 +27930,6 @@ INSERT INTO `CostInvest` VALUES ('US','T_HDV_SUBELC_N',2035,237.36,'#M$/bvmt','N
 ');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_SUBELC_N',2040,237.36,'#M$/bvmt','NULL
 ');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSLELC_N',2020,199.56,'#M$/bvmt','NULL
-');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSLELC_N',2025,199.56,'#M$/bvmt','NULL
-');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSLELC_N',2030,199.56,'#M$/bvmt','NULL
-');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSLELC_N',2035,199.56,'#M$/bvmt','NULL
-');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSLELC_N',2040,199.56,'#M$/bvmt','NULL
-');
-INSERT INTO `CostInvest` VALUES ('US',' T_HDV_RFDSL_N',2020,23.08,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2025,23.08,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2030,23.08,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2035,23.08,'#M$/btm','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2040,23.08,'#M$/btm','#EPAUS9rT_v20.1');
 INSERT INTO `CostInvest` VALUES ('US','R_SH_RELC_N',2020,4.11,'#M$/PJout','NULL
 ');
 INSERT INTO `CostInvest` VALUES ('US','R_SH_RELC_N',2025,4.11,'#M$/PJout','NULL
@@ -28511,9 +28844,6 @@ INSERT INTO `CostInvest` VALUES ('US','T_HDV_AJP_N',2045,814.532,'#M$/bpmt','NUL
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_AGA_N',2045,17.511,'#M$/bpmt','NULL');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_SUBELC_N',2045,237.36,'#M$/bvmt','NULL
 ');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSLELC_N',2045,199.56,'#M$/bvmt','NULL
-');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2045,23.08,'#M$/btm','#EPAUS9rT_v20.1');
 INSERT INTO `CostInvest` VALUES ('US','R_SH_RELC_N',2045,4.11,'#M$/PJout','NULL
 ');
 INSERT INTO `CostInvest` VALUES ('US','R_SH_HPELC_VER1_N',2045,7.43,'#M$/PJout','NULL');
@@ -28700,9 +29030,6 @@ INSERT INTO `CostInvest` VALUES ('US','T_HDV_AJP_N',2050,814.532,'#M$/bpmt','NUL
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_AGA_N',2050,17.511,'#M$/bpmt','NULL');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_SUBELC_N',2050,237.36,'#M$/bvmt','NULL
 ');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSLELC_N',2050,199.56,'#M$/bvmt','NULL
-');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2050,23.08,'#M$/btm','#EPAUS9rT_v20.1');
 INSERT INTO `CostInvest` VALUES ('US','R_SH_RELC_N',2050,4.11,'#M$/PJout','NULL
 ');
 INSERT INTO `CostInvest` VALUES ('US','R_SH_HPELC_VER1_N',2050,7.43,'#M$/PJout','NULL');
@@ -29188,19 +29515,6 @@ INSERT INTO `CostInvest` VALUES ('US','T_HDV_AJP_GE',2040,929.617201,'#M$/bpmt
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_AJP_GE',2045,929.617201,'#M$/bpmt
 ','#US9rTv18.1');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_AJP_GE',2050,929.617201,'#M$/bpmt','#US9rTv18.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2020,23.08,'#M$/btm
-','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2025,23.08,'#M$/btm
-','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2030,23.08,'#M$/btm
-','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2035,23.08,'#M$/btm
-','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2040,23.08,'#M$/btm
-','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2045,23.08,'#M$/btm
-','#EPAUS9rT_v20.1');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2050,23.08,'#M$/btm','#EPAUS9rT_v20.1');
 INSERT INTO `CostInvest` VALUES ('US','T_FT',2020,92.82,'#Tabe 3 of https://www.sciencedirect.com/science/article/pii/S0360319915001652#sec3
 
 43 M Euro for 14000 t/a capacity',NULL);
@@ -31263,6 +31577,57 @@ INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2035,3433.212,'#$M/bvmt',
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2040,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2045,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2050,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2020,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2025,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2030,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2035,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2040,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2045,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2050,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB20_N',2020,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB20_N',2025,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB20_N',2030,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB20_N',2035,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB20_N',2040,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB20_N',2045,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB20_N',2050,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB100_N',2025,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB100_N',2030,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB100_N',2035,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB100_N',2040,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB100_N',2045,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRB100_N',2050,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2020,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2025,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2030,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2035,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2040,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2045,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFDSL_N',2050,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2020,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2025,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2030,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2035,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2040,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2045,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB20_N',2050,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB100_N',2025,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB100_N',2030,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB100_N',2035,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB100_N',2040,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB100_N',2045,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFB100_N',2050,32.754,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFLNG_N',2025,54.153,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFLNG_N',2030,54.153,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFLNG_N',2035,54.153,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFLNG_N',2040,54.153,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFLNG_N',2045,54.153,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_RFLNG_N',2050,54.153,'#$M/btm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2030,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2035,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2040,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2045,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2050,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
