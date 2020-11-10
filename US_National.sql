@@ -230,86 +230,86 @@ INSERT INTO `technologies` VALUES ('C_WH_NWHHE_NGA_N','p','commercial','#new NGA
 INSERT INTO `technologies` VALUES ('C_WH_NWHST_NGA_N','p','commercial','#new NGA NWH ST for water heating','');
 INSERT INTO `technologies` VALUES ('C_WH_NWH_NGA_R','p','commercial','#existing NGA NWH for water heating','');
 INSERT INTO `technologies` VALUES ('C_WH_SOLST_ELC_N','p','commercial','#new electric and solarST for water heating','');
-INSERT INTO `technologies` VALUES ('E_BLND_BITHML_COALIGCC_N','p','electric','#blending tech to collect high medium low sulfur bit coal for new coal IGCC plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_BITHML_COALSTM_N','p','electric','#blending tech to collect high medium low sulfur bit coal for new coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_BITSUBLIG_COALIGCC_N','p','electric','#blending tech to collect bit subbit and lig coal for new coal IGCC plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_BITSUBLIG_COALSTM_N','p','electric','#blending tech to collect bit subbit and lig coal for new coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_BITSUBLIG_COALSTM_R','p','electric','#blending tech to collect bit subbit and lig coal for existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_BIT_COALSTM_R','p','electric','#blending tech to collect bit coal for existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_LIGHM_COALIGCC_N','p','electric','#blending tech to collect high medium sulfur lignite coal for new coal IGCC plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_LIGHM_COALSTM_N','p','electric','#blending tech to collect high medium sulfur lignite coal for new coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_LIG_COALSTM_R','p','electric','#blending tech to collect lignite coal for existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_SUBBIT_COALSTM_R','p','electric','#blending tech to collect subbit coal for existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_SUBML_COALIGCC_N','p','electric','#blending tech to collect medium low sulfur subbit coal for new coal IGCC plant','');
-INSERT INTO `technologies` VALUES ('E_BLND_SUBML_COALSTM_N','p','electric','#blending tech to collect medium low sulfur subbit coal for new coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_CCR_COAB','p','electric','#co2 capture retrofit tech for bituminous coal to existing power plant located after FGD or passthrough and before LNB','');
-INSERT INTO `technologies` VALUES ('E_CCR_COAL','p','electric','#co2 capture retrofit tech for lignite coal to existing power plant located after FGD or passthrough and before LNB','');
-INSERT INTO `technologies` VALUES ('E_CCR_COALIGCC_N','p','electric','#co2 capture retrofit tech before coal IGCC plant','');
-INSERT INTO `technologies` VALUES ('E_CCR_COALSTM_N','p','electric','#co2 capture retrofit tech before new coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_CCR_COAS','p','electric','#co2 capture retrofit tech for subbituminous coal to existing power plant located after FGD or passthrough and before LNB','');
-INSERT INTO `technologies` VALUES ('E_EA_COAB','p','electric','#co2 emission accounting tech for coal bituminous','');
-INSERT INTO `technologies` VALUES ('E_EA_COAL','p','electric','#co2 emission accounting tech for coal lignite','');
-INSERT INTO `technologies` VALUES ('E_EA_COAS','p','electric','#co2 emission accounting tech for coal subbituminous','');
-INSERT INTO `technologies` VALUES ('E_ELCTDLOSS','p','electric','#Transmission and distribution loss','');
-INSERT INTO `technologies` VALUES ('E_LNBSCR_COAB_N','p','electric','#new LNB combined with SCR retrofit for nox removal from bituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNBSCR_COAL_N','p','electric','#new LNB combined with SCR retrofit for nox removal from lignite before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNBSCR_COAS_N','p','electric','#new LNB combined with SCR retrofit for nox removal from subbituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNBSCR_COAS_R','p','electric','#existing LNB combined with SCR retrofit for nox removal from subbituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAB_N','p','electric','#new LNB combined with SNCR retrofit for nox removal from bituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAL_N','p','electric','#new LNB combined with SNCR retrofit for nox removal from lignite before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAS_N','p','electric','#new LNB combined with SNCR retrofit for nox removal from subbituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNB_COAB_N','p','electric','#new LNB retrofit tech for nox removal from bituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNB_COAB_R','p','electric','#existing LNB retrofit tech for nox removal from bituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNB_COAL_N','p','electric','#new LNB retrofit tech for nox removal from lignite before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNB_COAL_R','p','electric','#existing LNB retrofit tech for nox removal from lignite before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNB_COAS_N','p','electric','#new LNB retrofit tech for nox removal from subbituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_LNB_COAS_R','p','electric','#existing LNB retrofit tech for nox removal from subbituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTCO2_COAB','p','electric','#co2 passthrough tech for bituminous coal after FGD and before LNB','');
-INSERT INTO `technologies` VALUES ('E_PTCO2_COAL','p','electric','#co2 passthrough tech for lignite coal after FGD and before LNB','');
-INSERT INTO `technologies` VALUES ('E_PTCO2_COAS','p','electric','#co2 passthrough tech for subbituminous coal after FGD and before LNB','');
-INSERT INTO `technologies` VALUES ('E_PTNOXLNB_COAB','p','electric','#nox passthrough tech for bituminous coal after so2 or co2 passthrough and before SCR or SNCR or passthrough','');
-INSERT INTO `technologies` VALUES ('E_PTNOXLNB_COAL','p','electric','#nox passthrough tech for lignite coal after so2 or co2 passthrough and before SCR or SNCR or passthrough','');
-INSERT INTO `technologies` VALUES ('E_PTNOXLNB_COAS','p','electric','#nox passthrough tech for subbituminous coal after so2 or co2 passthrough and before SCR or SNCR or passthrough','');
-INSERT INTO `technologies` VALUES ('E_PTNOXSCR_COAB','p','electric','#nox passthrough tech for bituminous coal after LNB retrofit or passthrough and before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTNOXSCR_COAL','p','electric','#nox passthrough tech for lignite coal after LNB retrofit or passthrough and before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTNOXSCR_COAS','p','electric','#nox passthrough tech for subbituminous coal after LNB retrofit or passthrough and before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTSO2_COABH','p','electric','#passthrough tech with no so2 removal from bit high sulfur before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTSO2_COABL','p','electric','#passthrough tech with no so2 removal from bit low sulfur before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTSO2_COABM','p','electric','#passthrough tech with no so2 removal from bit medium sulfur before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTSO2_COALH','p','electric','#passthrough tech with no so2 removal from lig high sulfur before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTSO2_COALM','p','electric','#passthrough tech with no so2 removal from lig medium sulfur before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTSO2_COASL','p','electric','#passthrough tech with no so2 removal from subbit low sulfur before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_PTSO2_COASM','p','electric','#passthrough tech with no so2 removal from subbit medium sulfur before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_SCR_COAB_N','p','electric','#new SCR retrofit for nox removal from bituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_SCR_COAL_N','p','electric','#new SCR retrofit for nox removal from lignite before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_SCR_COAS_N','p','electric','#new SCR retrofit for nox removal from subbituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_SNCR_COAB_N','p','electric','#new SNCR retrofit for nox removal from bituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_SNCR_COAL_N','p','electric','#new SNCR retrofit for nox removal from lignite before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_SNCR_COAS_N','p','electric','#new SNCR retrofit for nox removal from subbituminous before existing coal steam plant','');
-INSERT INTO `technologies` VALUES ('E_BIOIGCC_N','p','PowerPlants','#new bioIGCC power plant','');
-INSERT INTO `technologies` VALUES ('E_COALIGCC_CCS_N','pb','PowerPlants','#new coal IGCC with CCS power plant','');
-INSERT INTO `technologies` VALUES ('E_COALIGCC_N','pb','PowerPlants','#new coal IGCC power plant','');
-INSERT INTO `technologies` VALUES ('E_COALSTM_N','pb','PowerPlants','#new pulverized coal steam power plant','');
-INSERT INTO `technologies` VALUES ('E_COALSTM_R','pb','PowerPlants','#existing coal steam power plant','');
-INSERT INTO `technologies` VALUES ('E_GEOBCFS_N','p','PowerPlants','#new geothermal binary cycle & flashed system power plant','');
-INSERT INTO `technologies` VALUES ('E_GEO_R','p','PowerPlants','#existing geothermal power plant','');
-INSERT INTO `technologies` VALUES ('E_HYDCONV_R','p','PowerPlants','#existing conventional hydroelectric power plant','');
-INSERT INTO `technologies` VALUES ('E_HYDREV_R','ps','PowerPlants','#existing reversible hydroelectric power plant','');
-INSERT INTO `technologies` VALUES ('E_NGAACC_N','p','PowerPlants','#new natural gas advanced combined cycle power plant','');
-INSERT INTO `technologies` VALUES ('E_NGAACT_N','p','PowerPlants','#new natural gas advanced combustion turbine power plant','');
-INSERT INTO `technologies` VALUES ('E_NGACC_CCS_N','p','PowerPlants','#new natural gas combined cycle with CCS power plant','');
-INSERT INTO `technologies` VALUES ('E_NGACC_R','p','PowerPlants','# existing natural gas combined cycle power plant, the portion of the whole combined cycle capacity which can change rate from 1 timeslice to another in the same season ','');
-INSERT INTO `technologies` VALUES ('E_NGACT_R','p','PowerPlants','#existing natural gas combustion turbine power plant','');
-INSERT INTO `technologies` VALUES ('E_NGASTM_R','pb','PowerPlants','#existing natural gas steam power plant','');
-INSERT INTO `technologies` VALUES ('E_SOLPVCEN_N','p','PowerPlants','#new solar photovoltaic centralized power plant','');
-INSERT INTO `technologies` VALUES ('E_SOLPVENDUSE_N','p','PowerPlants','#New solar PV in end-use sectors, the difference with E_SOLPVCEN_N is no variable cost (T&D losses) assigned','');
-INSERT INTO `technologies` VALUES ('E_SOLPV_R','p','PowerPlants','#existing solar photovoltaic power plant','');
-INSERT INTO `technologies` VALUES ('E_SOLTHCEN_N','p','PowerPlants','#new solar thermal centralized power plant','');
-INSERT INTO `technologies` VALUES ('E_SOLTH_R','p','PowerPlants','#existing solar thermal power plant','');
-INSERT INTO `technologies` VALUES ('E_URNLWR_N','pb','PowerPlants','#new nuclear LWR power plant','');
-INSERT INTO `technologies` VALUES ('E_URNLWR_R','pb','PowerPlants','#existing nuclear LWR power plant','');
-INSERT INTO `technologies` VALUES ('E_WNDCL4_N','p','PowerPlants','#new wind class 4 power plant','');
-INSERT INTO `technologies` VALUES ('E_WND_R','p','PowerPlants','#existing wind power plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_BITHML_COALIGCC_N','p','electric_misc','#blending tech to collect high medium low sulfur bit coal for new coal IGCC plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_BITHML_COALSTM_N','p','electric_misc','#blending tech to collect high medium low sulfur bit coal for new coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_BITSUBLIG_COALIGCC_N','p','electric_misc','#blending tech to collect bit subbit and lig coal for new coal IGCC plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_BITSUBLIG_COALSTM_N','p','electric_misc','#blending tech to collect bit subbit and lig coal for new coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_BITSUBLIG_COALSTM_R','p','electric_misc','#blending tech to collect bit subbit and lig coal for existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_BIT_COALSTM_R','p','electric_misc','#blending tech to collect bit coal for existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_LIGHM_COALIGCC_N','p','electric_misc','#blending tech to collect high medium sulfur lignite coal for new coal IGCC plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_LIGHM_COALSTM_N','p','electric_misc','#blending tech to collect high medium sulfur lignite coal for new coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_LIG_COALSTM_R','p','electric_misc','#blending tech to collect lignite coal for existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_SUBBIT_COALSTM_R','p','electric_misc','#blending tech to collect subbit coal for existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_SUBML_COALIGCC_N','p','electric_misc','#blending tech to collect medium low sulfur subbit coal for new coal IGCC plant','');
+INSERT INTO `technologies` VALUES ('E_BLND_SUBML_COALSTM_N','p','electric_misc','#blending tech to collect medium low sulfur subbit coal for new coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_CCR_COAB','p','electric_misc','#co2 capture retrofit tech for bituminous coal to existing power plant located after FGD or passthrough and before LNB','');
+INSERT INTO `technologies` VALUES ('E_CCR_COAL','p','electric_misc','#co2 capture retrofit tech for lignite coal to existing power plant located after FGD or passthrough and before LNB','');
+INSERT INTO `technologies` VALUES ('E_CCR_COALIGCC_N','p','electric_misc','#co2 capture retrofit tech before coal IGCC plant','');
+INSERT INTO `technologies` VALUES ('E_CCR_COALSTM_N','p','electric_misc','#co2 capture retrofit tech before new coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_CCR_COAS','p','electric_misc','#co2 capture retrofit tech for subbituminous coal to existing power plant located after FGD or passthrough and before LNB','');
+INSERT INTO `technologies` VALUES ('E_EA_COAB','p','electric_misc','#co2 emission accounting tech for coal bituminous','');
+INSERT INTO `technologies` VALUES ('E_EA_COAL','p','electric_misc','#co2 emission accounting tech for coal lignite','');
+INSERT INTO `technologies` VALUES ('E_EA_COAS','p','electric_misc','#co2 emission accounting tech for coal subbituminous','');
+INSERT INTO `technologies` VALUES ('E_ELCTDLOSS','p','electric_misc','#Transmission and distribution loss','');
+INSERT INTO `technologies` VALUES ('E_LNBSCR_COAB_N','p','electric_misc','#new LNB combined with SCR retrofit for nox removal from bituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNBSCR_COAL_N','p','electric_misc','#new LNB combined with SCR retrofit for nox removal from lignite before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNBSCR_COAS_N','p','electric_misc','#new LNB combined with SCR retrofit for nox removal from subbituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNBSCR_COAS_R','p','electric_misc','#existing LNB combined with SCR retrofit for nox removal from subbituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAB_N','p','electric_misc','#new LNB combined with SNCR retrofit for nox removal from bituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAL_N','p','electric_misc','#new LNB combined with SNCR retrofit for nox removal from lignite before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAS_N','p','electric_misc','#new LNB combined with SNCR retrofit for nox removal from subbituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNB_COAB_N','p','electric_misc','#new LNB retrofit tech for nox removal from bituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNB_COAB_R','p','electric_misc','#existing LNB retrofit tech for nox removal from bituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNB_COAL_N','p','electric_misc','#new LNB retrofit tech for nox removal from lignite before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNB_COAL_R','p','electric_misc','#existing LNB retrofit tech for nox removal from lignite before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNB_COAS_N','p','electric_misc','#new LNB retrofit tech for nox removal from subbituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_LNB_COAS_R','p','electric_misc','#existing LNB retrofit tech for nox removal from subbituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTCO2_COAB','p','electric_misc','#co2 passthrough tech for bituminous coal after FGD and before LNB','');
+INSERT INTO `technologies` VALUES ('E_PTCO2_COAL','p','electric_misc','#co2 passthrough tech for lignite coal after FGD and before LNB','');
+INSERT INTO `technologies` VALUES ('E_PTCO2_COAS','p','electric_misc','#co2 passthrough tech for subbituminous coal after FGD and before LNB','');
+INSERT INTO `technologies` VALUES ('E_PTNOXLNB_COAB','p','electric_misc','#nox passthrough tech for bituminous coal after so2 or co2 passthrough and before SCR or SNCR or passthrough','');
+INSERT INTO `technologies` VALUES ('E_PTNOXLNB_COAL','p','electric_misc','#nox passthrough tech for lignite coal after so2 or co2 passthrough and before SCR or SNCR or passthrough','');
+INSERT INTO `technologies` VALUES ('E_PTNOXLNB_COAS','p','electric_misc','#nox passthrough tech for subbituminous coal after so2 or co2 passthrough and before SCR or SNCR or passthrough','');
+INSERT INTO `technologies` VALUES ('E_PTNOXSCR_COAB','p','electric_misc','#nox passthrough tech for bituminous coal after LNB retrofit or passthrough and before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTNOXSCR_COAL','p','electric_misc','#nox passthrough tech for lignite coal after LNB retrofit or passthrough and before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTNOXSCR_COAS','p','electric_misc','#nox passthrough tech for subbituminous coal after LNB retrofit or passthrough and before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTSO2_COABH','p','electric_misc','#passthrough tech with no so2 removal from bit high sulfur before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTSO2_COABL','p','electric_misc','#passthrough tech with no so2 removal from bit low sulfur before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTSO2_COABM','p','electric_misc','#passthrough tech with no so2 removal from bit medium sulfur before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTSO2_COALH','p','electric_misc','#passthrough tech with no so2 removal from lig high sulfur before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTSO2_COALM','p','electric_misc','#passthrough tech with no so2 removal from lig medium sulfur before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTSO2_COASL','p','electric_misc','#passthrough tech with no so2 removal from subbit low sulfur before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_PTSO2_COASM','p','electric_misc','#passthrough tech with no so2 removal from subbit medium sulfur before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_SCR_COAB_N','p','electric_misc','#new SCR retrofit for nox removal from bituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_SCR_COAL_N','p','electric_misc','#new SCR retrofit for nox removal from lignite before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_SCR_COAS_N','p','electric_misc','#new SCR retrofit for nox removal from subbituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_SNCR_COAB_N','p','electric_misc','#new SNCR retrofit for nox removal from bituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_SNCR_COAL_N','p','electric_misc','#new SNCR retrofit for nox removal from lignite before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_SNCR_COAS_N','p','electric_misc','#new SNCR retrofit for nox removal from subbituminous before existing coal steam plant','');
+INSERT INTO `technologies` VALUES ('E_BIOIGCC_N','p','electric','#new bioIGCC power plant','');
+INSERT INTO `technologies` VALUES ('E_COALIGCC_CCS_N','pb','electric','#new coal IGCC with CCS power plant','');
+INSERT INTO `technologies` VALUES ('E_COALIGCC_N','pb','electric','#new coal IGCC power plant','');
+INSERT INTO `technologies` VALUES ('E_COALSTM_N','pb','electric','#new pulverized coal steam power plant','');
+INSERT INTO `technologies` VALUES ('E_COALSTM_R','pb','electric','#existing coal steam power plant','');
+INSERT INTO `technologies` VALUES ('E_GEOBCFS_N','p','electric','#new geothermal binary cycle & flashed system power plant','');
+INSERT INTO `technologies` VALUES ('E_GEO_R','p','electric','#existing geothermal power plant','');
+INSERT INTO `technologies` VALUES ('E_HYDCONV_R','p','electric','#existing conventional hydroelectric power plant','');
+INSERT INTO `technologies` VALUES ('E_HYDREV_R','ps','electric','#existing reversible hydroelectric power plant','');
+INSERT INTO `technologies` VALUES ('E_NGAACC_N','p','electric','#new natural gas advanced combined cycle power plant','');
+INSERT INTO `technologies` VALUES ('E_NGAACT_N','p','electric','#new natural gas advanced combustion turbine power plant','');
+INSERT INTO `technologies` VALUES ('E_NGACC_CCS_N','p','electric','#new natural gas combined cycle with CCS power plant','');
+INSERT INTO `technologies` VALUES ('E_NGACC_R','p','electric','# existing natural gas combined cycle power plant, the portion of the whole combined cycle capacity which can change rate from 1 timeslice to another in the same season ','');
+INSERT INTO `technologies` VALUES ('E_NGACT_R','p','electric','#existing natural gas combustion turbine power plant','');
+INSERT INTO `technologies` VALUES ('E_NGASTM_R','pb','electric','#existing natural gas steam power plant','');
+INSERT INTO `technologies` VALUES ('E_SOLPVCEN_N','p','electric','#new solar photovoltaic centralized power plant','');
+INSERT INTO `technologies` VALUES ('E_SOLPVENDUSE_N','p','electric','#New solar PV in end-use sectors, the difference with E_SOLPVCEN_N is no variable cost (T&D losses) assigned','');
+INSERT INTO `technologies` VALUES ('E_SOLPV_R','p','electric','#existing solar photovoltaic power plant','');
+INSERT INTO `technologies` VALUES ('E_SOLTHCEN_N','p','electric','#new solar thermal centralized power plant','');
+INSERT INTO `technologies` VALUES ('E_SOLTH_R','p','electric','#existing solar thermal power plant','');
+INSERT INTO `technologies` VALUES ('E_URNLWR_N','pb','electric','#new nuclear LWR power plant','');
+INSERT INTO `technologies` VALUES ('E_URNLWR_R','pb','electric','#existing nuclear LWR power plant','');
+INSERT INTO `technologies` VALUES ('E_WNDCL4_N','p','electric','#new wind class 4 power plant','');
+INSERT INTO `technologies` VALUES ('E_WND_R','p','electric','#existing wind power plant','');
 INSERT INTO `technologies` VALUES ('R_BLND_FUEL_LT','p','residential','#blending tech to blend INC, CFL, REF, EXT, and LFL for lighting','');
 INSERT INTO `technologies` VALUES ('R_BLND_FUEL_SC','p','residential','#blending tech to blend heat pump, central AC, and room AC for space cooling','');
 INSERT INTO `technologies` VALUES ('R_BLND_FUEL_SH','p','residential','#blending tech to collect NGA, ELC, LPG, KER, DISTOIL, wood for space heating','');
@@ -421,7 +421,7 @@ INSERT INTO `technologies` VALUES ('T_HDV_SUBELC_N','p','transport','#new electr
 INSERT INTO `technologies` VALUES ('T_HDV_SUBELC_R','p','transport','#existing electric subways and street cars','');
 INSERT INTO `technologies` VALUES ('T_OH_DSL_N','p','transport','#new offhighway diesel','');
 INSERT INTO `technologies` VALUES ('T_OH_E10_N','p','transport','#new offhighway E10','');
-INSERT INTO `technologies` VALUES ('E_SOLPVENDUSE_R','p','PowerPlants','#existing rooftop PV ','');
+INSERT INTO `technologies` VALUES ('E_SOLPVENDUSE_R','p','electric','#existing rooftop PV ','');
 INSERT INTO `technologies` VALUES ('IMPINDGSL','r','supply','#import of diesel fuel for the industrial sector','');
 INSERT INTO `technologies` VALUES ('IMPELC','r','supply','#electricity imports. This tech has useful life only in the first future time periods to prevent potential infeasibilities. The import costs are super high!','');
 INSERT INTO `technologies` VALUES ('T_BLND_ETH','p','transport','#blending or combination of all pure ethanol sources','');
@@ -429,16 +429,16 @@ INSERT INTO `technologies` VALUES ('T_BLND_ETHGAS_E10','p','transport','#blendin
 INSERT INTO `technologies` VALUES ('T_BLND_ETHGAS_E85','p','transport','#blending of ethanol and gasoline to produce E85','');
 INSERT INTO `technologies` VALUES ('IMPELCNGA_S3','p','supply','#natural gas import for electric sector','');
 INSERT INTO `technologies` VALUES ('T_BLND_ETH_ACTIVITY_CONTROL','p','transport','#dummy tech to control national ethanol consumption','');
-INSERT INTO `technologies` VALUES ('E_WNDCL1_N','p','PowerPlants','#wind class 1','');
-INSERT INTO `technologies` VALUES ('E_WNDCL2_N','p','PowerPlants','#wind class 2','');
-INSERT INTO `technologies` VALUES ('E_WNDCL3_N','p','PowerPlants','#wind class 3','');
-INSERT INTO `technologies` VALUES ('E_WNDCL5_N','p','PowerPlants','#wind class 5','');
+INSERT INTO `technologies` VALUES ('E_WNDCL1_N','p','electric','#wind class 1','');
+INSERT INTO `technologies` VALUES ('E_WNDCL2_N','p','electric','#wind class 2','');
+INSERT INTO `technologies` VALUES ('E_WNDCL3_N','p','electric','#wind class 3','');
+INSERT INTO `technologies` VALUES ('E_WNDCL5_N','p','electric','#wind class 5','');
 INSERT INTO `technologies` VALUES ('IMPINDREN','p','supply','#imported biomass to industrial sector','');
-INSERT INTO `technologies` VALUES ('E_BECCS_N','p','PowerPlants','#bio-energy with carbon capture and storage','');
+INSERT INTO `technologies` VALUES ('E_BECCS_N','p','electric','#bio-energy with carbon capture and storage','');
 INSERT INTO `technologies` VALUES ('E_TRS_DC','p','supply','#transformation of electricity from AC to DC','');
 INSERT INTO `technologies` VALUES ('E_ELECAL','p','supply','#technology for electrolysis','');
 INSERT INTO `technologies` VALUES ('E_ELECPEM','p','supply','#technology for electrolysis','');
-INSERT INTO `technologies` VALUES ('H2_STO150','ps','PowerPlants','#hydrogen storage','');
+INSERT INTO `technologies` VALUES ('H2_STO150','ps','electric','#hydrogen storage','');
 INSERT INTO `technologies` VALUES ('H2_COMP10100','p','supply','#hydrogen compression technology at 100 bar','');
 INSERT INTO `technologies` VALUES ('H2_COMP100700','p','supply','#hydrogen compression technology at 700 bar','');
 INSERT INTO `technologies` VALUES ('SNGSYN','p','supply','#technology for generating synthetic natural gas from hydrogen and CO2','');
@@ -457,8 +457,8 @@ INSERT INTO `technologies` VALUES ('T_E10MEOHBL','p','transport','#blending meth
 INSERT INTO `technologies` VALUES ('T_E85MEOHBL','p','transport','#blending methanol with E85','');
 INSERT INTO `technologies` VALUES ('H2700_FC','p','transport','#H2_700 going to fuel cell','');
 INSERT INTO `technologies` VALUES ('E_EAG_NGA','p','supply','#connecting SNG to NGA','');
-INSERT INTO `technologies` VALUES ('E_NGA_H2BL','p','electric','#blending nga with h2','');
-INSERT INTO `technologies` VALUES ('E_Batt','ps','PowerPlants','#battery storage','');
+INSERT INTO `technologies` VALUES ('E_NGA_H2BL','p','electric_misc','#blending nga with h2','');
+INSERT INTO `technologies` VALUES ('E_Batt','ps','electric','#battery storage','');
 INSERT INTO `technologies` VALUES ('IMPAGR','r','supply','#agricultural residues imports into the system','');
 INSERT INTO `technologies` VALUES ('IMPECG','r','supply','#energy crop - grass imports into the system','');
 INSERT INTO `technologies` VALUES ('IMPECW','r','supply','#energy crop - wood based imports into the system','');
@@ -473,38 +473,38 @@ INSERT INTO `technologies` VALUES ('FISCH_TROP','p','supply','#fFscher tropsch p
 INSERT INTO `technologies` VALUES ('TRANSEST','p','supply','#transesterification process to produce bio-diesel from soy','');
 INSERT INTO `technologies` VALUES ('CELL_ETH_SYN','p','supply','#cellolostic ethanol generation from corn stover','');
 INSERT INTO `technologies` VALUES ('BLEND_BIOJTF_JTF','p','transport','# technology blending bio-jetfule with jet fuel','');
-INSERT INTO `technologies` VALUES ('E_Batt8hr','ps','PowerPlants','#battery storage','');
+INSERT INTO `technologies` VALUES ('E_Batt8hr','ps','electric','#battery storage','');
 INSERT INTO `technologies` VALUES ('CO2_Capture','p','supply','#capturing carbon for air to use for generating SNG','');
 INSERT INTO `technologies` VALUES ('CO2_BLND','p','supply','#capturing carbon for air to use for generating SNG','');
-INSERT INTO `technologies` VALUES ('E_H2CC_N','p','PowerPlants','#hydrogen combustion in a combined cycle plants for electricity generation','');
+INSERT INTO `technologies` VALUES ('E_H2CC_N','p','electric','#hydrogen combustion in a combined cycle plants for electricity generation','');
 INSERT INTO `technologies` VALUES ('C_OTH','p','commercial','#technology for meeting other commercial demand','');
 INSERT INTO `technologies` VALUES ('R_OTH','p','residential','#technology for meeting other residential demand','');
 INSERT INTO `technologies` VALUES ('R_SH_FKER_R','p','residential','#kerosene fired space heating furnace in the residential sector','');
 INSERT INTO `technologies` VALUES ('R_SH_RDISTOIL_R','p','residential','#ditilate oil fired space heating furnace in the residential sector','');
 INSERT INTO `technologies` VALUES ('R_WH_DISTOIL_R','p','residential','#ditilate oil fired water heating in the residential sector','');
 INSERT INTO `technologies` VALUES ('C_WH_SOL_ELC_R','p','commercial','#combined solar electricity water heater in the commercial sector','');
-INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAB_R','p','electric','#low nox burner, selective non-catalytic reduction retrofit for bituminous coal, existing','');
-INSERT INTO `technologies` VALUES ('E_LNBSCR_COAB_R','p','electric','#low nox burner, selective catalytic reduction retrofit for bituminous coal, existing','');
-INSERT INTO `technologies` VALUES ('E_SCR_COAB_R','p','electric','#selective catalytic reduction technology for bituminous coal, existing ','');
-INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAS_R','p','electric','#low nox burner, selective non-catalytic reduction retrofit for subbituminous coal, existing','');
-INSERT INTO `technologies` VALUES ('E_SNCR_COAB_R','p','electric','#selective non-catalytic reduction technology retrofit for bituminous coal, existing ','');
-INSERT INTO `technologies` VALUES ('E_SNCR_COAS_R','p','electric','#selective non-catalytic reduction retrofit tech for subbituminous coal, existing','');
-INSERT INTO `technologies` VALUES ('E_SCR_COAS_R','p','electric','#selective catalytic reduction technology retrofit, subbitumionous coal, existing','');
+INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAB_R','p','electric_misc','#low nox burner, selective non-catalytic reduction retrofit for bituminous coal, existing','');
+INSERT INTO `technologies` VALUES ('E_LNBSCR_COAB_R','p','electric_misc','#low nox burner, selective catalytic reduction retrofit for bituminous coal, existing','');
+INSERT INTO `technologies` VALUES ('E_SCR_COAB_R','p','electric_misc','#selective catalytic reduction technology for bituminous coal, existing ','');
+INSERT INTO `technologies` VALUES ('E_LNBSNCR_COAS_R','p','electric_misc','#low nox burner, selective non-catalytic reduction retrofit for subbituminous coal, existing','');
+INSERT INTO `technologies` VALUES ('E_SNCR_COAB_R','p','electric_misc','#selective non-catalytic reduction technology retrofit for bituminous coal, existing ','');
+INSERT INTO `technologies` VALUES ('E_SNCR_COAS_R','p','electric_misc','#selective non-catalytic reduction retrofit tech for subbituminous coal, existing','');
+INSERT INTO `technologies` VALUES ('E_SCR_COAS_R','p','electric_misc','#selective catalytic reduction technology retrofit, subbitumionous coal, existing','');
 INSERT INTO `technologies` VALUES ('T_HDV_CRELC_R','p','transport','#existing electric commuter rail','');
-INSERT INTO `technologies` VALUES ('E_FGD_COASM_N','p','electric','#flue gas desulferization retrofit technology for subbituminous medium-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COASL_N','p','electric','#flue gas desulferization retrofit technology for subbituminous low-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COALM_N','p','electric','#flue gas desulferization retrofit technology for lignite medium-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COALH_N','p','electric','#flue gas desulferization retrofit technology for lignite high-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COABM_N','p','electric','#flue gas desulferization retrofit technology for bituminous medium-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COABL_N','p','electric','#flue gas desulferization retrofit technology for bituminous low-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COABH_N','p','electric','#flue gas desulferization retrofit technology for bituminous high-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COASM_R','p','electric','#existing flue gas desulferization retrofit technology for subbituminous medium-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COASL_R','p','electric','#existing flue gas desulferization retrofit technology for subbituminous low-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COALM_R','p','electric','#existing flue gas desulferization retrofit technology for lignite medium-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COALH_R','p','electric','#existing flue gas desulferization retrofit technology for lignite high-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COABM_R','p','electric','#flue gas desulferization retrofit technology for bituminous medium-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COABL_R','p','electric','#flue gas desulferization retrofit technology for bituminous low-sulfur coal','');
-INSERT INTO `technologies` VALUES ('E_FGD_COABH_R','p','electric','#flue gas desulferization retrofit technology for bituminous high-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COASM_N','p','electric_misc','#flue gas desulferization retrofit technology for subbituminous medium-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COASL_N','p','electric_misc','#flue gas desulferization retrofit technology for subbituminous low-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COALM_N','p','electric_misc','#flue gas desulferization retrofit technology for lignite medium-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COALH_N','p','electric_misc','#flue gas desulferization retrofit technology for lignite high-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COABM_N','p','electric_misc','#flue gas desulferization retrofit technology for bituminous medium-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COABL_N','p','electric_misc','#flue gas desulferization retrofit technology for bituminous low-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COABH_N','p','electric_misc','#flue gas desulferization retrofit technology for bituminous high-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COASM_R','p','electric_misc','#existing flue gas desulferization retrofit technology for subbituminous medium-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COASL_R','p','electric_misc','#existing flue gas desulferization retrofit technology for subbituminous low-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COALM_R','p','electric_misc','#existing flue gas desulferization retrofit technology for lignite medium-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COALH_R','p','electric_misc','#existing flue gas desulferization retrofit technology for lignite high-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COABM_R','p','electric_misc','#flue gas desulferization retrofit technology for bituminous medium-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COABL_R','p','electric_misc','#flue gas desulferization retrofit technology for bituminous low-sulfur coal','');
+INSERT INTO `technologies` VALUES ('E_FGD_COABH_R','p','electric_misc','#flue gas desulferization retrofit technology for bituminous high-sulfur coal','');
 INSERT INTO `technologies` VALUES ('DRY_MILL','p','supply','#dry mill process for ethanol production','');
 INSERT INTO `technologies` VALUES ('IMPCORN','p','supply','#corn resource imports into the system','');
 INSERT INTO `technologies` VALUES ('CCS_EA','p','supply','#co2 accounting for CCS emissions','');
@@ -910,8 +910,10 @@ INSERT INTO `technologies` VALUES ('T_HDV_WTO_LH2_N','p','transport','#Liquid hy
 INSERT INTO `technologies` VALUES ('T_HDV_RFB20_R','p','transport','# existing diesel freight rail','');
 INSERT INTO `technologies` VALUES ('T_HDV_THLH2_N','p','transport','#H2 heavy-duty long haul trucks','');
 INSERT INTO `technologies` VALUES ('O_EA_GSL','p','industrial','#emission accounting technology from gasoline in the industrial sector','');
-INSERT INTO `technologies` VALUES ('IMPTRNLNG','r','supply','#imported LNG to transport','');
-INSERT INTO `technologies` VALUES ('T_EA_LNG','p','transport','#co2 emissions accounting LNG','');
+INSERT INTO `technologies` VALUES ('IMPTRNLNG','r','supply','#imported LNG to transport
+','');
+INSERT INTO `technologies` VALUES ('T_EA_LNG','p','transport','#co2 emissions accounting LNG
+','');
 INSERT INTO `technologies` VALUES ('T_HDV_THLLNG_N','p','transport','#LNG heavy-duty long haul trucks','');
 INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_WTP','p','transport','#blending demand tech for passenger boats','');
 INSERT INTO `technologies` VALUES ('T_HDV_BLNDDEM_RP_CR','p','transport','#blending technology for commuter rail technologies',NULL);
@@ -1344,7 +1346,8 @@ INSERT INTO `tech_annual` VALUES ('T_HDV_WTGC_LH2_N','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_WTO_LH2_N','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_RFB20_R','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_THLH2_N','');
-INSERT INTO `tech_annual` VALUES ('T_EA_LNG','');
+INSERT INTO `tech_annual` VALUES ('T_EA_LNG
+','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_THLLNG_N','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_BLNDDEM_WTP','');
 INSERT INTO `tech_annual` VALUES ('T_HDV_BLNDDEM_RP_CR',NULL);
@@ -1359,8 +1362,8 @@ CREATE TABLE "sector_labels" (
 	PRIMARY KEY("sector")
 );
 INSERT INTO `sector_labels` VALUES ('supply');
-INSERT INTO `sector_labels` VALUES ('PowerPlants');
 INSERT INTO `sector_labels` VALUES ('electric');
+INSERT INTO `sector_labels` VALUES ('electric_misc');
 INSERT INTO `sector_labels` VALUES ('transport');
 INSERT INTO `sector_labels` VALUES ('commercial');
 INSERT INTO `sector_labels` VALUES ('residential');
@@ -1806,8 +1809,10 @@ INSERT INTO `commodities` VALUES ('TMDHDV_WTC_LH2','p','#demand for liquid hydro
 INSERT INTO `commodities` VALUES ('TMDHDV_WTGC_LH2','p','#demand for general cargo LH2 ships');
 INSERT INTO `commodities` VALUES ('TMDHDV_WTO_LH2','p','#demand for offshore supply vessel LH2 ships');
 INSERT INTO `commodities` VALUES ('TMDHDV_HTL_H2','p','#transport miles demanded for H2 heavy long haul trucks ');
-INSERT INTO `commodities` VALUES ('T_LNG_EA','p','#LNG to co2 emission accounting for transportation');
-INSERT INTO `commodities` VALUES ('T_LNG','p','#lng for the transportation sector');
+INSERT INTO `commodities` VALUES ('T_LNG_EA','p','#LNG to co2 emission accounting for transportation
+');
+INSERT INTO `commodities` VALUES ('T_LNG','p','#lng for the transportation sector
+');
 INSERT INTO `commodities` VALUES ('TMDHDV_HTL_LNG','p','#demand for heavy-duty long haul LNG trucks');
 INSERT INTO `commodities` VALUES ('TMDHDV_WTP_MGO','p','#mgo demand for passenger ferries');
 INSERT INTO `commodities` VALUES ('TMDHDV_WTP_ELC','p','#demand for electric passenger ferries');
@@ -5482,22 +5487,54 @@ INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2025,'
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2030,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2035,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2040,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_OH_DSL_N',2017,'TMDOH_DSL',0.417,'#kt/bvmt','#VT_EPAUS9rT_TRNOH_v18.1.0full.xlsx');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_OH_DSL_N',2017,'TMDOH_DSL',0.01176,'#kt/bvmt','#VT_EPAUS9rT_TRNOH_v18.1.0full.xlsx');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','E10','T_OH_E10_N',2017,'TMDOH_E10',0.1773,'#kt/bvmt','#VT_EPAUS9rT_TRNOH_v18.1.0full.xlsx');
@@ -5570,8 +5607,12 @@ INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_N',2045,'
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_N',2045,'TMDHDV_A_JP',0.0215,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','E10','T_HDV_AGA_N',2045,'TMDHDV_A_GA',0.1636,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2045,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','COABH_R','E_FGD_COABH_N',2050,'COAB_R_CC',-1.127,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','COABM_R','E_FGD_COABM_N',2050,'COAB_R_CC',-0.505,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','COABL_R','E_FGD_COABL_N',2050,'COAB_R_CC',-0.14,'#kt/PJout','NULL');
@@ -5616,8 +5657,12 @@ INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_N',2050,'
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_N',2050,'TMDHDV_A_JP',0.0215,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','E10','T_HDV_AGA_N',2050,'TMDHDV_A_GA',0.1636,'#kt/bpm','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','E10','T_HDV_AGA_N',2050,'TMDHDV_A_GA',0.0011,'#kt/bpm','NULL');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.00015,'#kt/btm
+','#kt/btm
+');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','E_NGA','E_NGASTM_R',2015,'ELCP',0.067,'#kt/PJout','#VT_EPAUS9rT_ELC_v18.1.1, Emission tab, SEELCNGS');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','E_NGA','E_NGASTM_R',2015,'ELCP',0.903,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_SUP','ethos','IMPTRNGAS',2017,'GAS_EA',0.0051,'#kt/PJout','#GREET 2019');
@@ -5918,20 +5963,34 @@ INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_WT',2035,
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_WT',2040,'TMDHDV_A_JP',0.0215,'#kt/bpm',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_WT',2045,'TMDHDV_A_JP',0.0215,'#kt/bpm',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_WT',2050,'TMDHDV_A_JP',0.0215,'#kt/bpm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.26701,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.26701,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.26701,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.26701,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.26701,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.00015,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.00015,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.00015,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.00015,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.00015,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.26701,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.00015,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.26701,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.00015,'#kt/btm',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.26701,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.26701,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.26701,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.26701,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.26701,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.00015,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.00015,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.00015,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.00015,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.00015,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.26701,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.00015,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.26701,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.00015,'#kt/btm
+',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','H2_100','T_FT',2020,'T_Liquids',0.00367,'#kt/PJout','#same as the emission activity of the fischer troph process');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','H2_100','T_FT',2025,'T_Liquids',0.00367,'#kt/PJout','#same as the emission activity of the fischer troph process');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','H2_100','T_FT',2030,'T_Liquids',0.00367,'#kt/PJout','#same as the emission activity of the fischer troph process');
@@ -8180,62 +8239,150 @@ INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','JTF','T_HDV_AJP_GE',2050,
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_R',2015,'TMDHDV_A_JP',0.065,'#kt/bpm',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','JTF','T_HDV_AJP_R',2015,'TMDHDV_A_JP',0.0215,'#kt/bpm',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_WT',2050,'TMDHDV_A_JP',0.065,'#kt/bpm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.26701,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.00783,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.0076,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.01108,'#kt/btm','#kt/btm');
+INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.00015,'#kt/btm','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.26701,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2000,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2005,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2010,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_R',2015,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.00783,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.0076,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2020,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2025,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2030,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2035,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2040,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2045,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_HDV_RFDSL_N',2050,'TMDHDV_RF_DSL',0.01108,'#kt/btm
+','#kt/btm
+');
 INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.00783,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.00783,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.00783,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.00783,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.00783,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.00783,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.00783,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.0076,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.0076,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.0076,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.0076,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.0076,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.0076,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.0076,'#kt/btm',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.01108,'#kt/btm','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.01108,'#kt/btm','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.01108,'#kt/btm','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.01108,'#kt/btm','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.01108,'#kt/btm','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.01108,'#kt/btm','#GREET 2019');
-INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.01108,'#kt/btm','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.00783,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.00783,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.00783,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.00783,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.00783,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.00783,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.0076,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.0076,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.0076,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.0076,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.0076,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.0076,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.0076,'#kt/btm
+',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2020,'TMDHDV_RF_B20',0.01108,'#kt/btm
+','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2025,'TMDHDV_RF_B20',0.01108,'#kt/btm
+','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2030,'TMDHDV_RF_B20',0.01108,'#kt/btm
+','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2035,'TMDHDV_RF_B20',0.01108,'#kt/btm
+','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2040,'TMDHDV_RF_B20',0.01108,'#kt/btm
+','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2045,'TMDHDV_RF_B20',0.01108,'#kt/btm
+','#GREET 2019');
+INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','B20','T_HDV_RFB20_N',2050,'TMDHDV_RF_B20',0.01108,'#kt/btm
+','#GREET 2019');
 INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_CRDSL_R',2000,'TMDHDV_RP_CRDSL',0.002,'#kt/bvmt','#EPA US9rT v18.1
 ');
 INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_HDV_CRDSL_R',2005,'TMDHDV_RP_CRDSL',0.002,'#kt/bvmt','#EPA US9rT v18.1
@@ -13050,8 +13197,10 @@ INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_MDV_TMDSL_R',2000
 INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_MDV_TMDSL_R',2005,'TMDMDV_MT_DSL',1.0327,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
 INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_MDV_TMDSL_R',2010,'TMDMDV_MT_DSL',1.0327,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
 INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_MDV_TMDSL_R',2015,'TMDMDV_MT_DSL',1.0327,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
-INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',0.4036,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
-INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',1.0327,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
+INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',0.4036,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS
+');
+INSERT INTO `EmissionActivity` VALUES ('US','pm10_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',1.0327,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS
+');
 INSERT INTO `EmissionActivity` VALUES ('US','voc_TRN','DSL','T_MDV_TMDSL_HYB_R',2015,'TMDMDV_MT_DSL',0.4852,'#kt/bvmt','#VT_EPAUS9rT_TRNHDV_v18.1.1full.xlsx, TechData_HDV_EMIS');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_R',2000,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','DSL','T_HDV_ICRDSL_R',2005,'TMDHDV_RP_ICRDSL',1.2557,'#kt/bpm','#GREET 2019');
@@ -17716,14 +17865,22 @@ INSERT INTO `Efficiency` VALUES ('US','CO2_SNG','MEOHSYN',2035,'MEOH',1.0e-06,NU
 INSERT INTO `Efficiency` VALUES ('US','CO2_SNG','MEOHSYN',2040,'MEOH',1.0e-06,NULL);
 INSERT INTO `Efficiency` VALUES ('US','CO2_SNG','MEOHSYN',2045,'MEOH',1.0e-06,NULL);
 INSERT INTO `Efficiency` VALUES ('US','CO2_SNG','MEOHSYN',2050,'MEOH',1.0e-06,NULL);
-INSERT INTO `Efficiency` VALUES ('US','T_LNG_EA','T_EA_LNG',2017,'T_LNG',1.0,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2020,'TMDHDV_HTL_LNG',0.04438,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2025,'TMDHDV_HTL_LNG',0.05649,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2030,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2035,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2040,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2045,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2050,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG_EA','T_EA_LNG',2017,'T_LNG',1.0,'NULL
+');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2020,'TMDHDV_HTL_LNG',0.04438,'#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2025,'TMDHDV_HTL_LNG',0.05649,'#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2030,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2035,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2040,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2045,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `Efficiency` VALUES ('US','T_LNG','T_HDV_THLLNG_N',2050,'TMDHDV_HTL_LNG',0.06213,'#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_HTL_LNG','T_HDV_BLNDDEM_HTL',2020,'TMDHDV_HTL',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','ethos','IMPTRNLNG',2017,'T_LNG_EA',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_WTP_MGO','T_HDV_BLNDDEM_WTP',2017,'TMDHDV_WTP',1.0,NULL);
@@ -31570,12 +31727,18 @@ INSERT INTO `CostInvest` VALUES ('US','MEOH_STO',2035,1.0,NULL,'#We assume the e
 INSERT INTO `CostInvest` VALUES ('US','MEOH_STO',2040,1.0,NULL,'#We assume the existing gasoline storage can be used for methanol storage, and therefore no construction cost is specified for methanol storage. However, in order to make the model not choose arbitrary large storage capacities, a tiny investment cost (1 M$/GW) is specified.');
 INSERT INTO `CostInvest` VALUES ('US','MEOH_STO',2045,1.0,NULL,'#We assume the existing gasoline storage can be used for methanol storage, and therefore no construction cost is specified for methanol storage. However, in order to make the model not choose arbitrary large storage capacities, a tiny investment cost (1 M$/GW) is specified.');
 INSERT INTO `CostInvest` VALUES ('US','MEOH_STO',2050,1.0,NULL,'#We assume the existing gasoline storage can be used for methanol storage, and therefore no construction cost is specified for methanol storage. However, in order to make the model not choose arbitrary large storage capacities, a tiny investment cost (1 M$/GW) is specified.');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2020,3395.485,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2025,3395.485,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2030,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2035,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2040,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
-INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2045,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2020,3395.485,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2025,3395.485,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2030,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2035,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2040,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
+INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2045,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.
+');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_THLLNG_N',2050,3433.212,'#$M/bvmt','#Transitioning to zero-emission freight trucks. ICCT, 2017.');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2020,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRDSL_N',2025,650.185,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
