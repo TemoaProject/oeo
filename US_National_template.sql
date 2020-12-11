@@ -4,9 +4,10 @@ CREATE TABLE "CapacityCredit" (
 	"regions"	text,
 	"periods"	integer,
 	"tech"	text,
+	"vintage" integer,
 	"cf_tech"	real CHECK("cf_tech" >= 0 AND "cf_tech" <= 1),
 	"cf_tech_notes"	text,
-	PRIMARY KEY("regions","periods","tech")
+	PRIMARY KEY("regions","periods","tech","vintage")
 );
 
 
