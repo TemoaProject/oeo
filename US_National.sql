@@ -848,6 +848,12 @@ INSERT INTO `tech_curtailment` VALUES ('E_WNDCL2_N',NULL);
 INSERT INTO `tech_curtailment` VALUES ('E_WNDCL3_N',NULL);
 INSERT INTO `tech_curtailment` VALUES ('E_SOLPVENDUSE_N',NULL);
 INSERT INTO `tech_curtailment` VALUES ('E_SOLPVENDUSE_R',NULL);
+CREATE TABLE "tech_flex" (
+	"tech"	text,
+	"notes"	TEXT,
+	PRIMARY KEY("tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
 CREATE TABLE "tech_annual" (
 	"tech"	text,
 	"notes"	TEXT,

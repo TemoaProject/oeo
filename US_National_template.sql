@@ -1377,6 +1377,14 @@ CREATE TABLE "tech_curtailment" (
 );
 
 
+CREATE TABLE "tech_flex" (
+	"tech"	text,
+	"notes"	TEXT,
+	PRIMARY KEY("tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
+
+
 CREATE TABLE "tech_exchange" (
 	"tech"	text,
 	"notes"	TEXT,
