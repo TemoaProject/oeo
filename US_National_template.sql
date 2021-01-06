@@ -539,19 +539,19 @@ CREATE TABLE "commodities" (
 	FOREIGN KEY("flag") REFERENCES "commodity_labels"("comm_labels")
 );
 
-INSERT INTO "commodities" VALUES('O_OTH_EA','p','#''other'' industrial fuel to emission accounting');
+INSERT INTO "commodities" VALUES('I_OTH_EA','p','#''other'' industrial fuel to emission accounting');
 
-INSERT INTO "commodities" VALUES('O_COAL','p','# coal to industrial sector');
+INSERT INTO "commodities" VALUES('I_COAL','p','# coal to industrial sector');
 
-INSERT INTO "commodities" VALUES('O_DFO','p','# distillate fuel oil to industrial sector');
+INSERT INTO "commodities" VALUES('I_DFO','p','# distillate fuel oil to industrial sector');
 
-INSERT INTO "commodities" VALUES('O_GSL','p','# gasoline to industrial sector');
+INSERT INTO "commodities" VALUES('I_GSL','p','# gasoline to industrial sector');
 
-INSERT INTO "commodities" VALUES('O_LPG','p','# LPG to industrial sector');
+INSERT INTO "commodities" VALUES('I_LPG','p','# LPG to industrial sector');
 
-INSERT INTO "commodities" VALUES('O_RFO','p','# residual fuel oil to industrial sector');
+INSERT INTO "commodities" VALUES('I_RFO','p','# residual fuel oil to industrial sector');
 
-INSERT INTO "commodities" VALUES('O_REN','p','# renewable fuel oil to industrial sector');
+INSERT INTO "commodities" VALUES('I_REN','p','# renewable fuel oil to industrial sector');
 
 INSERT INTO "commodities" VALUES('GSLDEM_IND','d','# gasoline to industrial sector');
 
@@ -999,13 +999,13 @@ INSERT INTO "commodities" VALUES('SNG_100','p','# compress SNG to 100 bar');
 
 INSERT INTO "commodities" VALUES('MEOH','p','# methanol');
 
-INSERT INTO "commodities" VALUES('O_NGA','p','#natural gas input to industrial sector');
+INSERT INTO "commodities" VALUES('I_NGA','p','#natural gas input to industrial sector');
 
-INSERT INTO "commodities" VALUES('O_NG_EA','p','#emissions from imported hydrogen fuel cell from transport');
+INSERT INTO "commodities" VALUES('I_NG_EA','p','#emissions from imported hydrogen fuel cell from transport');
 
 INSERT INTO "commodities" VALUES('E_NGA_EA','p','#emissions from imported hydrogen fuel cell from transport');
 
-INSERT INTO "commodities" VALUES('O_GSL_EA','p','#emissions from imported hydrogen fuel cell from transport');
+INSERT INTO "commodities" VALUES('I_GSL_EA','p','#emissions from imported hydrogen fuel cell from transport');
 
 INSERT INTO "commodities" VALUES('STV','p','# corn stover resource');
 
@@ -1029,9 +1029,9 @@ INSERT INTO "commodities" VALUES('UWW','p','#Urban wood waste');
 
 INSERT INTO "commodities" VALUES('TMDHDV_CT_ELC','p','#transport miles demanded commercial truck electric');
 
-INSERT INTO "commodities" VALUES('O_OTH','p','#''Other'' fuels used in the industrial sector');
+INSERT INTO "commodities" VALUES('I_OTH','p','#''Other'' fuels used in the industrial sector');
 
-INSERT INTO "commodities" VALUES('O_OTH_H2','p','#liquid fuels generated from FT process used for meeting ''other'' industrial demand');
+INSERT INTO "commodities" VALUES('I_OTH_H2','p','#liquid fuels generated from FT process used for meeting ''other'' industrial demand');
 
 INSERT INTO "commodities" VALUES('CO2_SNG','p','# atmospheric co2');
 
@@ -1043,7 +1043,7 @@ INSERT INTO "commodities" VALUES('COTHER','d','#Other demand in commercial secto
 
 INSERT INTO "commodities" VALUES('ROTHER','d','#Other demand in resindetial sector');
 
-INSERT INTO "commodities" VALUES('O_SNG','p','#synthetic natural gas used in the industrial sector');
+INSERT INTO "commodities" VALUES('I_SNG','p','#synthetic natural gas used in the industrial sector');
 
 INSERT INTO "commodities" VALUES('T_SNG','p','#synthetic natural gas used in the transportation sector');
 
