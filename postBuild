@@ -1,0 +1,2 @@
+jupyter nbextension enable init_cell/main
+jupyter nbextension enable hide_input/main
