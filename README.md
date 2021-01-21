@@ -1,4 +1,6 @@
 ## Overview ##
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TemoaProject/oeo/master)
+
 Welcome to the GitHub repository associated with the [Open Energy Outlook for the United States](https://openenergyoutlook.org/). This project aims to bring U.S. energy system modeling into the twenty-first century by applying the gold standards of policy-focused academic modeling, maximizing transparency, building a networked community, and working towards a common goal: examining U.S. energy futures to inform future energy and climate policy efforts.
 
 This repository is a work-in-progess, and will initially include the following elements:
@@ -6,6 +8,6 @@ This repository is a work-in-progess, and will initially include the following e
 
 * A relational database to store the Temoa-compatible model input data. We use [sqlite](https://sqlite.org/index.html), a widely  used, open source, self-contained database system for this purpose. The ```.sql``` file is a text file, and the ```.sqlite``` file represents the compiled binary sqlite database. For more details on the preliminary version of the [OEO input database](US_Regional.sqlite), see [here](InputDatabase_README.md).
 
-* Input data is documented through a [Jupyter Book](https://jupyterbook.org/intro.html). This allows us to combine formatted text through the use of mark down with the ability to execute code, include sqlite database queries that render the input data in a convenient tabular form.
+* Input data is documented through a series of Jupyter Notebooks in the [database_documentation](database_documentation/) folder. This allows us to combine formatted text through the use of mark down with the ability to execute code, include sqlite database queries that render the input data in a convenient tabular form.
 
-Note that we are currently working on a preliminary version of the input database and documentation, and we will be sharing it in stages as it is developed.
+Note that we are currently working on a preliminary version of the input database and documentation, and we will be sharing it in stages as it is developed. View this repo and notebooks interactively on Binder [here](https://mybinder.org/v2/gh/TemoaProject/oeo/master).
