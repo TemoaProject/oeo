@@ -23,4 +23,6 @@ dependencies:
     - jupyter_contrib_nbextensions
     - seaborn
     - tabulate
+    - xlsxwriter
     - coincbc
+    - pyam
