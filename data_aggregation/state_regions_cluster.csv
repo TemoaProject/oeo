@@ -1,0 +1,50 @@
+,NAME,STUSPS,Region
+0,Maryland,MD,8
+1,Iowa,IA,6
+2,Delaware,DE,8
+3,Ohio,OH,8
+4,Pennsylvania,PA,8
+5,Nebraska,NE,5
+6,Washington,WA,2
+8,Alabama,AL,7
+9,Arkansas,AR,5
+10,New Mexico,NM,3
+11,Texas,TX,4
+12,California,CA,1
+13,Kentucky,KY,7
+14,Georgia,GA,7
+15,Wisconsin,WI,6
+16,Oregon,OR,2
+17,Missouri,MO,5
+18,Virginia,VA,8
+19,Tennessee,TN,7
+20,Louisiana,LA,5
+21,New York,NY,9
+22,Michigan,MI,6
+23,Idaho,ID,2
+24,Florida,FL,7
+26,Illinois,IL,6
+27,Montana,MT,2
+28,Minnesota,MN,6
+29,Indiana,IN,6
+30,Massachusetts,MA,9
+31,Kansas,KS,5
+32,Nevada,NV,3
+33,Vermont,VT,9
+34,Connecticut,CT,9
+35,New Jersey,NJ,8
+36,District of Columbia,DC,8
+37,North Carolina,NC,7
+38,Utah,UT,3
+39,North Dakota,ND,6
+40,South Carolina,SC,7
+41,Mississippi,MS,7
+42,Colorado,CO,3
+43,South Dakota,SD,5
+44,Oklahoma,OK,5
+45,Wyoming,WY,2
+46,West Virginia,WV,8
+47,Maine,ME,9
+49,New Hampshire,NH,9
+50,Arizona,AZ,3
+51,Rhode Island,RI,9
