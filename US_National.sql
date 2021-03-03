@@ -29125,4 +29125,14 @@ INSERT INTO `CapacityCredit` VALUES ('US',2045,'E_SOLTHCEN_N', 2045, 0.3,NULL);
 INSERT INTO `CapacityCredit` VALUES ('US',2050,'E_SOLTHCEN_N', 2045, 0.3,NULL);
 INSERT INTO `CapacityCredit` VALUES ('US',2050,'E_SOLTHCEN_N', 2050, 0.3,NULL);
 
+CREATE TABLE "MaxResource" (
+	"regions"	text,
+	"tech"	text,
+	"maxres"	real,
+	"maxres_units"	text,
+	"maxres_notes"	text,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY("regions","tech")
+);
+
 COMMIT;
