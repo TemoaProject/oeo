@@ -1600,6 +1600,48 @@ CREATE TABLE "TechOutputSplit" (
 	FOREIGN KEY("output_comm") REFERENCES "commodities"("comm_name"),
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods")
 );
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_NGACC_CCS_N','ELCP','0.0046','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_NGACC_CCS_N','ELCP','0.0046','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_NGACC_CCS_N','ELCP','0.0046','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_NGACC_CCS_N','ELCP','0.0046','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_NGACC_CCS_N','ELCP','0.0046','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_NGACC_CCS_N','ELCP','0.0046','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_NGACC_CCS_N','ELCP','0.0046','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_BECCS_N','co2_CCS','0.9982','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_BECCS_N','co2_CCS','0.9982','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_BECCS_N','co2_CCS','0.9982','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_BECCS_N','co2_CCS','0.9982','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_BECCS_N','co2_CCS','0.9982','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_BECCS_N','co2_CCS','0.9982','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_BECCS_N','co2_CCS','0.9982','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
 CREATE TABLE "TechInputSplit" (
 	"regions"	TEXT,
 	"periods"	integer,
@@ -12689,13 +12731,13 @@ INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGASTM_R',2010,'ELCP',0.33,'NUL
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGASTM_R',2015,'ELCP',0.33,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACT_R',2015,'ELCP',0.24,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_R',2015,'ELCP',0.446,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2020,'ELCP',0.455,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2025,'ELCP',0.455,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2030,'ELCP',0.455,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2035,'ELCP',0.455,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2040,'ELCP',0.455,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2045,'ELCP',0.455,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2050,'ELCP',0.455,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2020,'ELCP',98.91,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2025,'ELCP',98.91,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2030,'ELCP',98.91,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2035,'ELCP',98.91,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2040,'ELCP',98.91,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2045,'ELCP',98.91,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2050,'ELCP',98.91,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGAACT_N',2020,'ELCP',0.34,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGAACT_N',2025,'ELCP',0.34,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGAACT_N',2030,'ELCP',0.34,'NULL');
@@ -12872,20 +12914,20 @@ INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2035,'ELCP',0.
 INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2040,'ELCP',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2045,'ELCP',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2050,'ELCP',0.388,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2020,'ELCP',0.35,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2025,'ELCP',0.35,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2030,'ELCP',0.35,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2035,'ELCP',0.35,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2040,'ELCP',0.35,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2045,'ELCP',0.35,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2050,'ELCP',0.35,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2020,'ELCP',87.5,'#table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. Reported efficiency combined with techoutputsplit to get 87.5');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2025,'ELCP',87.5,'#table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2030,'ELCP',87.5,'#table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2035,'ELCP',87.5,'#table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2040,'ELCP',87.5,'#table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2045,'ELCP',87.5,'#table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2050,'ELCP',87.5,'#table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
 INSERT INTO `Efficiency` VALUES ('US','COAS_R_CC','E_CCR_COAS',2020,'COAS_R_LNB',0.65,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COAS_R_CC','E_CCR_COAS',2025,'COAS_R_LNB',0.65,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COAS_R_CC','E_CCR_COAS',2030,'COAS_R_LNB',0.65,'NULL');
@@ -13240,27 +13282,27 @@ INSERT INTO `Efficiency` VALUES ('US','BIO_JTF','BLEND_BIOJTF_JTF',2020,'JTF',1.
 INSERT INTO `Efficiency` VALUES ('US','AGR','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECG','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECA','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2020,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2020,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2020,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2025,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2025,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2025,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2030,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2030,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2030,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2035,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2035,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2035,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2040,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2040,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2040,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2045,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2045,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2045,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2050,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2050,'ELCP_Renewables',0.244,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2050,'ELCP_Renewables',0.244,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2020,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2020,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2020,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2025,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2025,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2025,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2030,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2030,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2030,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2035,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2035,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2035,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2040,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2040,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2040,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2045,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2045,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2045,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2050,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2050,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2050,'ELCP_Renewables',141.86,'');
 INSERT INTO `Efficiency` VALUES ('US','AGR','E_BIOIGCC_N',2050,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECG','E_BIOIGCC_N',2050,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECA','E_BIOIGCC_N',2050,'ELCP_Renewables',0.388,'NULL');
