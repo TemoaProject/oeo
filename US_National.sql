@@ -1600,48 +1600,49 @@ CREATE TABLE "TechOutputSplit" (
 	FOREIGN KEY("output_comm") REFERENCES "commodities"("comm_name"),
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods")
 );
-INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_NGACC_CCS_N','ELCP','0.0046','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_NGACC_CCS_N','ELCP','0.0046','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_NGACC_CCS_N','ELCP','0.0046','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_NGACC_CCS_N','ELCP','0.0046','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_NGACC_CCS_N','ELCP','0.0046','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_NGACC_CCS_N','ELCP','0.0046','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_NGACC_CCS_N','ELCP','0.0046','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_NGACC_CCS_N','co2_CCS','0.9954','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_BECCS_N','ELCP_Renewables','0.00172','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_BECCS_N','co2_CCS','0.9982','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_BECCS_N','co2_CCS','0.9982','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_BECCS_N','co2_CCS','0.9982','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_BECCS_N','co2_CCS','0.9982','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_BECCS_N','co2_CCS','0.9982','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_BECCS_N','co2_CCS','0.9982','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_BECCS_N','co2_CCS','0.9982','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_COALIGCC_CCS_N','co2_CCS','0.996','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
-INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_COALIGCC_CCS_N','ELCP','0.004','NULL');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology with outputs co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_NGACC_CCS_N','ELCP','0.004580','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_NGACC_CCS_N','co2_CCS','0.995420','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_NGACC_CCS_N','co2_CCS','0.995420','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_NGACC_CCS_N','co2_CCS','0.995420','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_NGACC_CCS_N','co2_CCS','0.995420','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_NGACC_CCS_N','co2_CCS','0.995420','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_NGACC_CCS_N','co2_CCS','0.995420','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_NGACC_CCS_N','co2_CCS','0.995420','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_BECCS_N','ELCP_Renewables','0.001715','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_BECCS_N','ELCP_Renewables','0.001715','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_BECCS_N','ELCP_Renewables','0.001715','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_BECCS_N','ELCP_Renewables','0.001715','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_BECCS_N','ELCP_Renewables','0.001715','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_BECCS_N','ELCP_Renewables','0.001715','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_BECCS_N','ELCP_Renewables','0.001715','TechOutputSplit for ccs techs is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_BECCS_N','co2_CCS','0.998285','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_BECCS_N','co2_CCS','0.998285','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_BECCS_N','co2_CCS','0.998285','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_BECCS_N','co2_CCS','0.998285','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_BECCS_N','co2_CCS','0.998285','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_BECCS_N','co2_CCS','0.998285','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_BECCS_N','co2_CCS','0.998285','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_COALIGCC_CCS_N','co2_CCS','0.995851','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_COALIGCC_CCS_N','co2_CCS','0.995851','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_COALIGCC_CCS_N','co2_CCS','0.995851','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_COALIGCC_CCS_N','co2_CCS','0.995851','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_COALIGCC_CCS_N','co2_CCS','0.995851','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_COALIGCC_CCS_N','co2_CCS','0.995851','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_COALIGCC_CCS_N','co2_CCS','0.995851','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2020','E_COALIGCC_CCS_N','ELCP','0.004149','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2025','E_COALIGCC_CCS_N','ELCP','0.004149','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2030','E_COALIGCC_CCS_N','ELCP','0.004149','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2035','E_COALIGCC_CCS_N','ELCP','0.004149','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2040','E_COALIGCC_CCS_N','ELCP','0.004149','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2045','E_COALIGCC_CCS_N','ELCP','0.004149','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
+INSERT INTO `TechOutputSplit` VALUES ('US','2050','E_COALIGCC_CCS_N','ELCP','0.004149','TechOutputSplit for ccs techs  is calculated as (A/(A+B)) or (B/(A+B)) where A and B are the original efficiencies for the technology  co2_ccs and ELCP (or ELCP_Renewables)');
 CREATE TABLE "TechInputSplit" (
 	"regions"	TEXT,
 	"periods"	integer,
@@ -12731,13 +12732,13 @@ INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGASTM_R',2010,'ELCP',0.33,'NUL
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGASTM_R',2015,'ELCP',0.33,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACT_R',2015,'ELCP',0.24,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_R',2015,'ELCP',0.446,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2020,'ELCP',98.91,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2025,'ELCP',98.91,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2030,'ELCP',98.91,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2035,'ELCP',98.91,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2040,'ELCP',98.91,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2045,'ELCP',98.91,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2050,'ELCP',98.91,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2020,'ELCP',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2025,'ELCP',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2030,'ELCP',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2035,'ELCP',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2040,'ELCP',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2045,'ELCP',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2050,'ELCP',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGAACT_N',2020,'ELCP',0.34,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGAACT_N',2025,'ELCP',0.34,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGAACT_N',2030,'ELCP',0.34,'NULL');
@@ -12914,20 +12915,20 @@ INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2035,'ELCP',0.
 INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2040,'ELCP',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2045,'ELCP',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COALIGCC_N','E_COALIGCC_N',2050,'ELCP',0.388,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2020,'ELCP',87.5,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. Reported efficiency combined with techoutputsplit to get 87.5');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2025,'ELCP',87.5,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2030,'ELCP',87.5,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2035,'ELCP',87.5,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2040,'ELCP',87.5,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2045,'ELCP',87.5,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2050,'ELCP',87.5,'#table 5.2 of this PhD thesis:
-https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y Reported efficiency combined with techoutputsplit to get 87.5');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2020,'ELCP',84.35,'#Original Source: table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2025,'ELCP',84.35,'#Original Source: table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2030,'ELCP',84.35,'#Original Source: table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2035,'ELCP',84.35,'#Original Source: table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2040,'ELCP',84.35,'#Original Source: table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2045,'ELCP',84.35,'#Original Source: table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2050,'ELCP',84.35,'#Original Source: table 5.2 of this PhD thesis:
+https://minerva-access.unimelb.edu.au/bitstream/handle/11343/214528/Thesis-NasimPour%202018.pdf?sequence=1&isAllowed=y. The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
 INSERT INTO `Efficiency` VALUES ('US','COAS_R_CC','E_CCR_COAS',2020,'COAS_R_LNB',0.65,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COAS_R_CC','E_CCR_COAS',2025,'COAS_R_LNB',0.65,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COAS_R_CC','E_CCR_COAS',2030,'COAS_R_LNB',0.65,'NULL');
@@ -13282,27 +13283,27 @@ INSERT INTO `Efficiency` VALUES ('US','BIO_JTF','BLEND_BIOJTF_JTF',2020,'JTF',1.
 INSERT INTO `Efficiency` VALUES ('US','AGR','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECG','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECA','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2020,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2020,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2020,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2025,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2025,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2025,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2030,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2030,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2030,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2035,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2035,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2035,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2040,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2040,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2040,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2045,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2045,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2045,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2050,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2050,'ELCP_Renewables',141.86,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2050,'ELCP_Renewables',141.86,'');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2020,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2020,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2020,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2025,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2025,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2025,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2030,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2030,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2030,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2035,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2035,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2035,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2040,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2040,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2040,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2045,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2045,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2045,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2050,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2050,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2050,'ELCP_Renewables',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
 INSERT INTO `Efficiency` VALUES ('US','AGR','E_BIOIGCC_N',2050,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECG','E_BIOIGCC_N',2050,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECA','E_BIOIGCC_N',2050,'ELCP_Renewables',0.388,'NULL');
@@ -15148,41 +15149,41 @@ INSERT INTO `Efficiency` VALUES ('US','co2_dummy','co2_passthrough',2040,'co2_se
 INSERT INTO `Efficiency` VALUES ('US','co2_dummy','co2_passthrough',2045,'co2_seq',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_dummy','co2_passthrough',2050,'co2_seq',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_dummy','co2_passthrough',2020,'co2_seq',1.0,'');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2020,'co2_CCS',99.35,'');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2025,'co2_CCS',99.35,'');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2030,'co2_CCS',99.35,'');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2035,'co2_CCS',99.35,'');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2040,'co2_CCS',99.35,'');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2045,'co2_CCS',99.35,'');
-INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2050,'co2_CCS',99.35,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2020,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2025,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2030,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2035,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2040,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2045,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2050,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2020,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2025,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2030,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2035,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2040,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2045,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2050,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2020,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2025,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2030,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2035,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2040,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2045,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2050,'co2_CCS',142.24,'');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2020,'co2_CCS',84.3,'');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2025,'co2_CCS',84.3,'');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2030,'co2_CCS',84.3,'');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2035,'co2_CCS',84.3,'');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2040,'co2_CCS',84.3,'');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2045,'co2_CCS',84.3,'');
-INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2050,'co2_CCS',84.3,'');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2020,'co2_CCS',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2025,'co2_CCS',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2030,'co2_CCS',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2035,'co2_CCS',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2040,'co2_CCS',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2045,'co2_CCS',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','E_NGA','E_NGACC_CCS_N',2050,'co2_CCS',99.345,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2020,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2025,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2030,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2035,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2040,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2045,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','AGR','E_BECCS_N',2050,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2020,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2025,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2030,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2035,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2040,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2045,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECG','E_BECCS_N',2050,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2020,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2025,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2030,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2035,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2040,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2045,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','ECA','E_BECCS_N',2050,'co2_CCS',142.244,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2020,'co2_CCS',84.35,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2025,'co2_CCS',84.35,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2030,'co2_CCS',84.35,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2035,'co2_CCS',84.35,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2040,'co2_CCS',84.35,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2045,'co2_CCS',84.35,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
+INSERT INTO `Efficiency` VALUES ('US','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2050,'co2_CCS',84.35,'The efficiency for ccs techs is A+B, where A and B are the original efficiencies for the technology with ELCP and co2_ccs outputs. This way, multiplying TechOutputSplit (calculated as A/(A+B) or B/(A+B)) x Efficiency returns the original Efficiency');
 CREATE TABLE "DiscountRate" (
 	"regions"	text,
 	"tech"	text,
