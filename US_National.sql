@@ -15084,13 +15084,13 @@ INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2035,'co2_to_fuel',1.0
 INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2040,'co2_to_fuel',1.0e-06,'');
 INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2045,'co2_to_fuel',1.0e-06,'');
 INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2050,'co2_to_fuel',1.0e-06,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2020,'co2_to_ground',1.0,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2025,'co2_to_ground',1.0,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2030,'co2_to_ground',1.0,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2035,'co2_to_ground',1.0,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2040,'co2_to_ground',1.0,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2045,'co2_to_ground',1.0,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2050,'co2_to_ground',1.0,'');
+INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2020,'co2_to_ground',1.0e-6,'');
+INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2025,'co2_to_ground',1.0e-6,'');
+INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2030,'co2_to_ground',1.0e-6,'');
+INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2035,'co2_to_ground',1.0e-6,'');
+INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2040,'co2_to_ground',1.0e-6,'');
+INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2045,'co2_to_ground',1.0e-6,'');
+INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture',2050,'co2_to_ground',1.0e-6,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_transp_BLND','co2_to_seq',2020,'co2_seq',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_transp_BLND','co2_to_seq',2025,'co2_seq',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_transp_BLND','co2_to_seq',2030,'co2_seq',1.0,'');
@@ -26277,13 +26277,13 @@ INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2035,862.579,'#$M/bpm','# 
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2040,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2045,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2050,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2020,0.03172,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2. Assumes a 25 year lifetime.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2025,0.03172,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2. Assumes a 25 year lifetime.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2030,0.03172,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2. Assumes a 25 year lifetime.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2035,0.03172,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2. Assumes a 25 year lifetime.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2040,0.03172,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2. Assumes a 25 year lifetime.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2045,0.03172,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2. Assumes a 25 year lifetime.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2050,0.03172,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2. Assumes a 25 year lifetime.');	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2020,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2025,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2030,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2035,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2040,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2045,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2050,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.);	
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
