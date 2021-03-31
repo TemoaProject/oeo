@@ -4543,7 +4543,7 @@ INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','COAB_EA','E_EA_COAB',2017
 INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','COAB_EA','E_EA_COAB',2017,'COABL_R',0.147,'#kt/PJout','VT_EPAUS9rT_ELC_v18.1.1');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_ELC','COAB_EA','E_EA_COAB',2017,'COABM_R',0.526,'#kt/PJout','VT_EPAUS9rT_ELC_v18.1.1');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','COAB_EA','E_EA_COAB',2017,'COABH_R',0.192,'#kt/PJout','eGrid');
-INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','COAB_EA','E_EA_COAB',2017,'COABL_R,'0.192,'#kt/PJout','eGrid');
+INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','COAB_EA','E_EA_COAB',2017,'COABL_R',0.192,'#kt/PJout','eGrid');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','COAB_EA','E_EA_COAB',2017,'COABM_R',0.192,'#kt/PJout','eGrid');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','COAL_EA','E_EA_COAL',2017,'COALH_R',92.63,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','COAL_EA','E_EA_COAL',2017,'COALM_R',92.63,'#kt/PJout','NULL');
@@ -26283,7 +26283,7 @@ INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2030,0.793,'M$/kt-co2','#Spe
 INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2035,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
 INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2040,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
 INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2045,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2050,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.);	
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2050,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
