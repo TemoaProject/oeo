@@ -808,12 +808,7 @@ INSERT INTO `tech_reserve` VALUES ('E_BECCS_N',NULL);
 INSERT INTO `tech_reserve` VALUES ('E_Batt',NULL);
 INSERT INTO `tech_reserve` VALUES ('E_Batt8hr',NULL);
 INSERT INTO `tech_reserve` VALUES ('E_H2CC_N',NULL);
-CREATE TABLE `tech_renewable` (
-  `tech`  TEXT
-);
-CREATE TABLE `tech_nonrenewable` (
-  `tech`  TEXT
-);
+
 CREATE TABLE `tech_groups` (
 	`tech`	text,
 	`notes`	text,
