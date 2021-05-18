@@ -2703,7 +2703,6 @@ CREATE TABLE "MyopicBaseyear" (
 	"year"	real
 	"notes"	text	
 );
-INSERT INTO `MyopicBaseyear` VALUES ('2017');
 CREATE TABLE "MinGenGroupWeight" (
 	"regions"	text,
 	"tech"	text,
