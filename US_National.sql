@@ -2687,6 +2687,12 @@ CREATE TABLE "Output_Costs" (
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
+CREATE TABLE "Output_Duals" (
+	"constraint_name"	text,
+	"scenario"	text,
+	"dual"	real,
+	PRIMARY KEY("constraint_name","scenario")
+);
 CREATE TABLE "Output_CapacityByPeriodAndTech" (
 	"regions"	text,
 	"scenario"	text,
