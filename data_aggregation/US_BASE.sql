@@ -474,10 +474,10 @@ INSERT INTO `technologies` VALUES ('TRANSEST','p','supply','#transesterification
 INSERT INTO `technologies` VALUES ('CELL_ETH_SYN','p','supply','#cellolostic ethanol generation from corn stover','');
 INSERT INTO `technologies` VALUES ('BLEND_BIOJTF_JTF','p','transport','# technology blending bio-jetfule with jet fuel','');
 INSERT INTO `technologies` VALUES ('E_Batt8hr','ps','electric','#battery storage','');
-INSERT INTO `technologies` VALUES ('CO2_Capture','p','supply','#capturing carbon from the atmospher','');
+INSERT INTO `technologies` VALUES ('CO2_Capture_elcnga','p','supply','# natural gas and electricity use for direct air capture technology (CO2_Capture_fuel)','');
 INSERT INTO `technologies` VALUES ('CO2_Capture_fuel','p','supply','#capturing carbon from the atmosphere to use for generating snythetic fuels','');
 INSERT INTO `technologies` VALUES ('CO2_Capture_ground','p','supply','#capturing carbon from the atmosphere for squestering in the ground','');
-INSERT INTO `technologies` VALUES ('CO2_Capture_elec','p','supply','#electricity use relating to CO2_Capture technology','');
+INSERT INTO `technologies` VALUES ('CO2_Capture_nga','p','supply','# natural gas use for direct air capture technology (CO2_Capture_ground)','');
 INSERT INTO `technologies` VALUES ('CO2_BLND','p','supply','#capturing carbon for air to use for generating SNG','');
 INSERT INTO `technologies` VALUES ('E_H2CC_N','p','electric','#hydrogen combustion in a combined cycle plants for electricity generation','');
 INSERT INTO `technologies` VALUES ('C_OTH','p','commercial','#technology for meeting other commercial demand','');
@@ -762,7 +762,8 @@ INSERT INTO `technologies` VALUES ('CCS_EA_fuel','p','supply','#c2 accounting fo
 INSERT INTO `technologies` VALUES ('T_LDV_TCCNG_R','p','transport','#existing CNG commercial truck','');
 INSERT INTO `technologies` VALUES ('T_LDV_TCELC_R','p','transport','#existing electric commercial truck','');
 INSERT INTO `technologies` VALUES ('LDV_CHRG','p','transport','charging infrastructure for light-duty vehicles',NULL);		
-INSERT INTO `technologies` VALUES ('HDV_CHRG','p','transport','charging infrastructure for heavy-duty vehicles',NULL);	
+INSERT INTO `technologies` VALUES ('HDV_CHRG','p','transport','charging infrastructure for heavy-duty vehicles',NULL);
+INSERT INTO `technologies` VALUES ('T_BLND_ELC_NGA','p','supply','# blending technology to create an input for direct air capture using electricity and natural gas',NULL);	
 CREATE TABLE "tech_reserve" (
 	"tech"	text,
 	"notes"	text,
@@ -1548,9 +1549,9 @@ INSERT INTO `commodities` VALUES ('ATM_co2_ground','p','# atmospheric Co2 to the
 INSERT INTO `commodities` VALUES ('ATM_co2_fuel','p','# atmospheric CO2 to fuel');
 INSERT INTO `commodities` VALUES ('co2_CCS_fuel','p','# CCS co2 to fuel');
 INSERT INTO `commodities` VALUES ('co2_CCS_ground','p','# CCS co2 to ground');
-INSERT INTO `commodities` VALUES ('ATM_co2','p','# captured atmospheric Co2');
 INSERT INTO `commodities` VALUES ('ELC_LDV_CHRG','p','# electricity from light-duty EV charger');
 INSERT INTO `commodities` VALUES ('ELC_HDV_CHRG','p','# electricity from heavy-duty EV charger');
+INSERT INTO `commodities` VALUES ('ELC_NGA','p','# electricity and natural gas blend for direct air capture');
 CREATE TABLE "TechOutputSplit" (
 	"regions"	TEXT,
 	"periods"	integer,
@@ -2437,6 +2438,16 @@ INSERT INTO `TechInputSplit` VALUES ('US',2045,'TMDHDV_RP_CR','T_HDV_BLNDDEM_RP'
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'TMDHDV_RP_ICR','T_HDV_BLNDDEM_RP',0.118353688969942,'#MARKAL');
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'TMDHDV_RP_SUB','T_HDV_BLNDDEM_RP',0.504509641875086,'#MARKAL');
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'TMDHDV_RP_CR','T_HDV_BLNDDEM_RP',0.377136669154972,'#MARKAL');
+INSERT INTO `TechInputSplit` VALUES ('US',2030,'I_NGA','T_BLND_ELC_NGA',0.949848024,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2035,'I_NGA','T_BLND_ELC_NGA',0.949848024,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2040,'I_NGA','T_BLND_ELC_NGA',0.949848024,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2045,'I_NGA','T_BLND_ELC_NGA',0.949848024,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2050,'I_NGA','T_BLND_ELC_NGA',0.949848024,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2030,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2035,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2040,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2045,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
+INSERT INTO `TechInputSplit` VALUES ('US',2050,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
 CREATE TABLE `StorageInit` (
 	`storage_tech`	TEXT,
 	`storage_tech_note`	TEXT,
@@ -3281,8 +3292,8 @@ INSERT INTO `LifetimeTech` VALUES ('US','CELL_ETH_SYN',20.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','E_Batt8hr',15.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','E_H2CC_N',30.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','DRY_MILL',20.0,'');
-INSERT INTO `LifetimeTech` VALUES ('US','CO2_Capture',25.0,'https://www.cell.com/action/showFullTableHTML?isHtml=true&tableId=tbl2&pii=S2542-4351%2818%2930225-3');
-INSERT INTO `LifetimeTech` VALUES ('US','CO2_Capture_elec',25.0,'https://www.cell.com/action/showFullTableHTML?isHtml=true&tableId=tbl2&pii=S2542-4351%2818%2930225-3');
+INSERT INTO `LifetimeTech` VALUES ('US','CO2_Capture_nga',25.0,'https://www.cell.com/action/showFullTableHTML?isHtml=true&tableId=tbl2&pii=S2542-4351%2818%2930225-3');
+INSERT INTO `LifetimeTech` VALUES ('US','CO2_Capture_elcnga',25.0,'https://www.cell.com/action/showFullTableHTML?isHtml=true&tableId=tbl2&pii=S2542-4351%2818%2930225-3');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_AJP_GE',30.0,'NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_AJP_AE',30.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','T_HDV_AJP_BW',30.0,NULL);
@@ -3514,6 +3525,9 @@ INSERT INTO `LifetimeTech` VALUES ('US','T_LDV_TCCNG_R',20.0,'null');
 INSERT INTO `LifetimeTech` VALUES ('US','T_LDV_TCELC_R',20.0,'null');
 INSERT INTO `LifetimeTech` VALUES ('US','LDV_CHRG',15.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','HDV_CHRG',15.0,NULL);
+INSERT INTO `LifetimeTech` VALUES ('US','CO2_Capture_ground',25.0,'https://www.cell.com/action/showFullTableHTML?isHtml=true&tableId=tbl2&pii=S2542-4351%2818%2930225-3');
+INSERT INTO `LifetimeTech` VALUES ('US','CO2_Capture_fuel',25.0,'https://www.cell.com/action/showFullTableHTML?isHtml=true&tableId=tbl2&pii=S2542-4351%2818%2930225-3');
+INSERT INTO `LifetimeTech` VALUES ('US','T_BLND_ELC_NGA',50.0,NULL);
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
 	"tech"	text,
@@ -8153,20 +8167,11 @@ INSERT INTO `EmissionActivity` VALUES ('US','co2','COALIGCC_CCS_N','E_COALIGCC_C
 INSERT INTO `EmissionActivity` VALUES ('US','co2','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2040,'ELCP',-227.366,'#kt/PJ out','# assumed 90% capture efficiency');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2045,'ELCP',-227.366,'#kt/PJ out','# assumed 90% capture efficiency');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','COALIGCC_CCS_N','E_COALIGCC_CCS_N',2050,'ELCP',-227.366,'#kt/PJ out','# assumed 90% capture efficiency');
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture',2020,'ATM_co2',-1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture',2025,'ATM_co2',-1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture',2030,'ATM_co2',-1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture',2035,'ATM_co2',-1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture',2040,'ATM_co2',-1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture',2045,'ATM_co2',-1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture',2050,'ATM_co2',-1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2','CO2_Capture_fuel',2020,'ATM_co2_fuel',1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2','CO2_Capture_fuel',2025,'ATM_co2_fuel',1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2','CO2_Capture_fuel',2030,'ATM_co2_fuel',1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2','CO2_Capture_fuel',2035,'ATM_co2_fuel',1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2','CO2_Capture_fuel',2040,'ATM_co2_fuel',1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2','CO2_Capture_fuel',2045,'ATM_co2_fuel',1.0,NULL,NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2','CO2_Capture_fuel',2050,'ATM_co2_fuel',1.0,NULL,NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_ground',2030,'ATM_co2_ground',-0.694203402,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_ground',2035,'ATM_co2_ground',-0.694203402,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_ground',2040,'ATM_co2_ground',-0.694203402,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_ground',2045,'ATM_co2_ground',-0.694203402,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_ground',2050,'ATM_co2_ground',-0.694203402,NULL,'#');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','co2_CCS','CCS_EA_fuel',2020,'co2_CCS_fuel',1.0,'NULL','');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','co2_CCS','CCS_EA_fuel',2025,'co2_CCS_fuel',1.0,'NULL','');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','co2_CCS','CCS_EA_fuel',2030,'co2_CCS_fuel',1.0,'NULL','');
@@ -8183,6 +8188,12 @@ INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','CNG','T_LDV_TCCNG_R',2010
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','CNG','T_LDV_TCCNG_R',2005,'TMDLDV_CT_OTH',0.6673,'#kt/bvmt','EPA MARKAL');		
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','CNG','T_LDV_TCCNG_R',2005,'TMDLDV_CT_OTH',0.0173,'#kt/bvmt','EPA MARKAL');		
 INSERT INTO `EmissionActivity` VALUES ('US','so2_TRN','CNG','T_LDV_TCCNG_R',2005,'TMDLDV_CT_OTH',0.0173,'#kt/bvmt','EPA MARKAL');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2030,'ATM_co2_fuel',-0.783478016,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2035,'ATM_co2_fuel',-0.783478016,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2040,'ATM_co2_fuel',-0.783478016,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2045,'ATM_co2_fuel',-0.783478016,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2050,'ATM_co2_fuel',-0.783478016,NULL,'#');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2_fuel','CCS_fuel_BLND',2017,'co2_to_fuel',1.0,NULL,NULL);
 CREATE TABLE "Efficiency" (
 	"regions"	text,
 	"input_comm"	text,
@@ -9320,14 +9331,14 @@ INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_N',2040,'TMDHDV_A_JP',0.4
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_R',2000,'TMDHDV_A_JP',0.43,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_R',2005,'TMDHDV_A_JP',0.43,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF','T_HDV_AJP_R',2010,'TMDHDV_A_JP',0.43,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2020,'TMDHDV_RP_SUB',0.412,'#US9rTv18.1');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2025,'TMDHDV_RP_SUB',0.412,'#US9rTv18.1');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2030,'TMDHDV_RP_SUB',0.412,'#US9rTv18.1');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2035,'TMDHDV_RP_SUB',0.412,'#US9rTv18.1');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2040,'TMDHDV_RP_SUB',0.412,'#US9rTv18.1');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_R',2000,'TMDHDV_RP_SUB',0.358,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_R',2005,'TMDHDV_RP_SUB',0.351,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_R',2010,'TMDHDV_RP_SUB',0.398,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2020,'TMDHDV_RP_SUB',0.412,'#GREET');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2025,'TMDHDV_RP_SUB',0.412,'#GREET');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2030,'TMDHDV_RP_SUB',0.412,'#GREET');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2035,'TMDHDV_RP_SUB',0.412,'#GREET');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_N',2040,'TMDHDV_RP_SUB',0.412,'#GREET');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_R',2000,'TMDHDV_RP_SUB',0.358,'#GREET');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_R',2005,'TMDHDV_RP_SUB',0.351,'#GREET');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_HDV_SUBELC_R',2010,'TMDHDV_RP_SUB',0.398,'#GREET');
 INSERT INTO `Efficiency` VALUES ('US','C_NGA','C_CK_CONVECTION_NGA_N',2045,'CCKNGA',0.6,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ELC','C_CK_INDUCTION_ELC_N',2045,'CCKELC',0.8,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ELC','C_LT_CFL23W_ELC_N',2045,'CLTCFL',1.48,'NULL');
@@ -12055,13 +12066,6 @@ INSERT INTO `Efficiency` VALUES ('US','co2_CCS','CCS_EA_fuel',2035,'co2_CCS_fuel
 INSERT INTO `Efficiency` VALUES ('US','co2_CCS','CCS_EA_fuel',2040,'co2_CCS_fuel',1.0,'#to synthetic gas production, this pathway emits co2 (as synthetic fuel gets burnt)');
 INSERT INTO `Efficiency` VALUES ('US','co2_CCS','CCS_EA_fuel',2045,'co2_CCS_fuel',1.0,'#to synthetic gas production, this pathway emits co2 (as synthetic fuel gets burnt)');
 INSERT INTO `Efficiency` VALUES ('US','co2_CCS','CCS_EA_fuel',2050,'co2_CCS_fuel',1.0,'#to synthetic gas production, this pathway emits co2 (as synthetic fuel gets burnt)');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture_elec',2020,'dummy_sink',1000/8.81,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture_elec',2025,'dummy_sink',1000/8.81,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture_elec',2030,'dummy_sink',1000/8.81,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture_elec',2035,'dummy_sink',1000/8.81,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture_elec',2040,'dummy_sink',1000/8.81,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture_elec',2045,'dummy_sink',1000/8.81,'');
-INSERT INTO `Efficiency` VALUES ('US','ELC','CO2_Capture_elec',2050,'dummy_sink',1000/8.81,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_transp_BLND','co2_to_seq',2020,'dummy_sink',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_transp_BLND','co2_to_seq',2025,'dummy_sink',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','co2_transp_BLND','co2_to_seq',2030,'dummy_sink',1.0,'');
@@ -12136,27 +12140,6 @@ INSERT INTO `Efficiency` VALUES ('US','co2_CCS_fuel','CCS_fuel_BLND',2017,'co2_t
 INSERT INTO `Efficiency` VALUES ('US','ATM_co2_fuel','CCS_fuel_BLND',2017,'co2_to_fuel',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ATM_co2_ground','CCS_ground_BLND',2017,'co2_to_ground',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','co2_CCS_ground','CCS_ground_BLND',2017,'co2_to_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture',2020,'ATM_co2',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture',2025,'ATM_co2',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture',2030,'ATM_co2',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture',2035,'ATM_co2',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture',2040,'ATM_co2',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture',2045,'ATM_co2',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture',2050,'ATM_co2',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_fuel',2020,'ATM_co2_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_fuel',2025,'ATM_co2_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_fuel',2030,'ATM_co2_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_fuel',2035,'ATM_co2_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_fuel',2040,'ATM_co2_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_fuel',2045,'ATM_co2_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_fuel',2050,'ATM_co2_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_ground',2020,'ATM_co2_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_ground',2025,'ATM_co2_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_ground',2030,'ATM_co2_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_ground',2035,'ATM_co2_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_ground',2040,'ATM_co2_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_ground',2045,'ATM_co2_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2','CO2_Capture_ground',2050,'ATM_co2_ground',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ELC_LDV_CHRG','T_LDV_PELC_N',2030,'TMDLDV_P',0.748,'# EPAUS9rT_TRNLDV_v20.1.0');		
 INSERT INTO `Efficiency` VALUES ('US','ELC_LDV_CHRG','T_LDV_PELC_N',2035,'TMDLDV_P',0.748,'# EPAUS9rT_TRNLDV_v20.1.0');		
 INSERT INTO `Efficiency` VALUES ('US','ELC_LDV_CHRG','T_LDV_PELC_N',2040,'TMDLDV_P',0.748,'# EPAUS9rT_TRNLDV_v20.1.0');		
@@ -12190,6 +12173,28 @@ INSERT INTO `Efficiency` VALUES ('US','ELC','LDV_CHRG',2010,'ELC_LDV_CHRG',1.0,N
 INSERT INTO `Efficiency` VALUES ('US','ELC','LDV_CHRG',2015,'ELC_LDV_CHRG',1.0,NULL);		
 INSERT INTO `Efficiency` VALUES ('US','ELC','HDV_CHRG',2010,'ELC_HDV_CHRG',1.0,NULL);		
 INSERT INTO `Efficiency` VALUES ('US','ELC','HDV_CHRG',2015,'ELC_HDV_CHRG',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_fuel',2030,'ATM_co2_fuel',1.27636,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0055272 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_fuel',2035,'ATM_co2_fuel',1.27636,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0055272 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_fuel',2040,'ATM_co2_fuel',1.27636,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0055272 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_fuel',2045,'ATM_co2_fuel',1.27636,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0055272 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_fuel',2050,'ATM_co2_fuel',1.27636,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0055272 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_ground',2030,'ATM_co2_ground',1.4405,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0088100 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_ground',2035,'ATM_co2_ground',1.4405,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0088100 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_ground',2040,'ATM_co2_ground',1.4405,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0088100 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_ground',2045,'ATM_co2_ground',1.4405,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0088100 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','ATM','CO2_Capture_ground',2050,'ATM_co2_ground',1.4405,'# 1 kt of co2 captured from the atmosphere plus co2 captured from natural gas input (50 kt/PJ x 0.0088100 kt CO2/PJ NG)');
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','CO2_Capture_nga',2030,'dummy_sink',113.507378,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2');
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','CO2_Capture_nga',2035,'dummy_sink',113.507378,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl3');
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','CO2_Capture_nga',2040,'dummy_sink',113.507378,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl4');
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','CO2_Capture_nga',2045,'dummy_sink',113.507378,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl5');
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','CO2_Capture_nga',2050,'dummy_sink',113.507378,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6');
+INSERT INTO `Efficiency` VALUES ('US','ELC_NGA','CO2_Capture_elcnga',2030,'dummy_sink',180.9234332,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl7');
+INSERT INTO `Efficiency` VALUES ('US','ELC_NGA','CO2_Capture_elcnga',2035,'dummy_sink',180.9234332,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl8');
+INSERT INTO `Efficiency` VALUES ('US','ELC_NGA','CO2_Capture_elcnga',2040,'dummy_sink',180.9234332,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl9');
+INSERT INTO `Efficiency` VALUES ('US','ELC_NGA','CO2_Capture_elcnga',2045,'dummy_sink',180.9234332,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl10');
+INSERT INTO `Efficiency` VALUES ('US','ELC_NGA','CO2_Capture_elcnga',2050,'dummy_sink',180.9234332,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl11');
+INSERT INTO `Efficiency` VALUES ('US','ELC','T_BLND_ELC_NGA',2017,'ELC_NGA',1.0,'');
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','T_BLND_ELC_NGA',2017,'ELC_NGA',1.0,'');
 CREATE TABLE "DiscountRate" (
 	"regions"	text,
 	"tech"	text,
@@ -13365,13 +13370,6 @@ INSERT INTO `DiscountRate` VALUES ('US','E_Batt8hr',2035,0.06,NULL);
 INSERT INTO `DiscountRate` VALUES ('US','E_Batt8hr',2030,0.06,NULL);
 INSERT INTO `DiscountRate` VALUES ('US','E_Batt8hr',2025,0.06,NULL);
 INSERT INTO `DiscountRate` VALUES ('US','E_Batt8hr',2020,0.06,NULL);
-INSERT INTO `DiscountRate` VALUES ('US','CO2_Capture',2020,0.06,'');
-INSERT INTO `DiscountRate` VALUES ('US','CO2_Capture',2025,0.06,'');
-INSERT INTO `DiscountRate` VALUES ('US','CO2_Capture',2030,0.06,'');
-INSERT INTO `DiscountRate` VALUES ('US','CO2_Capture',2035,0.06,'');
-INSERT INTO `DiscountRate` VALUES ('US','CO2_Capture',2040,0.06,'');
-INSERT INTO `DiscountRate` VALUES ('US','CO2_Capture',2045,0.06,'');
-INSERT INTO `DiscountRate` VALUES ('US','CO2_Capture',2050,0.06,'');
 INSERT INTO `DiscountRate` VALUES ('US','E_H2CC_N',2020,0.06,'');
 INSERT INTO `DiscountRate` VALUES ('US','E_H2CC_N',2025,0.06,'');
 INSERT INTO `DiscountRate` VALUES ('US','E_H2CC_N',2030,0.06,'');
@@ -16786,31 +16784,6 @@ INSERT INTO `CostVariable` VALUES ('US',2050,'DRY_MILL',2040,14.16,'#M$/PJ','#te
 INSERT INTO `CostVariable` VALUES ('US',2045,'DRY_MILL',2045,14.16,'#M$/PJ','#test');
 INSERT INTO `CostVariable` VALUES ('US',2050,'DRY_MILL',2045,14.16,'#M$/PJ','#test');
 INSERT INTO `CostVariable` VALUES ('US',2050,'DRY_MILL',2050,14.16,'#M$/PJ','#test');
-INSERT INTO `CostVariable` VALUES ('US',2020,'CO2_Capture',2020,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2025,'CO2_Capture',2020,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2030,'CO2_Capture',2020,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'CO2_Capture',2020,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'CO2_Capture',2020,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2025,'CO2_Capture',2025,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2030,'CO2_Capture',2025,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'CO2_Capture',2025,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'CO2_Capture',2025,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'CO2_Capture',2025,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2030,'CO2_Capture',2030,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'CO2_Capture',2030,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'CO2_Capture',2030,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'CO2_Capture',2030,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture',2030,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2035,'CO2_Capture',2035,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'CO2_Capture',2035,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'CO2_Capture',2035,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture',2035,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2040,'CO2_Capture',2040,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'CO2_Capture',2040,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture',2040,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2045,'CO2_Capture',2045,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture',2045,0.03,NULL,NULL);
-INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture',2050,0.03,NULL,NULL);
 INSERT INTO `CostVariable` VALUES ('US',2017,'IMPTRNMGO',2017,14.5319,'# $M/PJ','# 12% lower than DSL, based on EIA and report on marine fuels from SEB');
 INSERT INTO `CostVariable` VALUES ('US',2020,'IMPTRNMGO',2017,22.0766,'# $M/PJ','# 20% higher than diesel (spike due to IMO sulfur regs)');
 INSERT INTO `CostVariable` VALUES ('US',2025,'IMPTRNMGO',2017,11.4929,'# $M/PJ','# 12% lower than DSL, based on EIA and report on marine fuels from SEB');
@@ -23270,13 +23243,6 @@ INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2035,862.579,'#$M/bpm','# 
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2040,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2045,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
 INSERT INTO `CostInvest` VALUES ('US','T_HDV_ICRH2_N',2050,862.579,'#$M/bpm','# Isaac and Fulton, 2016. "Propulsion Systems for 21st Century Rail."');
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2020,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2025,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2030,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2035,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2040,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2045,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
-INSERT INTO `CostInvest` VALUES ('US','CO2_Capture',2050,0.793,'M$/kt-co2','#Specs of plant B of Table 2 from https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2: 8.81 GJ gas input/t-CO2.');	
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_PELC_N',2030,4198.8331,'$M/bvmt','EPAUS9rT_TRNLDV_v20.1.0full');
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_PELC_N',2035,4129.7905,'$M/bvmt','EPAUS9rT_TRNLDV_v20.1.0full');
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_PELC_N',2040,4078.2445,'$M/bvmt','EPAUS9rT_TRNLDV_v20.1.0full');
@@ -23296,6 +23262,16 @@ INSERT INTO `CostInvest` VALUES ('US','HDV_CHRG',2035,17160,'$M/(PJ/year)','# we
 INSERT INTO `CostInvest` VALUES ('US','HDV_CHRG',2040,17160,'$M/(PJ/year)','# weighted average of 50 kW, 150 kW, and 250 kW DCFC plus extra transmission system upgrades from https://www.nature.com/articles/s41560-021-00855-0.pdf#page=3&zoom=100,64,481');		
 INSERT INTO `CostInvest` VALUES ('US','HDV_CHRG',2045,17160,'$M/(PJ/year)','# weighted average of 50 kW, 150 kW, and 250 kW DCFC plus extra transmission system upgrades from https://www.nature.com/articles/s41560-021-00855-0.pdf#page=3&zoom=100,64,481');		
 INSERT INTO `CostInvest` VALUES ('US','HDV_CHRG',2050,17160,'$M/(PJ/year)','# weighted average of 50 kW, 150 kW, and 250 kW DCFC plus extra transmission system upgrades from https://www.nature.com/articles/s41560-021-00855-0.pdf#page=3&zoom=100,64,481');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_fuel',2030,0.477138112,'# $M/(ktCO2 captured/year)','# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. 0.609 $M/(kt CO2 processed / year) x CO2_Capture_fuel');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_fuel',2035,0.477138112,'# $M/(ktCO2 captured/year)','# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. 0.609 $M/(kt CO2 processed / year) x CO2_Capture_fuel');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_fuel',2040,0.477138112,'# $M/(ktCO2 captured/year)','# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. 0.609 $M/(kt CO2 processed / year) x CO2_Capture_fuel');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_fuel',2045,0.477138112,'# $M/(ktCO2 captured/year)','# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. 0.609 $M/(kt CO2 processed / year) x CO2_Capture_fuel');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_fuel',2050,0.477138112,'# $M/(ktCO2 captured/year)','# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. 0.609 $M/(kt CO2 processed / year) x CO2_Capture_fuel');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_ground',2030,0.795557098,'# $M/(ktCO2/year)','# Plant A Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_ground',2035,0.804581742,'# $M/(ktCO2/year)','# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_ground',2040,0.743491843,'# $M/(ktCO2/year)','# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl7');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_ground',2045,0.682401944,'# $M/(ktCO2/year)','# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl8');
+INSERT INTO `CostInvest` VALUES ('US','CO2_Capture_ground',2050,0.550503297,'# $M/(ktCO2/year)','# Plant B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6');
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
@@ -25321,29 +25297,36 @@ INSERT INTO `CostFixed` VALUES ('US',2050,'H2_COMP_LIQ',2040,0.13,'#$M/PJ','# 4%
 INSERT INTO `CostFixed` VALUES ('US',2045,'H2_COMP_LIQ',2045,0.13,'#$M/PJ','# 4% of capital costs');
 INSERT INTO `CostFixed` VALUES ('US',2050,'H2_COMP_LIQ',2045,0.13,'#$M/PJ','# 4% of capital costs');
 INSERT INTO `CostFixed` VALUES ('US',2050,'H2_COMP_LIQ',2050,0.13,'#$M/PJ','# 4% of capital costs');
-INSERT INTO `CostFixed` VALUES ('US',2020,'CO2_Capture',2020,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0037');
-INSERT INTO `CostFixed` VALUES ('US',2025,'CO2_Capture',2020,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0039');
-INSERT INTO `CostFixed` VALUES ('US',2025,'CO2_Capture',2025,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0040');
-INSERT INTO `CostFixed` VALUES ('US',2030,'CO2_Capture',2020,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0042');
-INSERT INTO `CostFixed` VALUES ('US',2030,'CO2_Capture',2025,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0043');
-INSERT INTO `CostFixed` VALUES ('US',2030,'CO2_Capture',2030,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0044');
-INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture',2020,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0046');
-INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture',2025,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0047');
-INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture',2030,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0048');
-INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture',2035,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0049');
-INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture',2020,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0051');
-INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture',2025,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0052');
-INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture',2030,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0053');
-INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture',2035,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0054');
-INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture',2025,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0055');
-INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture',2030,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0056');
-INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture',2035,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0057');
-INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture',2040,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0058');
-INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture',2045,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0059');
-INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture',2030,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0060');
-INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture',2035,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0061');
-INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture',2040,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0062');
-INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture',2045,0.03,'#$M/kt CO2 captured','Table 2 O&M for system B: https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2542435118302253%3Fshowall%3Dtrue#secsectitle0063');
+INSERT INTO `CostFixed` VALUES ('US',2030,'CO2_Capture_fuel',2030,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl13','# $M/ktCO12');
+INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture_fuel',2030,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl14','# $M/ktCO13');
+INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture_fuel',2030,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl15','# $M/ktCO14');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_fuel',2030,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl16','# $M/ktCO15');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_fuel',2030,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl17','# $M/ktCO16');
+INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture_fuel',2035,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl18','# $M/ktCO17');
+INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture_fuel',2035,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl19','# $M/ktCO18');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_fuel',2035,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl20','# $M/ktCO19');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_fuel',2035,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl21','# $M/ktCO20');
+INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture_fuel',2040,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl22','# $M/ktCO21');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_fuel',2040,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl23','# $M/ktCO22');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_fuel',2040,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl24','# $M/ktCO23');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_fuel',2045,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl25','# $M/ktCO24');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_fuel',2045,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl26','# $M/ktCO25');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_fuel',2050,0.0180199943589583,'# Plant D Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl27','# $M/ktCO26');
+INSERT INTO `CostFixed` VALUES ('US',2030,'CO2_Capture_ground',2030,0.0291565428670601,'# Plant A Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO12');
+INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture_ground',2030,0.0291565428670601,'# Plant A Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO13');
+INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture_ground',2030,0.0291565428670601,'# Plant A Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO14');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_ground',2030,0.0291565428670601,'# Plant A Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO15');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_ground',2030,0.0291565428670601,'# Plant A Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO16');
+INSERT INTO `CostFixed` VALUES ('US',2035,'CO2_Capture_ground',2035,0.0260326275598751,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO17');
+INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture_ground',2035,0.0260326275598751,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO18');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_ground',2035,0.0260326275598751,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO19');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_ground',2035,0.0260326275598751,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO20');
+INSERT INTO `CostFixed` VALUES ('US',2040,'CO2_Capture_ground',2040,0.0229087122526901,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO21');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_ground',2040,0.0229087122526901,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO22');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_ground',2040,0.0229087122526901,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO23');
+INSERT INTO `CostFixed` VALUES ('US',2045,'CO2_Capture_ground',2045,0.019784796945505,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO24');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_ground',2045,0.019784796945505,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl6','# $M/ktCO25');
+INSERT INTO `CostFixed` VALUES ('US',2050,'CO2_Capture_ground',2050,0.0159666782367234,'# Plant B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl27','# $M/ktCO26');
 CREATE TABLE "CapacityToActivity" (
 	"regions"	text,
 	"tech"	text,
@@ -26641,5 +26624,6 @@ CREATE TABLE "LinkedTechs" (
 INSERT INTO `LinkedTechs` VALUES ('US','E_BECCS_N','co2','E_BECCS_N_emissions',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','E_NGACC_CCS_N','co2','E_NGACC_CCS_N_emissions',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','E_COALIGCC_CCS_N','co2','E_COALIGCC_CCS_N_emissions',NULL);
-INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture','co2','CO2_Capture_elec',NULL);
+INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_ground','co2','CO2_Capture_nga',NULL);
+INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_fuel','co2','CO2_Capture_elcnga',NULL);
 COMMIT;
