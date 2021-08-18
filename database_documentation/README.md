@@ -18,11 +18,15 @@ This will need to be done only once, before using notebooks within the Temoa env
 
 ```(temoa-py3) $ jupyter nbextension enable hide_input/main```
 
+```(temoa-py3) $ jupyter nbextension enable toc2/main```
+
 Once these extensions are enabled, open notebooks as follows.
 
 ```(temoa-py3) $ jupyter notebook```
 
 Navigate to the `Overview.ipynb/` file or any other notebook to view the database documentation. 
+The "Table of Contents" button (below and to the right of the Help menu) can be used to view the table of contents and navigate
+to different sections of the notebook. 
 The "Toggle selected cell input display" button (below and to the right of the Help menu) can be used to view hidden code cells. 
 
 
