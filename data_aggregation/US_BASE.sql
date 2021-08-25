@@ -26695,4 +26695,25 @@ INSERT INTO `LinkedTechs` VALUES ('US','E_NGACC_CCS_N','co2','E_NGACC_CCS_N_emis
 INSERT INTO `LinkedTechs` VALUES ('US','E_COALIGCC_CCS_N','co2','E_COALIGCC_CCS_N_emissions',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_ground','co2','CO2_Capture_nga',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_fuel','co2','CO2_Capture_elcnga',NULL);
+
+CREATE TABLE "tech_variable" (
+	"tech"	text,
+	"notes"	TEXT,
+	PRIMARY KEY("tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
+
+CREATE TABLE "TechInputSplitAverage" (
+	"regions"	TEXT,
+	"periods"	integer,
+	"input_comm"	text,
+	"tech"	text,
+	"ti_split"	real,
+	"ti_split_notes"	text,
+	PRIMARY KEY("regions","periods","input_comm","tech"),
+	FOREIGN KEY("input_comm") REFERENCES "commodities"("comm_name"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods")
+);
+
 COMMIT;
