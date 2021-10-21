@@ -451,7 +451,7 @@ INSERT INTO `technologies` VALUES ('T_EAG_CNG','p','transport','#emission from s
 INSERT INTO `technologies` VALUES ('R_NGA_H2BL','p','residential','#technology blends natural gas and hydrogen','');
 INSERT INTO `technologies` VALUES ('T_CNG_H2BL','p','transport','#blending technology for cng and H2','');
 INSERT INTO `technologies` VALUES ('C_NGA_H2BL','p','commercial','#blends natural gas and H2','');
-INSERT INTO `technologies` VALUES ('I_NG_H2BL','p','industrial','#blends natural gas and H2','');
+INSERT INTO `technologies` VALUES ('I_EA_NG','p','industrial','#emission accounting for industrial natural gas','');
 INSERT INTO `technologies` VALUES ('MEOH_STO','ps','supply','#methanol storage','');
 INSERT INTO `technologies` VALUES ('T_E10MEOHBL','p','transport','#blending methanol with E10 85%','');
 INSERT INTO `technologies` VALUES ('T_E85MEOHBL','p','transport','#blending methanol with E85','');
@@ -900,7 +900,7 @@ INSERT INTO `tech_annual` VALUES ('T_BLND_ETH_ACTIVITY_CONTROL','');
 INSERT INTO `tech_annual` VALUES ('I_EAG_NG','');
 INSERT INTO `tech_annual` VALUES ('T_EAG_CNG','');
 INSERT INTO `tech_annual` VALUES ('T_CNG_H2BL','');
-INSERT INTO `tech_annual` VALUES ('I_NG_H2BL','');
+INSERT INTO `tech_annual` VALUES ('I_EA_NG','');
 INSERT INTO `tech_annual` VALUES ('T_E10MEOHBL','');
 INSERT INTO `tech_annual` VALUES ('T_E85MEOHBL','');
 INSERT INTO `tech_annual` VALUES ('H2700_FC','');
@@ -1747,7 +1747,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2017,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2017,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2017,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2017,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2017,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2017,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2017,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2020,'H2_10','H2_COMP10100',0.943,NULL);
@@ -1758,7 +1757,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2020,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2020,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2020,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2020,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2020,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2020,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2020,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2025,'H2_10','H2_COMP10100',0.943,NULL);
@@ -1769,7 +1767,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2025,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2025,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2025,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2025,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2025,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2025,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2025,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2030,'H2_10','H2_COMP10100',0.943,NULL);
@@ -1780,7 +1777,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2030,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2030,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2030,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2030,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2030,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2030,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2030,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2035,'H2_10','H2_COMP10100',0.943,NULL);
@@ -1791,7 +1787,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2035,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2035,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2035,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2035,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2035,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2035,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2035,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'H2_10','H2_COMP10100',0.943,NULL);
@@ -1802,7 +1797,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2040,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2040,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'H2_10','H2_COMP10100',0.943,NULL);
@@ -1813,7 +1807,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2045,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2045,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'H2_10','H2_COMP10100',0.943,NULL);
@@ -1824,7 +1817,6 @@ INSERT INTO `TechInputSplit` VALUES ('US',2050,'SNG_20','SNG_COMP20100',0.9804,N
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'ELC','SNG_COMP20100',0.0196,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'R_NGA_EA','R_NGA_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'C_NGA_EA','C_NGA_H2BL',0.96566,NULL);
-INSERT INTO `TechInputSplit` VALUES ('US',2050,'I_NG_EA','I_NG_H2BL',0.96566,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'GAS','T_E10MEOHBL',0.85,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'MEOH','T_E85MEOHBL',0.8032,NULL);
 INSERT INTO `TechInputSplit` VALUES ('US',2017,'E_NGA_EA','E_NGA_H2BL',0.96566,NULL);
@@ -3285,7 +3277,7 @@ INSERT INTO `LifetimeTech` VALUES ('US','T_EAG_CNG',50.0,'#NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','R_NGA_H2BL',50.0,'#NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','T_CNG_H2BL',50.0,'#NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','C_NGA_H2BL',50.0,'#NULL');
-INSERT INTO `LifetimeTech` VALUES ('US','I_NG_H2BL',50.0,'#NULL');
+INSERT INTO `LifetimeTech` VALUES ('US','I_EA_NG',50.0,'#NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','MEOH_STO',20.0,'#NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','E_NGA_H2BL',50.0,'#NULL');
 INSERT INTO `LifetimeTech` VALUES ('US','E_EAG_NGA',50.0,'#NULL');
@@ -8019,7 +8011,7 @@ INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','MGO','T_HDV_WTP_MGO_N',2
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','MGO','T_HDV_WTP_MGO_N',2040,'TMDHDV_WTP_MGO',0.8872,'kt/btm','emissions from both cruising and at berth, data from Port of LA, European Environment Agency, and International Council on Clean Transportation.');
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','MGO','T_HDV_WTP_MGO_N',2045,'TMDHDV_WTP_MGO',0.8872,'kt/btm','emissions from both cruising and at berth, data from Port of LA, European Environment Agency, and International Council on Clean Transportation.');
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','MGO','T_HDV_WTP_MGO_N',2050,'TMDHDV_WTP_MGO',0.8872,'kt/btm','emissions from both cruising and at berth, data from Port of LA, European Environment Agency, and International Council on Clean Transportation.');
-INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NG_EA','I_NG_H2BL',2017,'I_NGA',50.0,'#kt/PJout',NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NG_EA','I_EA_NG',2017,'I_NGA',50.0,'#kt/PJout',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','JTF_EA','BLEND_BIOJTF_JTF',2017,'JTF',67.2,'#kt/PJout',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','BIO_JTF','BLEND_BIOJTF_JTF',2020,'JTF',67.2,'#kt/PJout',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','R_NGA_EA','R_NGA_H2BL',2017,'R_NGA',50.3,'#kt/PJout',NULL);
@@ -10195,7 +10187,6 @@ INSERT INTO `Efficiency` VALUES ('US','H2_100','T_CNG_H2BL',2017,'CNG',1.0,NULL)
 INSERT INTO `Efficiency` VALUES ('US','H2_100','H2_COMP100700',2017,'H2_700',1,NULL);
 INSERT INTO `Efficiency` VALUES ('US','H2_100','H2_STO150',2017,'H2_100',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','H2_100','MEOHSYN',2017,'MEOH',0.755,NULL);
-INSERT INTO `Efficiency` VALUES ('US','H2_100','I_NG_H2BL',2017,'I_NGA',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','H2_100','R_NGA_H2BL',2017,'R_NGA',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','H2_100','SNGSYN',2017,'SNG_20',0.79,NULL);
 INSERT INTO `Efficiency` VALUES ('US','MEOH','MEOH_STO',2017,'MEOH',1.0,NULL);
@@ -10303,7 +10294,7 @@ INSERT INTO `Efficiency` VALUES ('US','H2_700','H2700_FC',2017,'H2',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','H2_100','E_NGA_H2BL',2017,'E_NGA',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','SNG_100','E_EAG_NGA',2017,'E_NGA',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','E_NGA_EA','E_NGA_H2BL',2017,'E_NGA',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','I_NG_EA','I_NG_H2BL',2017,'I_NGA',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','I_NG_EA','I_EA_NG',2017,'I_NGA',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ELC','E_Batt',2020,'ELC',0.85,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ELC','E_Batt',2025,'ELC',0.85,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ELC','E_Batt',2030,'ELC',0.85,NULL);
