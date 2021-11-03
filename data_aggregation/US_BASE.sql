@@ -1171,7 +1171,6 @@ CREATE TABLE "groups" (
 	"notes"	text,
 	PRIMARY KEY("group_name")
 );
-INSERT INTO `groups` VALUES ('RPS_MTN',NULL);
 CREATE TABLE "commodity_labels" (
 	"comm_labels"	text,
 	"comm_labels_desc"	text,
@@ -1330,7 +1329,8 @@ INSERT INTO `commodities` VALUES ('E10','p','# E10 for transport');
 INSERT INTO `commodities` VALUES ('E85','p','# E85 for transport');
 INSERT INTO `commodities` VALUES ('ELC','p','# electricity');
 INSERT INTO `commodities` VALUES ('ELCP','p','#Output electricity of fossil power plants and input to T&D loss technology ');
-INSERT INTO `commodities` VALUES ('ELCP_Renewables','p','#Output electricity of renewable power plants (other than those solar PV and thermal plants denote by SOLMINRPS) and input to T&D loss technology ');
+INSERT INTO `commodities` VALUES ('ELCP_Renewables','p','#Output electricity of renewable power plants (other than those solar PV and thermal plants denote by SOLMINRPS) that can contribute to a RPS and input to T&D loss technology ');
+INSERT INTO `commodities` VALUES ('ELCP_Renewables_nonRPS','p','#Output electricity of renewable power plants (other than those solar PV and thermal plants denote by SOLMINRPS) that cannot contribute to a RPS and input to T&D loss technology ');
 INSERT INTO `commodities` VALUES ('H2','p','# hydrogen fuel cell for transport');
 INSERT INTO `commodities` VALUES ('JTF','p','# jet fuel for transport');
 INSERT INTO `commodities` VALUES ('JTF_EA','p','# jet fuel to co2 emission accounting');
@@ -2446,6 +2446,7 @@ INSERT INTO `TechInputSplit` VALUES ('US',2035,'ELC','T_BLND_ELC_NGA',0.05015197
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'ELC','T_BLND_ELC_NGA',0.050151976,'# Keith et al 2018');
+
 CREATE TABLE `StorageInit` (
 	`storage_tech`	TEXT,
 	`storage_tech_note`	TEXT,
@@ -2632,23 +2633,7 @@ CREATE TABLE "MinGenGroupWeight" (
 	"tech_desc"	text,
 	PRIMARY KEY("tech","group_name","regions")
 );
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL4_N','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WND_R','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLTHCEN_N','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLTH_R','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPVCEN_N','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPV_R ','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_HYDCONV_R ','RPS_MTN',0.28,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_GEOBCFS_N ','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_GEO_R ','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_BIOIGCC_N ','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL5_N','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL1_N','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL2_N','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_WNDCL3_N ','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_BECCS_N ','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPVENDUSE_R ','RPS_MTN',1.0,NULL);
-INSERT INTO `MinGenGroupWeight` VALUES ('US','E_SOLPVENDUSE_N ','RPS_MTN',1.0,NULL);
+
 CREATE TABLE "MinGenGroupTarget" (
 	`periods`	integer,
 	`group_name`	text,
@@ -2656,13 +2641,7 @@ CREATE TABLE "MinGenGroupTarget" (
 	`notes`	text,
 	PRIMARY KEY(periods,group_name)
 );
-INSERT INTO `MinGenGroupTarget` VALUES (2020,'RPS_MTN',219.96,NULL);
-INSERT INTO `MinGenGroupTarget` VALUES (2025,'RPS_MTN',240.48,NULL);
-INSERT INTO `MinGenGroupTarget` VALUES (2030,'RPS_MTN',261.0,NULL);
-INSERT INTO `MinGenGroupTarget` VALUES (2035,'RPS_MTN',271.44,NULL);
-INSERT INTO `MinGenGroupTarget` VALUES (2040,'RPS_MTN',281.88,NULL);
-INSERT INTO `MinGenGroupTarget` VALUES (2045,'RPS_MTN',294.48,NULL);
-INSERT INTO `MinGenGroupTarget` VALUES (2050,'RPS_MTN',307.08,NULL);
+
 CREATE TABLE "MinCapacity" (
 	"regions"	text,
 	"periods"	integer,
@@ -9932,7 +9911,7 @@ INSERT INTO `Efficiency` VALUES ('US','COAB_R_LNB_PT','E_LNB_COAB_N',2045,'COAB_
 INSERT INTO `Efficiency` VALUES ('US','COAB_R_LNB','E_LNB_COAB_N',2050,'COAB_R_SCR_PT',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COAB_R_LNB_PT','E_LNB_COAB_N',2050,'COAB_R_SCR_PT',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ELC','E_HYDREV_R',2015,'ELC',0.75,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','ethos_R','E_HYDCONV_R',2015,'ELCP_Renewables',1.0,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','ethos_R','E_HYDCONV_R',2015,'ELCP_Renewables_nonRPS',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ethos_R','E_GEOBCFS_N',2020,'ELCP_Renewables',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ethos_R','E_GEOBCFS_N',2025,'ELCP_Renewables',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ethos_R','E_GEOBCFS_N',2030,'ELCP_Renewables',1.0,'NULL');
@@ -10010,6 +9989,7 @@ INSERT INTO `Efficiency` VALUES ('US','COALSTM_R_L','E_BLND_BITSUBLIG_COALSTM_R'
 INSERT INTO `Efficiency` VALUES ('US','COAB_R','E_BLND_BIT_COALSTM_R',2017,'COALSTM_R_B',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ELCP','E_ELCTDLOSS',2017,'ELC',0.953,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ELCP_Renewables','E_ELCTDLOSS',2017,'ELC',0.953,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','ELCP_Renewables_nonRPS','E_ELCTDLOSS',2017,'ELC',0.953,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COABH_IGCC_N','E_BLND_BITHML_COALIGCC_N',2020,'COALIGCC_N_B',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COABM_IGCC_N','E_BLND_BITHML_COALIGCC_N',2020,'COALIGCC_N_B',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','COABL_IGCC_N','E_BLND_BITHML_COALIGCC_N',2020,'COALIGCC_N_B',1.0,'NULL');
@@ -26693,6 +26673,7 @@ CREATE TABLE "tech_variable" (
 	PRIMARY KEY("tech"),
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
+INSERT INTO `tech_variable` VALUES ('E_ELCTDLOSS',NULL);
 
 CREATE TABLE "TechInputSplitAverage" (
 	"regions"	TEXT,
@@ -26706,5 +26687,12 @@ CREATE TABLE "TechInputSplitAverage" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods")
 );
+INSERT INTO `TechInputSplitAverage` VALUES ('US',2020,'ELCP_Renewables','E_ELCTDLOSS',0.11,'# Calculations based on LBNL input data');
+INSERT INTO `TechInputSplitAverage` VALUES ('US',2025,'ELCP_Renewables','E_ELCTDLOSS',0.15,'# Calculations based on LBNL input data');
+INSERT INTO `TechInputSplitAverage` VALUES ('US',2030,'ELCP_Renewables','E_ELCTDLOSS',0.18,'# Calculations based on LBNL input data');
+INSERT INTO `TechInputSplitAverage` VALUES ('US',2035,'ELCP_Renewables','E_ELCTDLOSS',0.19,'# Calculations based on LBNL input data');
+INSERT INTO `TechInputSplitAverage` VALUES ('US',2040,'ELCP_Renewables','E_ELCTDLOSS',0.19,'# Calculations based on LBNL input data');
+INSERT INTO `TechInputSplitAverage` VALUES ('US',2045,'ELCP_Renewables','E_ELCTDLOSS',0.2,'# Calculations based on LBNL input data');
+INSERT INTO `TechInputSplitAverage` VALUES ('US',2050,'ELCP_Renewables','E_ELCTDLOSS',0.2,'# Calculations based on LBNL input data');
 
 COMMIT;
