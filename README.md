@@ -1,6 +1,6 @@
 <img width="750" alt="OEO Banner" src="https://user-images.githubusercontent.com/10479169/130466549-5f547716-12fa-416e-a2f7-770b9d6a30e6.png">
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TemoaProject/oeo/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TemoaProject/oeo/master/?urlpath=tree)
 
 ## Overview
 Welcome to the GitHub repository associated with the [Open Energy Outlook (OEO) for the United States](https://openenergyoutlook.org/). This project aims to bring U.S. energy system modeling into the twenty-first century by applying the gold standards of policy-focused academic modeling, maximizing transparency, building a networked community, and working towards a common goal: examining U.S. energy futures to inform future energy and climate policy efforts.
@@ -42,7 +42,7 @@ Raw input data and processing scripts are stored in the [```data_aggregation```]
 ## Data Documentation
 Input data is documented in a series of Jupyter Notebooks in the [```database_documentation```](database_documentation/) folder. The notebooks include a combination of markdown cells that provide a narrative describing data sources and assumptions, along with more interactive features that query the latest database version and render the input data as tables, graphs, and network diagrams. As noted above, the current documentation draws on the ```US_9R_4D``` database.
 
-There are a couple ways to view the rendered notebooks. First, you can click on the [```launch binder```](https://mybinder.org/v2/gh/TemoaProject/oeo/master) badge here or at the top of the README. We make use of [binder](https://mybinder.org/) to render the notebooks on the cloud for viewing. Note that it takes several minutes to process the notebooks for viewing. Second, if you have the Temoa environment set up on your local machine and have cloned this repo, you can simply execute the following command from your shell or the Anaconda prompt:
+There are a couple ways to view the rendered notebooks. First, you can click on the [```launch binder```](https://mybinder.org/v2/gh/TemoaProject/oeo/master/?urlpath=tree) badge here or at the top of the README. We make use of [binder](https://mybinder.org/) to render the notebooks on the cloud for viewing. Note that it takes several minutes to process the notebooks for viewing. Second, if you have the Temoa environment set up on your local machine and have cloned this repo, you can simply execute the following command from your shell or the Anaconda prompt:
 
 ```$ jupyter notebook```
 
