@@ -768,6 +768,8 @@ INSERT INTO `technologies` VALUES ('LDV_H2','p','transport','hydrogen refueling 
 INSERT INTO `technologies` VALUES ('HDV_H2','p','transport','hydrogen refueling station for on-road heavy-duty vehicles',NULL);
 INSERT INTO `technologies` VALUES ('NG_SMR','p','supply','#hydrogen production using Steam Methane Refining Natural gas',NULL);							
 INSERT INTO `technologies` VALUES ('NG_SMR_CCS','p','supply','#hydrogen production using Steam Methane Refining Natural Gas with carbon capture and sequestration',NULL);							
+INSERT INTO `technologies` VALUES ('NG_SMR_CCS_emissions','p','supply','#linked process that produces emissions associated with NG_SMR_CCS',NULL);
+
 CREATE TABLE "tech_reserve" (
 	"tech"	text,
 	"notes"	text,
@@ -3510,7 +3512,9 @@ INSERT INTO `LifetimeTech` VALUES ('US','T_BLND_ELC_NGA',50.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','LDV_H2',10.0,'# Argonne HRSAM');
 INSERT INTO `LifetimeTech` VALUES ('US','HDV_H2',10.0,'# Argonne HRSAM');
 INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
-INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR_CCS',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR_CCS',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');		
+INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR_CCS_emissions',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
 	"tech"	text,
@@ -8177,6 +8181,14 @@ INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2040,
 INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2045,'ATM_co2_fuel',-1.0,NULL,'#');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2050,'ATM_co2_fuel',-1.0,NULL,'#');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2_fuel','CCS_fuel_BLND',2017,'co2_to_fuel',1.0,NULL,NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2020,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2025,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2030,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2035,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2040,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2045,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2050,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+
 CREATE TABLE "Efficiency" (
 	"regions"	text,
 	"input_comm"	text,
@@ -12206,6 +12218,14 @@ INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2035,'hydrogen',0.76,
 INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2040,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
 INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2045,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
 INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2050,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');									
+INSERT INTO `Efficiency` VALUES ('US','ethos','NG_SMR_CCS_emissions',2020,'co2_CCS',1,' IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `Efficiency` VALUES ('US','ethos','NG_SMR_CCS_emissions',2025,'co2_CCS',1,' IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `Efficiency` VALUES ('US','ethos','NG_SMR_CCS_emissions',2030,'co2_CCS',1,' IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `Efficiency` VALUES ('US','ethos','NG_SMR_CCS_emissions',2035,'co2_CCS',1,' IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `Efficiency` VALUES ('US','ethos','NG_SMR_CCS_emissions',2040,'co2_CCS',1,' IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `Efficiency` VALUES ('US','ethos','NG_SMR_CCS_emissions',2045,'co2_CCS',1,' IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `Efficiency` VALUES ('US','ethos','NG_SMR_CCS_emissions',2050,'co2_CCS',1,' IEA Future of Hydrogen 2019, Annex table: Production pathways');
+
 CREATE TABLE "DiscountRate" (
 	"regions"	text,
 	"tech"	text,
@@ -26747,6 +26767,7 @@ INSERT INTO `LinkedTechs` VALUES ('US','E_NGACC_CCS_N','co2','E_NGACC_CCS_N_emis
 INSERT INTO `LinkedTechs` VALUES ('US','E_COALIGCC_CCS_N','co2','E_COALIGCC_CCS_N_emissions',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_ground','co2','CO2_Capture_nga',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_fuel','co2','CO2_Capture_elcnga',NULL);
+INSERT INTO `LinkedTechs` VALUES ('US','NG_SMR_CCS','co2','NG_SMR_CCS_emissions',NULL);
 
 CREATE TABLE "tech_variable" (
 	"tech"	text,
