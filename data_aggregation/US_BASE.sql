@@ -766,6 +766,8 @@ INSERT INTO `technologies` VALUES ('HDV_CHRG','p','transport','charging infrastr
 INSERT INTO `technologies` VALUES ('T_BLND_ELC_NGA','p','supply','# blending technology to create an input for direct air capture using electricity and natural gas',NULL);	
 INSERT INTO `technologies` VALUES ('LDV_H2','p','transport','hydrogen refueling station for light-duty vehicles',NULL);
 INSERT INTO `technologies` VALUES ('HDV_H2','p','transport','hydrogen refueling station for on-road heavy-duty vehicles',NULL);
+INSERT INTO `technologies` VALUES ('NG_SMR','p','supply','#hydrogen production using Steam Methane Refining Natural gas',NULL);							
+INSERT INTO `technologies` VALUES ('NG_SMR_CCS','p','supply','#hydrogen production using Steam Methane Refining Natural Gas with carbon capture and sequestration',NULL);							
 CREATE TABLE "tech_reserve" (
 	"tech"	text,
 	"notes"	text,
@@ -3507,6 +3509,8 @@ INSERT INTO `LifetimeTech` VALUES ('US','CO2_Capture_fuel',25.0,'https://www.cel
 INSERT INTO `LifetimeTech` VALUES ('US','T_BLND_ELC_NGA',50.0,NULL);
 INSERT INTO `LifetimeTech` VALUES ('US','LDV_H2',10.0,'# Argonne HRSAM');
 INSERT INTO `LifetimeTech` VALUES ('US','HDV_H2',10.0,'# Argonne HRSAM');
+INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR_CCS',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
 	"tech"	text,
@@ -12188,6 +12192,20 @@ INSERT INTO `Efficiency` VALUES ('US','ELC_NGA','CO2_Capture_elcnga',2045,'dummy
 INSERT INTO `Efficiency` VALUES ('US','ELC_NGA','CO2_Capture_elcnga',2050,'dummy_sink',223.6665943,'# Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2');
 INSERT INTO `Efficiency` VALUES ('US','ELC','T_BLND_ELC_NGA',2017,'ELC_NGA',1.0,'');
 INSERT INTO `Efficiency` VALUES ('US','I_NGA','T_BLND_ELC_NGA',2017,'ELC_NGA',1.0,'');
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR',2020,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');								
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR',2025,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');								
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR',2030,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');								
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR',2035,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');								
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR',2040,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');								
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR',2045,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');								
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR',2050,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');								
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2020,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2025,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2030,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2035,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2040,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2045,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `Efficiency` VALUES ('US','I_NGA','NG_SMR_CCS',2050,'hydrogen',0.76,'IEA Future of Hydrogen 2019, Annex table: Production pathways');									
 CREATE TABLE "DiscountRate" (
 	"regions"	text,
 	"tech"	text,
@@ -23244,6 +23262,20 @@ INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2035,132.14,'$M/(PJ/year)','# est
 INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2040,118.1,'$M/(PJ/year)','# estimate from Argonne HRSAM https://hdsam.es.anl.gov/index.php?content=hrsam');
 INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2045,110.96,'$M/(PJ/year)','# estimate from Argonne HRSAM https://hdsam.es.anl.gov/index.php?content=hrsam');
 INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2050,104.37,'$M/(PJ/year)','# estimate from Argonne HRSAM https://hdsam.es.anl.gov/index.php?content=hrsam');
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2020,28.8559107052258,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2025,28.8559107052258,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2030,28.8559107052258,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2035,28.8559107052258,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2040,28.8559107052258,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2045,28.8559107052258,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2050,28.8559107052258,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2020,53.2724505327245,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2025,48.3891425672248,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2030,43.1253170979198,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2035,42.4911212582446,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2040,41.8569254185693,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2045,41.2544393708777,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2050,40.5885337392187,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');									
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
@@ -25367,6 +25399,55 @@ INSERT INTO `CostFixed` VALUES ('US',2050,'HDV_CHRG',2040,0.07,'1% of capital co
 INSERT INTO `CostFixed` VALUES ('US',2045,'HDV_CHRG',2045,0.07,'1% of capital costs ','$M/PJ'); 
 INSERT INTO `CostFixed` VALUES ('US',2050,'HDV_CHRG',2045,0.07,'1% of capital costs ','$M/PJ'); 
 INSERT INTO `CostFixed` VALUES ('US',2050,'HDV_CHRG',2050,0.07,'1% of capital costs ','$M/PJ');
+INSERT INTO `CostFixed` VALUES ('US',2020,'NG_SMR',2020,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2025,'NG_SMR',2020,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2030,'NG_SMR',2020,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR',2020,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR',2020,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2025,'NG_SMR',2025,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2030,'NG_SMR',2025,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR',2025,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR',2025,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR',2025,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2030,'NG_SMR',2030,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR',2030,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR',2030,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR',2030,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR',2030,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR',2035,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR',2035,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR',2035,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR',2035,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR',2040,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR',2040,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR',2045,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR',2050,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR',2045,1.35622780314561,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2020,'NG_SMR_CCS',2020,1.59817351598174,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2025,'NG_SMR_CCS',2020,1.59817351598174,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2030,'NG_SMR_CCS',2020,1.59817351598174,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR_CCS',2020,1.59817351598174,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR_CCS',2020,1.59817351598174,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2025,'NG_SMR_CCS',2025,1.45167427701674,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2030,'NG_SMR_CCS',2025,1.45167427701674,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR_CCS',2025,1.45167427701674,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR_CCS',2025,1.45167427701674,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR_CCS',2025,1.45167427701674,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2030,'NG_SMR_CCS',2030,1.2937595129376,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR_CCS',2030,1.2937595129376,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR_CCS',2030,1.2937595129376,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR_CCS',2030,1.2937595129376,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2030,1.2937595129376,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2035,'NG_SMR_CCS',2035,1.27473363774734,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR_CCS',2035,1.27473363774734,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR_CCS',2035,1.27473363774734,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2035,1.27473363774734,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2040,'NG_SMR_CCS',2040,1.25570776255708,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR_CCS',2040,1.25570776255708,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2040,1.25570776255708,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR_CCS',2045,1.23763318112633,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2045,1.23763318112633,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
+INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2050,1.23763318112633,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');									
 CREATE TABLE "CapacityToActivity" (
 	"regions"	text,
 	"tech"	text,
