@@ -770,6 +770,12 @@ INSERT INTO `technologies` VALUES ('NG_SMR','p','supply','#hydrogen production u
 INSERT INTO `technologies` VALUES ('NG_SMR_CCS','p','supply','#hydrogen production using Steam Methane Refining Natural Gas with carbon capture and sequestration',NULL);							
 INSERT INTO `technologies` VALUES ('NG_SMR_CCS_emissions','p','supply','#linked process that produces emissions associated with NG_SMR_CCS',NULL);
 
+CREATE TABLE "tech_ramping" (
+	"tech"	text,
+	PRIMARY KEY("tech")
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
+
 CREATE TABLE "tech_reserve" (
 	"tech"	text,
 	"notes"	text,
@@ -2472,6 +2478,20 @@ CREATE TABLE "PlanningReserveMargin" (
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
 INSERT INTO `PlanningReserveMargin` VALUES ('US',0.35);
+CREATE TABLE "RampDown" (
+	`regions`	text,
+	`tech`	text,
+	`ramp_down` real,
+	PRIMARY KEY("regions", "tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
+CREATE TABLE "RampUp" (
+	`regions`	text,
+	`tech`	text,
+	`ramp_up` real,
+	PRIMARY KEY("regions", "tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
 CREATE TABLE "Output_V_Capacity" (
 	"regions"	text,
 	"scenario"	text,
