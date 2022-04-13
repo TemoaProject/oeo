@@ -8149,7 +8149,7 @@ INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2035,
 INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2040,'ATM_co2_fuel',-1.0,NULL,'#');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2045,'ATM_co2_fuel',-1.0,NULL,'#');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM','CO2_Capture_fuel',2050,'ATM_co2_fuel',-1.0,NULL,'#');
-INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2_fuel','CCS_fuel_BLND',2017,'co2_to_fuel',1.0,NULL,NULL);
+INSERT INTO `EmissionActivity` VALUES ('US','co2','ATM_co2_fuel','CCS_fuel_BLND',2030,'co2_to_fuel',1.0,NULL,NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2020,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2025,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NGA','NG_SMR_CCS',2030,'hydrogen', -59.21,'kt/PJ', 'IEA Future of Hydrogen 2019, Annex table: Production pathways');
@@ -12147,10 +12147,12 @@ INSERT INTO `Efficiency` VALUES ('US','ethos','E_COALIGCC_CCS_N_emissions',2035,
 INSERT INTO `Efficiency` VALUES ('US','ethos','E_COALIGCC_CCS_N_emissions',2040,'co2_CCS',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ethos','E_COALIGCC_CCS_N_emissions',2045,'co2_CCS',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ethos','E_COALIGCC_CCS_N_emissions',2050,'co2_CCS',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','co2_CCS_fuel','CCS_fuel_BLND',2017,'co2_to_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2_fuel','CCS_fuel_BLND',2017,'co2_to_fuel',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','ATM_co2_ground','CCS_ground_BLND',2017,'co2_to_ground',1.0,NULL);
-INSERT INTO `Efficiency` VALUES ('US','co2_CCS_ground','CCS_ground_BLND',2017,'co2_to_ground',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','co2_CCS_fuel','CCS_fuel_BLND',2020,'co2_to_fuel',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','co2_CCS_fuel','CCS_fuel_BLND',2030,'co2_to_fuel',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','ATM_co2_fuel','CCS_fuel_BLND',2030,'co2_to_fuel',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','co2_CCS_ground','CCS_ground_BLND',2020,'co2_to_ground',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','ATM_co2_ground','CCS_ground_BLND',2030,'co2_to_ground',1.0,NULL);
+INSERT INTO `Efficiency` VALUES ('US','co2_CCS_ground','CCS_ground_BLND',2030,'co2_to_ground',1.0,NULL);
 INSERT INTO `Efficiency` VALUES ('US','ELC_LDV_CHRG','T_LDV_PELC_N',2030,'TMDLDV_P',0.748,'# EPAUS9rT_TRNLDV_v20.1.0');		
 INSERT INTO `Efficiency` VALUES ('US','ELC_LDV_CHRG','T_LDV_PELC_N',2035,'TMDLDV_P',0.748,'# EPAUS9rT_TRNLDV_v20.1.0');		
 INSERT INTO `Efficiency` VALUES ('US','ELC_LDV_CHRG','T_LDV_PELC_N',2040,'TMDLDV_P',0.748,'# EPAUS9rT_TRNLDV_v20.1.0');		
