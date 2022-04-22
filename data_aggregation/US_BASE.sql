@@ -20365,34 +20365,6 @@ INSERT INTO `CostVariable` VALUES ('US',2050,'T_LDV_PELC_N',2040,33.24233,'EPAUS
 INSERT INTO `CostVariable` VALUES ('US',2045,'T_LDV_PELC_N',2045,33.24233,'EPAUS9rT_TRNLDV_v20.1.0full','$M/bvmt');
 INSERT INTO `CostVariable` VALUES ('US',2050,'T_LDV_PELC_N',2045,33.24233,'EPAUS9rT_TRNLDV_v20.1.0full','$M/bvmt');
 INSERT INTO `CostVariable` VALUES ('US',2050,'T_LDV_PELC_N',2050,33.24233,'EPAUS9rT_TRNLDV_v20.1.0full','$M/bvmt');
-INSERT INTO `CostVariable` VALUES ('US',2020,'co2_to_seq',2020,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2025,'co2_to_seq',2020,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2030,'co2_to_seq',2020,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2035,'co2_to_seq',2020,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2040,'co2_to_seq',2020,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2045,'co2_to_seq',2020,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2050,'co2_to_seq',2020,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2025,'co2_to_seq',2025,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2030,'co2_to_seq',2025,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2035,'co2_to_seq',2025,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2040,'co2_to_seq',2025,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2045,'co2_to_seq',2025,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2050,'co2_to_seq',2025,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2030,'co2_to_seq',2030,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2035,'co2_to_seq',2030,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2040,'co2_to_seq',2030,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2045,'co2_to_seq',2030,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2050,'co2_to_seq',2030,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2035,'co2_to_seq',2035,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2040,'co2_to_seq',2035,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2045,'co2_to_seq',2035,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2050,'co2_to_seq',2035,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2040,'co2_to_seq',2040,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2045,'co2_to_seq',2040,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2050,'co2_to_seq',2040,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2045,'co2_to_seq',2045,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2050,'co2_to_seq',2045,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
-INSERT INTO `CostVariable` VALUES ('US',2050,'co2_to_seq',2050,-0.05,'# $M/kt','Assuming $50/ton credit from 45Q for co2 sequestration');
 CREATE TABLE "CostInvest" (
 	"regions"	text,
 	"tech"	text,
