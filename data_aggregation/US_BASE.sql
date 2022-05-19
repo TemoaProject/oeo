@@ -22721,12 +22721,12 @@ INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVE85X_N',2035,2965.76,'#M$/bmt','#
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVE85X_N',2040,2971.59,'#M$/bmt','#VT_EPAUS9rT_TRNLDV_v20.1.0full.xlsx');
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVE85X_N',2045,2977.58,'#M$/bmt','#VT_EPAUS9rT_TRNLDV_v20.1.0full.xlsx');
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVE85X_N',2050,2983.04,'#M$/bmt','#VT_EPAUS9rT_TRNLDV_v20.1.0full.xlsx');
-INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2025','1897.39726027397','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
-INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2030','1817.21624266145','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
-INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2035','1775.87084148728','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
-INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2040','1775.87084148728','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
-INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2045','1775.87084148728','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
-INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2050','1738.2240704501','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
+INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2025','3838.57','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
+INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2030','3643.3153287814','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
+INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2035','3547.1089840408','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
+INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2040','3547.1089840408','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
+INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2045','3547.1089840408','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
+INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_100_N','2050','3366.6781913496','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_200_N','2025','4298.3','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_200_N','2030','3940.21796655444','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
 INSERT INTO `CostInvest` VALUES ('US','T_LDV_MVELC_200_N','2035','3611.96696925724','#M$/bvmt','reductions relative to 2020 scaled according to NREL EFS, moderate advancement scenario');
