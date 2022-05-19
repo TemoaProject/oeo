@@ -23073,7 +23073,14 @@ INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2030,36.88,'$M/(PJ/year)','IEA Fu
 INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2035,36.88,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Distribution');
 INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2040,36.88,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Distribution');
 INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2045,36.88,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Distribution');
-INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2050,36.88,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Distribution');							
+INSERT INTO `CostInvest` VALUES ('US','HDV_H2',2050,36.88,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Distribution');		
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2020,28.86,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2025,28.86,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2030,28.86,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2035,28.86,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2040,28.86,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2045,28.86,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO `CostInvest` VALUES ('US','NG_SMR',2050,28.86,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');					
 INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2020,53.2724505327245,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
 INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2025,48.3891425672248,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
 INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2030,43.1253170979198,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
