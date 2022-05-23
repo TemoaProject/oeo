@@ -776,6 +776,8 @@ INSERT INTO `technologies` VALUES ('HDV_H2','p','transport','hydrogen refueling 
 INSERT INTO `technologies` VALUES ('NG_SMR','p','supply','#hydrogen production using Steam Methane Refining Natural gas',NULL);							
 INSERT INTO `technologies` VALUES ('NG_SMR_CCS','p','supply','#hydrogen production using Steam Methane Refining Natural Gas with carbon capture and sequestration',NULL);							
 INSERT INTO `technologies` VALUES ('NG_SMR_CCS_emissions','p','supply','#linked process that produces emissions associated with NG_SMR_CCS',NULL);
+INSERT INTO "technologies" VALUES ('BECCS_H2_N','p','industrial','#biomass to hydrogen with carbon capture and storage','');
+INSERT INTO "technologies" VALUES ('BECCS_H2_N_emissions','p','industrial','linked process that produces emissions associated with BECCS-H2','');
 
 CREATE TABLE "tech_ramping" (
 	"tech"	text,
@@ -3530,6 +3532,8 @@ INSERT INTO `LifetimeTech` VALUES ('US','HDV_H2',10,'IEA Future of Hydrogen 2019
 INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');							
 INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR_CCS',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');		
 INSERT INTO `LifetimeTech` VALUES ('US','NG_SMR_CCS_emissions',25,'IEA Future of Hydrogen 2019, Annex table: Production pathways');
+INSERT INTO "LifetimeTech" VALUES ('US','BECCS_H2_N',30.0,'Estimated based on other thermal plants');
+INSERT INTO "LifetimeTech" VALUES ('US','BECCS_H2_N_emissions',30.0,NULL);
 
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
@@ -7777,6 +7781,21 @@ INSERT INTO `EmissionActivity` VALUES ('US','co2','I_RFO_EA','I_EA_RFO',2017,'I_
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_IND','I_RFO_EA','I_EA_RFO',2017,'I_RFO',0.0308,'kt/PJ','#VT_EPAUS9rT_IND_v16.1.0.xlsx sheet EmissionsUpdate, Residual oil CHP boiler ');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_IND','I_RFO_EA','I_EA_RFO',2017,'I_RFO',0.2345,'kt/PJ','#VT_EPAUS9rT_IND_v16.1.0.xlsx sheet EmissionsUpdate, Residual oil CHP boiler ');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_IND','I_RFO_EA','I_EA_RFO',2017,'I_RFO',0.1466,'kt/PJ','#VT_EPAUS9rT_IND_v16.1.0.xlsx sheet EmissionsUpdate, Residual oil CHP boiler ');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2030,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2035,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2040,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2045,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2050,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2030,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2035,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2040,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2045,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2050,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2030,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2035,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2040,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2045,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2050,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
 CREATE TABLE "Efficiency" (
 	"regions"	text,
 	"input_comm"	text,
@@ -12013,6 +12032,26 @@ INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_COM_ADDER',2017,'ELC_COM',1,'Co
 INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_COM_ADDER',2020,'ELC_COM',1,'Cost adder for electricity deliveered to the commercial sector');
 INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_RES_ADDER',2017,'ELC_RES',1,'Cost adder for electricity deliveered to the residential sector');
 INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_RES_ADDER',2020,'ELC_RES',1,'Cost adder for electricity deliveered to the residential sector');
+INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2030,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2035,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2040,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2045,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2050,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2030,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2035,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2040,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2045,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2050,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2030,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2035,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2040,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2045,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2050,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2030,'co2_CCS',1.0,'');
+INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2035,'co2_CCS',1.0,'');
+INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2040,'co2_CCS',1.0,'');
+INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2045,'co2_CCS',1.0,'');
+INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2050,'co2_CCS',1.0,'');
 
 CREATE TABLE "DiscountRate" (
 	"regions"	text,
@@ -20610,6 +20649,21 @@ INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture_ground',2040,0.026,'# 
 INSERT INTO `CostVariable` VALUES ('US',2045,'CO2_Capture_ground',2045,0.024,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. Divided by process efficiency so cost is per ton of CO2 captured from the atmosphere (excluding co2 from natural gas input) ','# $M/ktCO2');
 INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture_ground',2045,0.024,'# Linear interpolation between plants A and B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. Divided by process efficiency so cost is per ton of CO2 captured from the atmosphere (excluding co2 from natural gas input) ','# $M/ktCO2');
 INSERT INTO `CostVariable` VALUES ('US',2050,'CO2_Capture_ground',2050,0.021,'# Plant B Keith et al 2018 https://www.cell.com/joule/fulltext/S2542-4351(18)30225-3#tbl2. Divided by process efficiency so cost is per ton of CO2 captured from the atmosphere (excluding co2 from natural gas input) ','# $M/ktCO2');
+INSERT INTO "CostVariable" VALUES ('US',2030,'BECCS_H2_N',2030,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2035,'BECCS_H2_N',2030,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2040,'BECCS_H2_N',2030,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2045,'BECCS_H2_N',2030,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2050,'BECCS_H2_N',2030,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2035,'BECCS_H2_N',2035,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2040,'BECCS_H2_N',2035,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2045,'BECCS_H2_N',2035,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2050,'BECCS_H2_N',2035,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2040,'BECCS_H2_N',2040,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2045,'BECCS_H2_N',2040,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2050,'BECCS_H2_N',2040,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2045,'BECCS_H2_N',2045,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2050,'BECCS_H2_N',2045,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
+INSERT INTO "CostVariable" VALUES ('US',2050,'BECCS_H2_N',2050,3.2,'$M/PJ H2 HHV','Princeton NZA annex 3');
 CREATE TABLE "CostInvest" (
 	"regions"	text,
 	"tech"	text,
@@ -23088,6 +23142,11 @@ INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2035,42.4911212582446,'$M/(PJ
 INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2040,41.8569254185693,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
 INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2045,41.2544393708777,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');						
 INSERT INTO `CostInvest` VALUES ('US','NG_SMR_CCS',2050,40.5885337392187,'$M/(PJ/year)','IEA Future of Hydrogen 2019, Annex table: Production pathways');									
+INSERT INTO "CostInvest" VALUES ('US','BECCS_H2_N',2030,82.41,'$M / GW','Princeton NZA Annex 3');
+INSERT INTO "CostInvest" VALUES ('US','BECCS_H2_N',2035,82.41,'$M / GW','Princeton NZA Annex 3');
+INSERT INTO "CostInvest" VALUES ('US','BECCS_H2_N',2040,82.41,'$M / GW','Princeton NZA Annex 3');
+INSERT INTO "CostInvest" VALUES ('US','BECCS_H2_N',2045,82.41,'$M / GW','Princeton NZA Annex 3');
+INSERT INTO "CostInvest" VALUES ('US','BECCS_H2_N',2050,82.41,'$M / GW','Princeton NZA Annex 3');
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
@@ -25231,6 +25290,21 @@ INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2040,1.25570776255708,'$M
 INSERT INTO `CostFixed` VALUES ('US',2045,'NG_SMR_CCS',2045,1.23763318112633,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
 INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2045,1.23763318112633,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');							
 INSERT INTO `CostFixed` VALUES ('US',2050,'NG_SMR_CCS',2050,1.23763318112633,'$M/PJ','IEA Future of Hydrogen 2019, Annex table: Production pathways');									
+INSERT INTO "CostFixed" VALUES ('US',2030,'BECCS_H2_N',2030,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2035,'BECCS_H2_N',2030,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2040,'BECCS_H2_N',2030,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2045,'BECCS_H2_N',2030,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2050,'BECCS_H2_N',2030,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2035,'BECCS_H2_N',2035,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2040,'BECCS_H2_N',2035,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2045,'BECCS_H2_N',2035,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2050,'BECCS_H2_N',2035,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2040,'BECCS_H2_N',2040,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2045,'BECCS_H2_N',2040,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2050,'BECCS_H2_N',2040,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2045,'BECCS_H2_N',2045,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2050,'BECCS_H2_N',2045,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
+INSERT INTO "CostFixed" VALUES ('US',2050,'BECCS_H2_N',2050,0.57,'$M/(PJ/year)','Princeton NZA annex 3');
 CREATE TABLE "CapacityToActivity" (
 	"regions"	text,
 	"tech"	text,
@@ -26531,6 +26605,7 @@ INSERT INTO `LinkedTechs` VALUES ('US','E_COALIGCC_CCS_N','co2','E_COALIGCC_CCS_
 INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_ground','co2','CO2_Capture_nga',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','CO2_Capture_fuel','co2','CO2_Capture_elcnga',NULL);
 INSERT INTO `LinkedTechs` VALUES ('US','NG_SMR_CCS','co2','NG_SMR_CCS_emissions',NULL);
+INSERT INTO "LinkedTechs" VALUES ('US','BECCS_H2_N','co2','BECCS_H2_N_emissions','from princeton NZA');
 
 CREATE TABLE "tech_variable" (
 	"tech"	text,
