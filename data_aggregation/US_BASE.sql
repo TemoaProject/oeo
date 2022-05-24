@@ -776,8 +776,10 @@ INSERT INTO `technologies` VALUES ('HDV_H2','p','transport','hydrogen refueling 
 INSERT INTO `technologies` VALUES ('NG_SMR','p','supply','#hydrogen production using Steam Methane Refining Natural gas',NULL);							
 INSERT INTO `technologies` VALUES ('NG_SMR_CCS','p','supply','#hydrogen production using Steam Methane Refining Natural Gas with carbon capture and sequestration',NULL);							
 INSERT INTO `technologies` VALUES ('NG_SMR_CCS_emissions','p','supply','#linked process that produces emissions associated with NG_SMR_CCS',NULL);
-INSERT INTO "technologies" VALUES ('BECCS_H2_N','p','industrial','#biomass to hydrogen with carbon capture and storage','');
-INSERT INTO "technologies" VALUES ('BECCS_H2_N_emissions','p','industrial','linked process that produces emissions associated with BECCS-H2','');
+INSERT INTO `technologies` VALUES ('BECCS_H2_N','p','industrial','#biomass to hydrogen with carbon capture and storage','');
+INSERT INTO `technologies` VALUES ('BECCS_H2_N_emissions','p','industrial','linked process that produces emissions associated with BECCS-H2','');
+INSERT INTO `technologies` VALUES ('BECCS_BIO_BLND','p','supply','Blending biomass inputs to BECCS processes: WOODY, WASTE and HERB _BIO',NULL);
+INSERT INTO `technologies` VALUES ('BECCS_H2_BIO_ELC_BLND','p','supply','Blending biomass and electricity inputs to BECCS_H2 process',NULL);
 
 CREATE TABLE "tech_ramping" (
 	"tech"	text,
@@ -1585,6 +1587,8 @@ INSERT INTO `commodities` VALUES ('ELC_HDV_CHRG','p','# electricity from heavy-d
 INSERT INTO `commodities` VALUES ('ELC_NGA','p','# electricity and natural gas blend for direct air capture');
 INSERT INTO `commodities` VALUES ('H2_LDV_FUEL','p','# hydrogen from light-duty H2 refueling station');
 INSERT INTO `commodities` VALUES ('H2_HDV_FUEL','p','# hydrogen from heavy-duty H2 refueling station');
+INSERT INTO `commodities` VALUES ('BECCS_H2_BIO','p','Blend of biomass inputs to BECCS processes: WOODY, WASTE and HERB _BIO');
+INSERT INTO `commodities` VALUES ('BECCS_H2_BIO_ELC','p','Blend of biomass and electric inputs to BECCS_H2 process');
 CREATE TABLE "TechOutputSplit" (
 	"regions"	TEXT,
 	"periods"	integer,
@@ -2447,6 +2451,16 @@ INSERT INTO `TechInputSplit` VALUES ('US',2035,'H2','HDV_H2',0.95,'IEA Future of
 INSERT INTO `TechInputSplit` VALUES ('US',2040,'H2','HDV_H2',0.95,'IEA Future of Hydrogen 2019, Annex table: Distribution, 1.6kWh/kgH2');
 INSERT INTO `TechInputSplit` VALUES ('US',2045,'H2','HDV_H2',0.95,'IEA Future of Hydrogen 2019, Annex table: Distribution, 1.6kWh/kgH2');
 INSERT INTO `TechInputSplit` VALUES ('US',2050,'H2','HDV_H2',0.95,'IEA Future of Hydrogen 2019, Annex table: Distribution, 1.6kWh/kgH2');
+INSERT INTO `TechInputSplit` VALUES ('US',2030,'ELC','BECCS_H2_BIO_ELC_BLND',0.015,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2035,'ELC','BECCS_H2_BIO_ELC_BLND',0.015,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2040,'ELC','BECCS_H2_BIO_ELC_BLND',0.015,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2045,'ELC','BECCS_H2_BIO_ELC_BLND',0.015,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2050,'ELC','BECCS_H2_BIO_ELC_BLND',0.015,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2030,'BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',0.985,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2035,'BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',0.985,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2040,'BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',0.985,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2045,'BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',0.985,'Princeton NZA, Annex L');
+INSERT INTO `TechInputSplit` VALUES ('US',2050,'BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',0.985,'Princeton NZA, Annex L');
 
 CREATE TABLE `StorageInit` (
 	`storage_tech`	TEXT,
@@ -7781,21 +7795,11 @@ INSERT INTO `EmissionActivity` VALUES ('US','co2','I_RFO_EA','I_EA_RFO',2017,'I_
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_IND','I_RFO_EA','I_EA_RFO',2017,'I_RFO',0.0308,'kt/PJ','#VT_EPAUS9rT_IND_v16.1.0.xlsx sheet EmissionsUpdate, Residual oil CHP boiler ');
 INSERT INTO `EmissionActivity` VALUES ('US','so2_IND','I_RFO_EA','I_EA_RFO',2017,'I_RFO',0.2345,'kt/PJ','#VT_EPAUS9rT_IND_v16.1.0.xlsx sheet EmissionsUpdate, Residual oil CHP boiler ');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_IND','I_RFO_EA','I_EA_RFO',2017,'I_RFO',0.1466,'kt/PJ','#VT_EPAUS9rT_IND_v16.1.0.xlsx sheet EmissionsUpdate, Residual oil CHP boiler ');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2030,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2035,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2040,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2045,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WOODY_BIO','BECCS_H2_N',2050,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2030,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2035,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2040,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2045,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','HERB_BIO','BECCS_H2_N',2050,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2030,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2035,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2040,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2045,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
-INSERT INTO "EmissionActivity" VALUES ('US','co2','WASTE_BIO','BECCS_H2_N',2050,'hydrogen',-135.0,'kt/Pjout','princeton nza annex 3');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','BECCS_H2_BIO_ELC','BECCS_H2_N',2030,'hydrogen', -135,'kt/Pjout', 'princeton nza annex 3');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','BECCS_H2_BIO_ELC','BECCS_H2_N',2035,'hydrogen', -135,'kt/Pjout', 'princeton nza annex 3');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','BECCS_H2_BIO_ELC','BECCS_H2_N',2040,'hydrogen', -135,'kt/Pjout', 'princeton nza annex 3');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','BECCS_H2_BIO_ELC','BECCS_H2_N',2045,'hydrogen', -135,'kt/Pjout', 'princeton nza annex 3');
+INSERT INTO `EmissionActivity` VALUES ('US','co2','BECCS_H2_BIO_ELC','BECCS_H2_N',2050,'hydrogen', -135,'kt/Pjout', 'princeton nza annex 3');
 CREATE TABLE "Efficiency" (
 	"regions"	text,
 	"input_comm"	text,
@@ -12032,21 +12036,42 @@ INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_COM_ADDER',2017,'ELC_COM',1,'Co
 INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_COM_ADDER',2020,'ELC_COM',1,'Cost adder for electricity deliveered to the commercial sector');
 INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_RES_ADDER',2017,'ELC_RES',1,'Cost adder for electricity deliveered to the residential sector');
 INSERT INTO `Efficiency` VALUES ('US','ELC','ELC_RES_ADDER',2020,'ELC_RES',1,'Cost adder for electricity deliveered to the residential sector');
-INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2030,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2035,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2040,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2045,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WOODY_BIO','BECCS_H2_N',2050,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2030,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2035,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2040,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2045,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','HERB_BIO','BECCS_H2_N',2050,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2030,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2035,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2040,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2045,'hydrogen',0.56,'Princeton NZA');
-INSERT INTO "Efficiency" VALUES ('US','WASTE_BIO','BECCS_H2_N',2050,'hydrogen',0.56,'Princeton NZA');
+INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','BECCS_BIO_BLND',2020,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','BECCS_BIO_BLND',2025,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','BECCS_BIO_BLND',2030,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','BECCS_BIO_BLND',2035,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','BECCS_BIO_BLND',2040,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','BECCS_BIO_BLND',2045,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','BECCS_BIO_BLND',2050,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','BECCS_BIO_BLND',2020,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','BECCS_BIO_BLND',2025,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','BECCS_BIO_BLND',2030,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','BECCS_BIO_BLND',2035,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','BECCS_BIO_BLND',2040,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','BECCS_BIO_BLND',2045,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','BECCS_BIO_BLND',2050,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','BECCS_BIO_BLND',2020,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','BECCS_BIO_BLND',2025,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','BECCS_BIO_BLND',2030,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','BECCS_BIO_BLND',2035,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','BECCS_BIO_BLND',2040,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','BECCS_BIO_BLND',2045,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','BECCS_BIO_BLND',2050,'BECCS_H2_BIO',1,' Blending biomass inputs to BECCS processes');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',2030,'BECCS_H2_BIO_ELC',1,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',2035,'BECCS_H2_BIO_ELC',1,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',2040,'BECCS_H2_BIO_ELC',1,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',2045,'BECCS_H2_BIO_ELC',1,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO','BECCS_H2_BIO_ELC_BLND',2050,'BECCS_H2_BIO_ELC',1,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','ELC','BECCS_H2_BIO_ELC_BLND',2030,'BECCS_H2_BIO_ELC',0.00001,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','ELC','BECCS_H2_BIO_ELC_BLND',2035,'BECCS_H2_BIO_ELC',0.00001,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','ELC','BECCS_H2_BIO_ELC_BLND',2040,'BECCS_H2_BIO_ELC',0.00001,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','ELC','BECCS_H2_BIO_ELC_BLND',2045,'BECCS_H2_BIO_ELC',0.00001,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','ELC','BECCS_H2_BIO_ELC_BLND',2050,'BECCS_H2_BIO_ELC',0.00001,' Blending biomass and electricity inputs to BECCS_H2 process, small efficiency value to ignore ELC conversion to hydrogen');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO_ELC','BECCS_H2_N',2030,'hydrogen',0.56,' Princeton NZA, Annex L');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO_ELC','BECCS_H2_N',2035,'hydrogen',0.56,' Princeton NZA, Annex L');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO_ELC','BECCS_H2_N',2040,'hydrogen',0.56,' Princeton NZA, Annex L');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO_ELC','BECCS_H2_N',2045,'hydrogen',0.56,' Princeton NZA, Annex L');
+INSERT INTO `Efficiency` VALUES ('US','BECCS_H2_BIO_ELC','BECCS_H2_N',2050,'hydrogen',0.56,' Princeton NZA, Annex L');
 INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2030,'co2_CCS',1.0,'');
 INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2035,'co2_CCS',1.0,'');
 INSERT INTO "Efficiency" VALUES ('US','ethos','BECCS_H2_N_emissions',2040,'co2_CCS',1.0,'');
