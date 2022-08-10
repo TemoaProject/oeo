@@ -7202,7 +7202,6 @@ INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','MGO','T_HDV_WTP_MGO_N',2
 INSERT INTO `EmissionActivity` VALUES ('US','pm25_TRN','MGO','T_HDV_WTP_MGO_N',2050,'TMDHDV_WTP_MGO',0.8872,'kt/btm','emissions from both cruising and at berth, data from Port of LA, European Environment Agency, and International Council on Clean Transportation.');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','I_NG_EA','I_EA_NG',2017,'I_NGA',50.0,'#kt/PJout',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','JTF_EA','BLEND_BIOJTF_JTF',2017,'JTF',67.2,'#kt/PJout',NULL);
-INSERT INTO `EmissionActivity` VALUES ('US','co2','BIO_JTF','BLEND_BIOJTF_JTF',2020,'JTF',67.2,'#kt/PJout',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','R_NGA_EA','R_EA_NG',2017,'R_NGA',50.3,'#kt/PJout',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','E_NGA_EA','E_EA_NG',2017,'E_NGA',50.0,'#kt/PJout',NULL);
 INSERT INTO `EmissionActivity` VALUES ('US','co2','ethos','IMPTRNLNG',2017,'T_LNG_EA',19.91,'#kt/Pjout','#upstream NG emissons from Alvarez et al + liquefaction emissions estimated from GREET 2019');
@@ -9516,7 +9515,7 @@ INSERT INTO `Efficiency` VALUES ('US','FSR','BLEND_WOODY',2017,'WOODY_BIO',1.0,'
 INSERT INTO `Efficiency` VALUES ('US','UWW','BLEND_WOODY',2017,'WOODY_BIO',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','WOODY_BIO','FISCH_TROP',2017,'BIODSL',0.5,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','JTF_EA','BLEND_BIOJTF_JTF',2017,'JTF',1.0,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','BIO_JTF','BLEND_BIOJTF_JTF',2020,'JTF',1.0,'NULL');
+INSERT INTO `Efficiency` VALUES ('US','BIO_JTF','BLEND_BIOJTF_JTF',2017,'JTF',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','HERB_BIO','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','WASTE_BIO','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','ECG','E_BIOIGCC_N',2020,'ELCP_Renewables',0.388,'NULL');
