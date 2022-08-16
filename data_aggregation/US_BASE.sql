@@ -406,7 +406,7 @@ INSERT INTO `technologies` VALUES ('IMPTRNRFO','r','supply','#imported residual 
 INSERT INTO `technologies` VALUES ('T_BLND_DSLELC_CR','p','transport','#blending tech to collect elec and diesel for dual-mode commuter rail operations','');
 INSERT INTO `technologies` VALUES ('T_BLND_DSLBIODSL_B20','p','transport','#blending tech to collect diesel and biodiesel to make B20 for bus, truck, and rail','');
 INSERT INTO `technologies` VALUES ('T_EA_DSL','p','transport','#co2 emission accounting tech for diesel','');
-INSERT INTO `technologies` VALUES ('T_EA_JTF','p','transport','#co2 emission accounting tech for jet fuel','');
+INSERT INTO `technologies` VALUES ('T_EA_JTF','p','transport','T_Liquids to jet fuel commodity','');
 INSERT INTO `technologies` VALUES ('T_EA_LPG','p','transport','#co2 emission accounting tech for LPG','');
 INSERT INTO `technologies` VALUES ('T_EA_RFO','p','transport','#co2 emission accounting tech for residual fuel oil','');
 INSERT INTO `technologies` VALUES ('T_HDV_AGA_N','p','transport','#new airplane general avaiation 2010','');
@@ -4335,7 +4335,6 @@ INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','E_NGA','E_NGACC_CCS_N',20
 INSERT INTO `EmissionActivity` VALUES ('US','nox_ELC','E_NGA','E_NGACC_CCS_N',2040,'ELCP',0.0104,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','DSL_EA','T_EA_DSL',2017,'DSL',69.35,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','CNG_EA','T_EA_NG',2017,'CNG',50.3,'#kt/PJout','NULL');
-INSERT INTO `EmissionActivity` VALUES ('US','co2','JTF_EA','T_EA_JTF',2017,'JTF',67.2,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','T_LPG_EA','T_EA_LPG',2017,'T_LPG',59.8,'#kt/PJout','NULL');
 INSERT INTO `EmissionActivity` VALUES ('US','co2','RFO_EA','T_EA_RFO',2017,'RFO',79.05,'#kt/Pjout','Corbett and Winebrake, 2009');
 INSERT INTO `EmissionActivity` VALUES ('US','nox_TRN','JTF','T_HDV_AJP_R',2000,'TMDHDV_A_JP',0.065,'#kt/bpm','NULL');
@@ -7712,7 +7711,6 @@ INSERT INTO `Efficiency` VALUES ('US','ELC_TRN','T_BLND_DSLELC_CR',2017,'DSLELC'
 INSERT INTO `Efficiency` VALUES ('US','DSL','T_BLND_DSLBIODSL_B20',2017,'B20',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','BIODSL','T_BLND_DSLBIODSL_B20',2017,'B20',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','DSL_EA','T_EA_DSL',2017,'DSL',1.0,'NULL');
-INSERT INTO `Efficiency` VALUES ('US','JTF_EA','T_EA_JTF',2017,'JTF',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','T_LPG_EA','T_EA_LPG',2017,'T_LPG',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','RFO_EA','T_EA_RFO',2017,'RFO',1.0,'NULL');
 INSERT INTO `Efficiency` VALUES ('US','TMDHDV_A_JP','T_HDV_BLNDDEM_A',2017,'TMDHDV_A',1.0,'NULL');
