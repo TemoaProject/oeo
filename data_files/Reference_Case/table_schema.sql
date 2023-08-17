@@ -548,11 +548,6 @@ CREATE TABLE IF NOT EXISTS "tech_flex" (
 	PRIMARY KEY("tech"),
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
-CREATE TABLE `tech_groups` (
-	`tech`	text,
-	`notes`	text,
-	PRIMARY KEY(tech)
-);
 CREATE TABLE tech_new_cluster ( regions TEXT, tech TEXT, cap_size REAL, PRIMARY KEY (regions, tech));
 CREATE TABLE IF NOT EXISTS "tech_ramping" (
 	"tech"	text,
@@ -606,4 +601,54 @@ CREATE TABLE `time_renewable` (
 CREATE TABLE IF NOT EXISTS "time_season" (
 	"t_season"	text,
 	PRIMARY KEY("t_season")
+);
+CREATE TABLE `MaxActivityGroup` (
+	`regions`	text,
+	`periods`	integer,
+	`group_name`	text,
+	`max_act_g`	real,
+	`notes`	text,
+	PRIMARY KEY(`regions`,`periods`,`group_name`),
+	FOREIGN KEY(`periods`) REFERENCES `time_periods`(`t_periods`),
+	FOREIGN KEY(`group_name`) REFERENCES `groups`(`group_name`)
+);
+CREATE TABLE `MinActivityGroup` (
+	`regions`	text,
+	`periods`	integer,
+	`group_name`	text,
+	`min_act_g`	real,
+	`notes`	text,
+	PRIMARY KEY(`regions`,`periods`,`group_name`),
+	FOREIGN KEY(`periods`) REFERENCES `time_periods`(`t_periods`),
+	FOREIGN KEY(`group_name`) REFERENCES `groups`(`group_name`)
+);
+CREATE TABLE `MinCapacityGroup` (
+	`regions`	text,
+	`periods`	integer,
+	`group_name`	text,
+	`min_cap_g`	real,
+	`notes`	text,
+	PRIMARY KEY(`regions`,`periods`,`group_name`),
+	FOREIGN KEY(`periods`) REFERENCES `time_periods`(`t_periods`),
+	FOREIGN KEY(`group_name`) REFERENCES `groups`(`group_name`)
+);
+CREATE TABLE `MaxCapacityGroup` (
+	`regions`	text,
+	`periods`	integer,
+	`group_name`	text,
+	`max_cap_g`	real,
+	`notes`	text,
+	PRIMARY KEY(`regions`,`periods`,`group_name`),
+	FOREIGN KEY(`periods`) REFERENCES `time_periods`(`t_periods`),
+	FOREIGN KEY(`group_name`) REFERENCES `groups`(`group_name`)
+);
+CREATE TABLE `tech_groups` (
+	`region`	text,
+	`group_name`	text,
+	`tech`	text,
+	`notes`	TEXT,
+	PRIMARY KEY(`region`,`group_name`,`tech`),
+	FOREIGN KEY(`region`) REFERENCES `regions`(`regions`),
+	FOREIGN KEY(`group_name`) REFERENCES `groups`(`group_name`),
+	FOREIGN KEY(`tech`) REFERENCES `technologies`(`tech`)
 );

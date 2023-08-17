@@ -7,7 +7,7 @@ sqlite3 US_9R_8D.sqlite -batch ".dump 'commodities' 'commodity_labels' 'groups' 
 grep -vx -f table_schema.sql tempfile.sql > sets.sql #
 rm tempfile.sql #
 # Export all parameters that do not depend on the sub-annual temporal representation
-sqlite3 US_9R_8D.sqlite -batch ".dump 'CapacityCredit' 'CapacityToActivity' 'CostFixed' 'CostInvest' 'CostVariable' 'Demand' 'DiscountRate' 'Efficiency' 'EmissionActivity' 'EmissionLimit' 'ExistingCapacity' 'GlobalDiscountRate' 'GrowthRateMax' 'GrowthRateSeed' 'LifetimeLoanTech' 'LifetimeProcess' 'LifetimeTech' 'LinkedTechs' 'MaxActivity' 'MaxAnnualCapacityFactor' 'MaxCapacity' 'MaxResource' 'MinActivity' 'MinAnnualCapacityFactor' 'MinCapacity' 'MinGenGroupTarget' 'MinGenGroupWeight' 'MyopicBaseyear' 'PlanningReserveMargin' 'StorageDuration' 'StorageInit' 'TechInputSplit' 'TechInputSplitAverage' 'TechOutputSplit'" > tempfile.sql #
+sqlite3 US_9R_8D.sqlite -batch ".dump 'CapacityCredit' 'CapacityToActivity' 'CostFixed' 'CostInvest' 'CostVariable' 'Demand' 'DiscountRate' 'Efficiency' 'EmissionActivity' 'EmissionLimit' 'ExistingCapacity' 'GlobalDiscountRate' 'GrowthRateMax' 'GrowthRateSeed' 'LifetimeLoanTech' 'LifetimeProcess' 'LifetimeTech' 'LinkedTechs' 'MaxActivity' 'MaxAnnualCapacityFactor' 'MaxCapacity' 'MaxResource' 'MaxCapacityGroup' 'MinCapacityGroup' 'MinActivityGroup' 'MaxActivityGroup' 'MinActivity' 'MinAnnualCapacityFactor' 'MinCapacity' 'MinGenGroupTarget' 'MinGenGroupWeight' 'MyopicBaseyear' 'PlanningReserveMargin' 'StorageDuration' 'StorageInit' 'TechInputSplit' 'TechInputSplitAverage' 'TechOutputSplit'" > tempfile.sql #
 grep -vx -f table_schema.sql tempfile.sql > timestep_independent_params.sql #
 rm tempfile.sql #
 # Export all sets and parameters that depend on the sub-annual temporal representation
