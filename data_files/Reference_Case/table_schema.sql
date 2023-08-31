@@ -652,3 +652,19 @@ CREATE TABLE `tech_groups` (
 	FOREIGN KEY(`group_name`) REFERENCES `groups`(`group_name`),
 	FOREIGN KEY(`tech`) REFERENCES `technologies`(`tech`)
 );
+CREATE TABLE `tech_rps` (
+	`region`	text,
+	`tech`	text,
+	`notes`	TEXT,
+	PRIMARY KEY(`region`,`tech`),
+	FOREIGN KEY(`region`) REFERENCES `regions`(`regions`),
+	FOREIGN KEY(`tech`) REFERENCES `technologies`(`tech`)
+);
+CREATE TABLE `RenewablePortfolioStandard` (
+	`regions`	text,
+	`periods`	INTEGER,
+	`rps`	real,
+	`rps_notes`	text,
+	PRIMARY KEY(`regions`,`periods`),
+	FOREIGN KEY(`periods`) REFERENCES `time_periods`(`t_periods`)
+);
