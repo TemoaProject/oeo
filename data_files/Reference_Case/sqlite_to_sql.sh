@@ -3,13 +3,13 @@
 ### Must make sure to include all tables (can confirm this against the list in temoa_config)
 ### The order of the tables is important to maintain so the diff's across files are meaningful/easier to navigate
 
-input_file="database_to_split.sqlite"
+input_file="US_9R_TS.sqlite"
 
 # Initialize the combined output file
-schema_output="table_schema.sql"
-sets_output="sets.sql"
-time_independent_output="timestep_independent_params.sql"
-time_dependent_output="timestep_dependent_params.sql"
+schema_output="table_schema_TS.sql"
+sets_output="sets_TS.sql"
+time_independent_output="timestep_independent_params_TS.sql"
+time_dependent_output="timestep_dependent_params_TS.sql"
 
 > "$schema_output"
 > "$sets_output"
@@ -18,7 +18,7 @@ time_dependent_output="timestep_dependent_params.sql"
 
 # All sets except for those that depend on the sub-annual temporal representation (time_season, time_of_day, tech_ramping)
 tables_sets=('commodities' 'commodity_labels' 'groups' 'regions' 'sector_labels' 'tech_annual' 'tech_curtailment' 'tech_exchange' \
-	'tech_flex' 'tech_groups' 'tech_new_cluster' 'tech_reserve' 'tech_variable' 'technologies' 'technology_labels' \
+	'tech_flex' 'tech_groups' 'tech_new_cluster' 'tech_reserve' 'tech_rps' 'tech_variable' 'technologies' 'technology_labels' \
 	'time_period_labels' 'time_periods' 'time_renewable')
 
 # All parameters that DO NOT depend on the sub-annual temporal representation
@@ -27,7 +27,7 @@ tables_time_independent=('CapacityCredit' 'CapacityToActivity' 'CostFixed' 'Cost
 	'LifetimeLoanTech' 'LifetimeProcess' 'LifetimeTech' 'LinkedTechs' 'MaxActivity' 'MaxAnnualCapacityFactor' 'MaxCapacity' \
 	'MaxResource' 'MaxCapacityGroup' 'MinCapacityGroup' 'MinActivityGroup' 'MaxActivityGroup' 'MinActivity' \
 	'MinAnnualCapacityFactor' 'MinCapacity' 'MinGenGroupTarget' 'MinGenGroupWeight' 'MyopicBaseyear' \
-	'PlanningReserveMargin' 'StorageDuration' 'StorageInit' 'TechInputSplit' 'TechInputSplitAverage' 'TechOutputSplit')
+	'PlanningReserveMargin' 'RenewablePortfolioStandard' 'StorageDuration' 'StorageInit' 'TechInputSplit' 'TechInputSplitAverage' 'TechOutputSplit')
 
 # All sets and parameters that DOES depend on the sub-annual temporal representation
 tables_time=('time_season' 'time_of_day' 'tech_ramping' 'RampDown' 'RampUp' 'CapacityFactorProcess' \
