@@ -42,7 +42,34 @@ for table_name in "${tables_sets[@]}"; do
     sqlite3 "$input_file" ".output $table_name.tmp.sql" ".dump $table_name"
 
     # Process the temporary file to format numeric values; also takes care of e-xx values
-	awk -F, 'BEGIN{OFS=","} {for (i=1; i<=NF; i++) if ($i ~ /^[+-]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?$/) $i=sprintf("%.7f", $i)} 1' "$table_name.tmp.sql" >> combined_output.tmp.sql
+	awk -F'VALUES\\(|\\);' '{
+		if (index($0, "VALUES(") > 0) {
+		    # Split the line into three parts: before VALUES, values, and after );
+		    split($0, parts, /VALUES\(|\);/)
+
+		    # Process the values part
+		    split(parts[2], values, ",")
+
+		    # Initialize an empty string for the modified values
+		    modified_values = ""
+
+		    # Iterate through the values
+		    for (i = 1; i <= length(values); i++) {
+		        # Check if the value is numeric
+		        if (values[i] ~ /^[+-]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?$/) {
+		            # Round the numeric value to 7 decimal places
+		            values[i] = sprintf("%.7f", values[i])
+		        }
+		        modified_values = modified_values (i > 1 ? "," : "") values[i]
+		    }
+
+		    # Reconstruct the line and print it
+		    print parts[1] "VALUES(" modified_values ");" parts[3]
+		}
+		else {print $0}
+
+	}' "$table_name.tmp.sql" >> combined_output.tmp.sql
+
 
     # Clean up the temporary file
     rm "$table_name.tmp.sql"
@@ -55,7 +82,34 @@ for table_name in "${tables_time_independent[@]}"; do
 
     sqlite3 "$input_file" ".output $table_name.tmp.sql" ".dump $table_name"
     
-    awk -F, 'BEGIN{OFS=","} {for (i=1; i<=NF; i++) if ($i ~ /^[+-]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?$/) $i=sprintf("%.7f", $i)} 1' "$table_name.tmp.sql" >> combined_output.tmp.sql
+	awk -F'VALUES\\(|\\);' '{
+		if (index($0, "VALUES(") > 0) {
+		    # Split the line into three parts: before VALUES, values, and after );
+		    split($0, parts, /VALUES\(|\);/)
+
+		    # Process the values part
+		    split(parts[2], values, ",")
+
+		    # Initialize an empty string for the modified values
+		    modified_values = ""
+
+		    # Iterate through the values
+		    for (i = 1; i <= length(values); i++) {
+		        # Check if the value is numeric
+		        if (values[i] ~ /^[+-]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?$/) {
+		            # Round the numeric value to 7 decimal places
+		            values[i] = sprintf("%.7f", values[i])
+		        }
+		        modified_values = modified_values (i > 1 ? "," : "") values[i]
+		    }
+
+		    # Reconstruct the line and print it
+		    print parts[1] "VALUES(" modified_values ");" parts[3]
+		}
+		else {print $0}
+
+	}' "$table_name.tmp.sql" >> combined_output.tmp.sql
+
 
     rm "$table_name.tmp.sql"
 done
@@ -67,7 +121,34 @@ for table_name in "${tables_time[@]}"; do
     
     sqlite3 "$input_file" ".output $table_name.tmp.sql" ".dump $table_name"
 
-    awk -F, 'BEGIN{OFS=","} {for (i=1; i<=NF; i++) if ($i ~ /^[+-]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?$/) $i=sprintf("%.7f", $i)} 1' "$table_name.tmp.sql" >> combined_output.tmp.sql
+	awk -F'VALUES\\(|\\);' '{
+		if (index($0, "VALUES(") > 0) {
+		    # Split the line into three parts: before VALUES, values, and after );
+		    split($0, parts, /VALUES\(|\);/)
+
+		    # Process the values part
+		    split(parts[2], values, ",")
+
+		    # Initialize an empty string for the modified values
+		    modified_values = ""
+
+		    # Iterate through the values
+		    for (i = 1; i <= length(values); i++) {
+		        # Check if the value is numeric
+		        if (values[i] ~ /^[+-]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?$/) {
+		            # Round the numeric value to 7 decimal places
+		            values[i] = sprintf("%.7f", values[i])
+		        }
+		        modified_values = modified_values (i > 1 ? "," : "") values[i]
+		    }
+
+		    # Reconstruct the line and print it
+		    print parts[1] "VALUES(" modified_values ");" parts[3]
+		}
+		else {print $0}
+
+	}' "$table_name.tmp.sql" >> combined_output.tmp.sql
+
 
     rm "$table_name.tmp.sql"
 done
