@@ -413,13 +413,41 @@ CREATE TABLE IF NOT EXISTS "Output_V_Capacity" (
 	"regions"	text,
 	"scenario"	text,
 	"sector"	text,
+	"t_periods"	integer,
+	"tech"	text,
+	"vintage"	integer,
+	"capacity"	real,
+	FOREIGN KEY("t_periods") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("sector") REFERENCES "sector_labels"("sector"),
+	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY("regions","scenario","t_periods","tech","vintage")
+);
+CREATE TABLE IF NOT EXISTS "Output_V_NewCapacity" (
+	"regions"	text,
+	"scenario"	text,
+	"sector"	text,
 	"tech"	text,
 	"vintage"	integer,
 	"capacity"	real,
 	PRIMARY KEY("regions","scenario","tech","vintage"),
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	FOREIGN KEY("sector") REFERENCES "sector_labels"("sector"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods")
+);
+CREATE TABLE IF NOT EXISTS "Output_V_RetiredCapacity" (
+	"regions"	text,
+	"scenario"	text,
+	"sector"	text,
+	"t_periods"	integer,
+	"tech"	text,
+	"vintage"	integer,
+	"capacity"	real,
+	FOREIGN KEY("t_periods") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("sector") REFERENCES "sector_labels"("sector"),
+	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY("regions","scenario","t_periods","tech","vintage")
 );
 CREATE TABLE IF NOT EXISTS "PlanningReserveMargin" (
 	`regions`	text,
@@ -667,4 +695,10 @@ CREATE TABLE `RenewablePortfolioStandard` (
 	`rps_notes`	text,
 	PRIMARY KEY(`regions`,`periods`),
 	FOREIGN KEY(`periods`) REFERENCES `time_periods`(`t_periods`)
+);
+CREATE TABLE IF NOT EXISTS "tech_retirement" (
+	"tech"	text,
+	"notes"	TEXT,
+	PRIMARY KEY("tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
